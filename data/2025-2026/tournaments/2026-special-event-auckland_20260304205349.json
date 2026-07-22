@@ -1,0 +1,817 @@
+{
+  "metadata": {
+    "id": "2026-special-event-auckland_https-limitlesstcg-com-tournamen_2025-2026",
+    "title": "2026 Special Event Auckland",
+    "title_norm": "2026 Special Event Auckland",
+    "url": "https://limitlesstcg.com/tournaments/531",
+    "season": "2025-2026",
+    "tournament_type": "REGIONAL",
+    "num_competitors": 80,
+    "tournament_date": "2026-01-24",
+    "added_at": "2026-03-04T20:53:49.515175Z"
+  },
+  "raw_entries": [
+    {
+      "placement": 1,
+      "raw_name": "Peter Lo",
+      "region_code": "AU"
+    },
+    {
+      "placement": 2,
+      "raw_name": "Keito Arai",
+      "region_code": "JP"
+    },
+    {
+      "placement": 3,
+      "raw_name": "Dino Spasovski",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 4,
+      "raw_name": "Justin Hoy",
+      "region_code": "AU"
+    },
+    {
+      "placement": 5,
+      "raw_name": "Henry Brand",
+      "region_code": "AU"
+    },
+    {
+      "placement": 6,
+      "raw_name": "Matthew Burris",
+      "region_code": "AU"
+    },
+    {
+      "placement": 7,
+      "raw_name": "Jeremy Lim",
+      "region_code": "AU"
+    },
+    {
+      "placement": 8,
+      "raw_name": "Natalie Millar",
+      "region_code": "AU"
+    },
+    {
+      "placement": 9,
+      "raw_name": "Christian Viti",
+      "region_code": "AU"
+    },
+    {
+      "placement": 10,
+      "raw_name": "Lucas Hamilton-Foster",
+      "region_code": "AU"
+    },
+    {
+      "placement": 11,
+      "raw_name": "Ashe Olsen",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 12,
+      "raw_name": "Solomon Foo",
+      "region_code": "AU"
+    },
+    {
+      "placement": 13,
+      "raw_name": "Tim Franklin",
+      "region_code": "AU"
+    },
+    {
+      "placement": 14,
+      "raw_name": "Tyler Bishop",
+      "region_code": "AU"
+    },
+    {
+      "placement": 15,
+      "raw_name": "Nathan Spry",
+      "region_code": "AU"
+    },
+    {
+      "placement": 16,
+      "raw_name": "Thomas Layburn",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 17,
+      "raw_name": "Luke Maher",
+      "region_code": "US"
+    },
+    {
+      "placement": 18,
+      "raw_name": "Nigel Tan",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 19,
+      "raw_name": "Angus Johnson",
+      "region_code": "AU"
+    },
+    {
+      "placement": 20,
+      "raw_name": "Nicholas Choong",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 21,
+      "raw_name": "Tae Hyung Kim",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 22,
+      "raw_name": "Samantha Turner",
+      "region_code": "AU"
+    },
+    {
+      "placement": 23,
+      "raw_name": "Meredith Whitehead",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 24,
+      "raw_name": "Angus Byers",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 25,
+      "raw_name": "Adam Paterson",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 26,
+      "raw_name": "Charlie Queen",
+      "region_code": "AU"
+    },
+    {
+      "placement": 27,
+      "raw_name": "Addison Yip",
+      "region_code": "AU"
+    },
+    {
+      "placement": 28,
+      "raw_name": "Gareth Murphy",
+      "region_code": "AU"
+    },
+    {
+      "placement": 29,
+      "raw_name": "Sean Takemoto",
+      "region_code": "AU"
+    },
+    {
+      "placement": 30,
+      "raw_name": "Kelvin Duong",
+      "region_code": "AU"
+    },
+    {
+      "placement": 31,
+      "raw_name": "Leigh Edwards",
+      "region_code": "AU"
+    },
+    {
+      "placement": 32,
+      "raw_name": "Louis Chi",
+      "region_code": "AU"
+    },
+    {
+      "placement": 33,
+      "raw_name": "Noah Lewis",
+      "region_code": "AU"
+    },
+    {
+      "placement": 34,
+      "raw_name": "Alex Gordon",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 35,
+      "raw_name": "George Glover",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 36,
+      "raw_name": "Nicholas Fox",
+      "region_code": "AU"
+    },
+    {
+      "placement": 37,
+      "raw_name": "Anthony Chan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 38,
+      "raw_name": "Layton Rumble",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 39,
+      "raw_name": "Kenny Potter",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 40,
+      "raw_name": "Cori Swards",
+      "region_code": "AU"
+    },
+    {
+      "placement": 41,
+      "raw_name": "Su Fu",
+      "region_code": "AU"
+    },
+    {
+      "placement": 42,
+      "raw_name": "Nathan Topping",
+      "region_code": "AU"
+    },
+    {
+      "placement": 43,
+      "raw_name": "Julian Luvara",
+      "region_code": "AU"
+    },
+    {
+      "placement": 44,
+      "raw_name": "Fergus Bell",
+      "region_code": "AU"
+    },
+    {
+      "placement": 45,
+      "raw_name": "Roberto Goulter",
+      "region_code": "AU"
+    },
+    {
+      "placement": 46,
+      "raw_name": "Qianyan Bei",
+      "region_code": "AU"
+    },
+    {
+      "placement": 47,
+      "raw_name": "Thomas Hormann",
+      "region_code": "AU"
+    },
+    {
+      "placement": 48,
+      "raw_name": "Haru Nishikawa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 49,
+      "raw_name": "Sheldon Kuppan",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 50,
+      "raw_name": "Toby Lockhart",
+      "region_code": "AU"
+    },
+    {
+      "placement": 51,
+      "raw_name": "Josh Machiela",
+      "region_code": "AU"
+    },
+    {
+      "placement": 52,
+      "raw_name": "Jack Li",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 53,
+      "raw_name": "Richard Hpa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 54,
+      "raw_name": "Vignesh Krishnan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 55,
+      "raw_name": "Ciaran Bradley",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 56,
+      "raw_name": "Blake Davies",
+      "region_code": "AU"
+    },
+    {
+      "placement": 57,
+      "raw_name": "Der Cherng Lee",
+      "region_code": "AU"
+    },
+    {
+      "placement": 58,
+      "raw_name": "Jordan Gil Concalves De Miranda",
+      "region_code": "UK"
+    },
+    {
+      "placement": 59,
+      "raw_name": "Shawn Zillmann",
+      "region_code": "AU"
+    },
+    {
+      "placement": 60,
+      "raw_name": "Tyriek Mousaco",
+      "region_code": "AU"
+    },
+    {
+      "placement": 61,
+      "raw_name": "Efim Zelmanovich",
+      "region_code": "AU"
+    },
+    {
+      "placement": 62,
+      "raw_name": "Teran Abeydeera",
+      "region_code": "AU"
+    },
+    {
+      "placement": 63,
+      "raw_name": "Lewis Stevens",
+      "region_code": "AU"
+    },
+    {
+      "placement": 64,
+      "raw_name": "Sinisa Blazic",
+      "region_code": "AU"
+    },
+    {
+      "placement": 65,
+      "raw_name": "Vincent Yu",
+      "region_code": "AU"
+    },
+    {
+      "placement": 66,
+      "raw_name": "Aaron Rogers",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 67,
+      "raw_name": "Adrian Lacanilao",
+      "region_code": "AU"
+    },
+    {
+      "placement": 68,
+      "raw_name": "Nikhil Narayan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 69,
+      "raw_name": "Saneel Swami",
+      "region_code": "AU"
+    },
+    {
+      "placement": 70,
+      "raw_name": "Peter Phaly",
+      "region_code": "AU"
+    },
+    {
+      "placement": 71,
+      "raw_name": "Jason Yip",
+      "region_code": "AU"
+    },
+    {
+      "placement": 72,
+      "raw_name": "Yasuyuki Handa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 73,
+      "raw_name": "Sera Matsumoto",
+      "region_code": "AU"
+    },
+    {
+      "placement": 74,
+      "raw_name": "Richie Coghlan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 75,
+      "raw_name": "Yiheng Huang",
+      "region_code": "AU"
+    },
+    {
+      "placement": 76,
+      "raw_name": "Samuel Gianakis",
+      "region_code": "AU"
+    },
+    {
+      "placement": 77,
+      "raw_name": "Jacob Tannahill-Swift",
+      "region_code": "AU"
+    },
+    {
+      "placement": 78,
+      "raw_name": "Jaclyn Elliott",
+      "region_code": "AU"
+    },
+    {
+      "placement": 79,
+      "raw_name": "Osiris Bell",
+      "region_code": "AU"
+    },
+    {
+      "placement": 80,
+      "raw_name": "Matthew James",
+      "region_code": "AU"
+    }
+  ],
+  "normalized_entries": [
+    {
+      "placement": 1,
+      "normalized_name": "Peter Lo",
+      "region_code": "AU"
+    },
+    {
+      "placement": 2,
+      "normalized_name": "Keito Arai",
+      "region_code": "JP"
+    },
+    {
+      "placement": 3,
+      "normalized_name": "Dino Spasovski",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 4,
+      "normalized_name": "Justin Hoy",
+      "region_code": "AU"
+    },
+    {
+      "placement": 5,
+      "normalized_name": "Henry Brand",
+      "region_code": "AU"
+    },
+    {
+      "placement": 6,
+      "normalized_name": "Matthew Burris",
+      "region_code": "AU"
+    },
+    {
+      "placement": 7,
+      "normalized_name": "Jeremy Lim",
+      "region_code": "AU"
+    },
+    {
+      "placement": 8,
+      "normalized_name": "Natalie Millar",
+      "region_code": "AU"
+    },
+    {
+      "placement": 9,
+      "normalized_name": "Christian Viti",
+      "region_code": "AU"
+    },
+    {
+      "placement": 10,
+      "normalized_name": "Lucas Hamilton-Foster",
+      "region_code": "AU"
+    },
+    {
+      "placement": 11,
+      "normalized_name": "Ashe Olsen",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 12,
+      "normalized_name": "Solomon Foo",
+      "region_code": "AU"
+    },
+    {
+      "placement": 13,
+      "normalized_name": "Tim Franklin",
+      "region_code": "AU"
+    },
+    {
+      "placement": 14,
+      "normalized_name": "Tyler Bishop",
+      "region_code": "AU"
+    },
+    {
+      "placement": 15,
+      "normalized_name": "Nathan Spry",
+      "region_code": "AU"
+    },
+    {
+      "placement": 16,
+      "normalized_name": "Thomas Layburn",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 17,
+      "normalized_name": "Luke Maher",
+      "region_code": "US"
+    },
+    {
+      "placement": 18,
+      "normalized_name": "Nigel Tan",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 19,
+      "normalized_name": "Angus Johnson",
+      "region_code": "AU"
+    },
+    {
+      "placement": 20,
+      "normalized_name": "Nicholas Choong",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 21,
+      "normalized_name": "Tae Hyung Kim",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 22,
+      "normalized_name": "Samantha Turner",
+      "region_code": "AU"
+    },
+    {
+      "placement": 23,
+      "normalized_name": "Meredith Whitehead",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 24,
+      "normalized_name": "Angus Byers",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 25,
+      "normalized_name": "Adam Paterson",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 26,
+      "normalized_name": "Charlie Queen",
+      "region_code": "AU"
+    },
+    {
+      "placement": 27,
+      "normalized_name": "Addison Yip",
+      "region_code": "AU"
+    },
+    {
+      "placement": 28,
+      "normalized_name": "Gareth Murphy",
+      "region_code": "AU"
+    },
+    {
+      "placement": 29,
+      "normalized_name": "Sean Takemoto",
+      "region_code": "AU"
+    },
+    {
+      "placement": 30,
+      "normalized_name": "Kelvin Duong",
+      "region_code": "AU"
+    },
+    {
+      "placement": 31,
+      "normalized_name": "Leigh Edwards",
+      "region_code": "AU"
+    },
+    {
+      "placement": 32,
+      "normalized_name": "Louis Chi",
+      "region_code": "AU"
+    },
+    {
+      "placement": 33,
+      "normalized_name": "Noah Lewis",
+      "region_code": "AU"
+    },
+    {
+      "placement": 34,
+      "normalized_name": "Alex Gordon",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 35,
+      "normalized_name": "George Glover",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 36,
+      "normalized_name": "Nicholas Fox",
+      "region_code": "AU"
+    },
+    {
+      "placement": 37,
+      "normalized_name": "Anthony Chan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 38,
+      "normalized_name": "Layton Rumble",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 39,
+      "normalized_name": "Kenny Potter",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 40,
+      "normalized_name": "Cori Swards",
+      "region_code": "AU"
+    },
+    {
+      "placement": 41,
+      "normalized_name": "Su Fu",
+      "region_code": "AU"
+    },
+    {
+      "placement": 42,
+      "normalized_name": "Nathan Topping",
+      "region_code": "AU"
+    },
+    {
+      "placement": 43,
+      "normalized_name": "Julian Luvara",
+      "region_code": "AU"
+    },
+    {
+      "placement": 44,
+      "normalized_name": "Fergus Bell",
+      "region_code": "AU"
+    },
+    {
+      "placement": 45,
+      "normalized_name": "Roberto Goulter",
+      "region_code": "AU"
+    },
+    {
+      "placement": 46,
+      "normalized_name": "Qianyan Bei",
+      "region_code": "AU"
+    },
+    {
+      "placement": 47,
+      "normalized_name": "Thomas Hormann",
+      "region_code": "AU"
+    },
+    {
+      "placement": 48,
+      "normalized_name": "Haru Nishikawa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 49,
+      "normalized_name": "Sheldon Kuppan",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 50,
+      "normalized_name": "Toby Lockhart",
+      "region_code": "AU"
+    },
+    {
+      "placement": 51,
+      "normalized_name": "Josh Machiela",
+      "region_code": "AU"
+    },
+    {
+      "placement": 52,
+      "normalized_name": "Jack Li",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 53,
+      "normalized_name": "Richard Hpa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 54,
+      "normalized_name": "Vignesh Krishnan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 55,
+      "normalized_name": "Ciaran Bradley",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 56,
+      "normalized_name": "Blake Davies",
+      "region_code": "AU"
+    },
+    {
+      "placement": 57,
+      "normalized_name": "Der Cherng Lee",
+      "region_code": "AU"
+    },
+    {
+      "placement": 58,
+      "normalized_name": "Jordan Gil Concalves De Miranda",
+      "region_code": "UK"
+    },
+    {
+      "placement": 59,
+      "normalized_name": "Shawn Zillmann",
+      "region_code": "AU"
+    },
+    {
+      "placement": 60,
+      "normalized_name": "Tyriek Mousaco",
+      "region_code": "AU"
+    },
+    {
+      "placement": 61,
+      "normalized_name": "Efim Zelmanovich",
+      "region_code": "AU"
+    },
+    {
+      "placement": 62,
+      "normalized_name": "Teran Abeydeera",
+      "region_code": "AU"
+    },
+    {
+      "placement": 63,
+      "normalized_name": "Lewis Stevens",
+      "region_code": "AU"
+    },
+    {
+      "placement": 64,
+      "normalized_name": "Sinisa Blazic",
+      "region_code": "AU"
+    },
+    {
+      "placement": 65,
+      "normalized_name": "Vincent Yu",
+      "region_code": "AU"
+    },
+    {
+      "placement": 66,
+      "normalized_name": "Aaron Rogers",
+      "region_code": "NZ"
+    },
+    {
+      "placement": 67,
+      "normalized_name": "Adrian Lacanilao",
+      "region_code": "AU"
+    },
+    {
+      "placement": 68,
+      "normalized_name": "Nikhil Narayan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 69,
+      "normalized_name": "Saneel Swami",
+      "region_code": "AU"
+    },
+    {
+      "placement": 70,
+      "normalized_name": "Peter Phaly",
+      "region_code": "AU"
+    },
+    {
+      "placement": 71,
+      "normalized_name": "Jason Yip",
+      "region_code": "AU"
+    },
+    {
+      "placement": 72,
+      "normalized_name": "Yasuyuki Handa",
+      "region_code": "AU"
+    },
+    {
+      "placement": 73,
+      "normalized_name": "Sera Matsumoto",
+      "region_code": "AU"
+    },
+    {
+      "placement": 74,
+      "normalized_name": "Richie Coghlan",
+      "region_code": "AU"
+    },
+    {
+      "placement": 75,
+      "normalized_name": "Yiheng Huang",
+      "region_code": "AU"
+    },
+    {
+      "placement": 76,
+      "normalized_name": "Samuel Gianakis",
+      "region_code": "AU"
+    },
+    {
+      "placement": 77,
+      "normalized_name": "Jacob Tannahill-Swift",
+      "region_code": "AU"
+    },
+    {
+      "placement": 78,
+      "normalized_name": "Jaclyn Elliott",
+      "region_code": "AU"
+    },
+    {
+      "placement": 79,
+      "normalized_name": "Osiris Bell",
+      "region_code": "AU"
+    },
+    {
+      "placement": 80,
+      "normalized_name": "Matthew James",
+      "region_code": "AU"
+    }
+  ]
+}

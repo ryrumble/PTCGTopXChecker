@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PKMN Top X Checker — Leaderboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0f1117; color: #e1e4e8; line-height: 1.5; padding: 16px;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 1400px; margin: 0 auto; }
+
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0; border-bottom: 1px solid #21262d; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;
+  }
+  header h1 { font-size: 20px; font-weight: 600; color: #f0f6fc; }
+  header .meta { color: #8b949e; font-size: 13px; }
+  header .meta span { margin-right: 14px; }
+
+  .tabs { display: flex; gap: 0; border-bottom: 1px solid #21262d; margin-bottom: 16px; }
+  .tabs button {
+    background: none; border: none; color: #8b949e; padding: 8px 18px;
+    cursor: pointer; font-size: 14px; border-bottom: 2px solid transparent; transition: all .15s;
+  }
+  .tabs button:hover { color: #e1e4e8; }
+  .tabs button.active { color: #f0f6fc; border-bottom-color: #58a6ff; }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .controls {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    padding: 10px 14px; background: #161b22; border-radius: 8px; margin-bottom: 14px;
+  }
+  .controls label { color: #8b949e; font-size: 13px; }
+  .controls select, .controls input {
+    background: #0d1117; border: 1px solid #30363d; border-radius: 6px;
+    color: #e1e4e8; padding: 5px 10px; font-size: 13px;
+  }
+  .controls input { min-width: 140px; }
+  .controls select:focus, .controls input:focus { outline: none; border-color: #58a6ff; }
+  .controls .stat { margin-left: auto; color: #8b949e; font-size: 13px; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid #21262d; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: #161b22; color: #8b949e; font-weight: 600; text-align: left;
+    padding: 8px 10px; border-bottom: 1px solid #21262d; white-space: nowrap;
+    cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 1;
+  }
+  th:hover { color: #e1e4e8; }
+  th .sort { margin-left: 3px; opacity: .4; }
+  th .sort.active { opacity: 1; color: #58a6ff; }
+  td { padding: 6px 10px; border-bottom: 1px solid #21262d; }
+  tr:hover td { background: #1c2128; }
+  td.rank { color: #8b949e; font-weight: 600; width: 44px; }
+  td.name { font-weight: 500; color: #f0f6fc; cursor: pointer; }
+  td.name:hover { color: #58a6ff; }
+  td.cp { font-weight: 600; font-variant-numeric: tabular-nums; }
+  td.rc { color: #8b949e; }
+
+  .badge {
+    display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600;
+  }
+  .badge-ab { background: #1a3a2a; color: #3fb950; }
+  .badge-NA { background: #1c2128; color: #58a6ff; }
+  .badge-EU { background: #1c2128; color: #bc8cff; }
+  .badge-LA { background: #1c2128; color: #f0883e; }
+  .badge-MEA { background: #1c2128; color: #f0e442; }
+  .badge-OC { background: #1c2128; color: #56d4dd; }
+  .badge-OTHER { background: #1c2128; color: #8b949e; }
+
+  /* Pagination */
+  .pagination {
+    display: flex; justify-content: center; align-items: center; gap: 6px;
+    padding: 12px 0; font-size: 13px;
+  }
+  .pagination button {
+    background: #21262d; border: 1px solid #30363d; border-radius: 6px;
+    color: #e1e4e8; padding: 5px 12px; cursor: pointer; font-size: 13px;
+  }
+  .pagination button:hover:not(:disabled) { background: #30363d; }
+  .pagination button:disabled { opacity: .4; cursor: default; }
+  .pagination .info { color: #8b949e; }
+
+  /* Modal */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6);
+    z-index: 100; align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: #161b22; border-radius: 10px; border: 1px solid #30363d;
+    max-width: 640px; width: 92%; max-height: 80vh; overflow-y: auto; padding: 20px;
+  }
+  .modal h2 { font-size: 17px; margin-bottom: 4px; }
+  .modal .sub { color: #8b949e; font-size: 13px; margin-bottom: 14px; }
+  .modal th { background: #0d1117; font-size: 12px; padding: 6px 8px; }
+  .modal td { padding: 5px 8px; font-size: 13px; }
+  .modal-close {
+    float: right; background: none; border: none; color: #8b949e;
+    cursor: pointer; font-size: 22px; line-height: 1;
+  }
+  .modal-close:hover { color: #e1e4e8; }
+
+  .tournament-card {
+    background: #161b22; border: 1px solid #21262d; border-radius: 6px;
+    padding: 12px 16px; margin-bottom: 6px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  }
+  .tournament-card .title { flex: 1; min-width: 180px; font-weight: 500; font-size: 14px; }
+  .tournament-card .meta { color: #8b949e; font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .loading { text-align: center; padding: 50px 16px; color: #8b949e; }
+  .spinner {
+    display: inline-block; width: 28px; height: 28px; border: 3px solid #30363d;
+    border-top-color: #58a6ff; border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: 10px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .empty-state { text-align: center; padding: 40px 16px; color: #8b949e; }
+  @media (max-width: 600px) {
+    .controls .stat { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>PKMN Top X Checker</h1>
+      <div class="meta">
+        <span id="hSeason">Season: <strong>—</strong></span>
+        <span id="hPlayers">Players: <strong>—</strong></span>
+        <span id="hTourneys">Tournaments: <strong>—</strong></span>
+      </div>
+    </div>
+    <div class="meta">View-only &middot; <a href="https://github.com/anomalyco/pkmnOnlineTopXChecker" target="_blank">Source</a></div>
+  </header>
+
+  <div class="tabs" id="tabs">
+    <button class="active" data-tab="leaderboard">Leaderboard</button>
+    <button data-tab="tournaments">Tournaments</button>
+  </div>
+
+  <!-- Leaderboard Tab -->
+  <div class="tab-content active" id="tab-leaderboard">
+    <div class="controls">
+      <label>Region</label>
+      <select id="fRegion">
+        <option value="ALL">All</option>
+        <option value="NA">NA</option><option value="EU">EU</option>
+        <option value="LA">LATAM</option><option value="MEA">MESA</option>
+        <option value="OC">OCE</option><option value="OTHER">Other</option>
+      </select>
+      <label>Search</label>
+      <input type="text" id="fSearch" placeholder="Name...">
+      <label><input type="checkbox" id="fHideAB" checked> Hide autobid</label>
+      <span class="stat" id="statCount">0 players</span>
+    </div>
+    <div class="table-wrap">
+      <table><thead><tr>
+        <th data-c="r"># <span class="sort"></span></th>
+        <th data-c="n">Name <span class="sort"></span></th>
+        <th data-c="rg">Region <span class="sort"></span></th>
+        <th data-c="rc">Code <span class="sort"></span></th>
+        <th data-c="cp">Total CP <span class="sort active">▼</span></th>
+        <th data-c="bp">Best <span class="sort"></span></th>
+        <th data-c="ev">Events <span class="sort"></span></th>
+        <th data-c="ab">Autobid <span class="sort"></span></th>
+      </tr></thead>
+      <tbody id="lbBody"></tbody></table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+    <div id="lbLoading" class="loading"><div class="spinner"></div><div>Loading leaderboard...</div></div>
+  </div>
+
+  <!-- Tournaments Tab -->
+  <div class="tab-content" id="tab-tournaments">
+    <div id="tourneysList"></div>
+    <div id="tLoading" class="loading"><div class="spinner"></div><div>Loading tournaments...</div></div>
+  </div>
+</div>
+
+<!-- Player Modal -->
+<div class="modal-overlay" id="playerModal">
+  <div class="modal">
+    <button class="modal-close" id="mClose">&times;</button>
+    <h2 id="mName">—</h2>
+    <div class="sub" id="mSub">—</div>
+    <div id="mLoading" class="loading" style="padding:20px;"><div class="spinner"></div></div>
+    <table id="mTable" style="display:none;"><thead><tr>
+      <th>Tournament</th><th>Place</th><th>Type</th><th>CP</th>
+    </tr></thead><tbody id="mBody"></tbody></table>
+  </div>
+</div>
+
+<script>
+const LB_URL = "../docs/data/leaderboard.json";
+const RES_URL = "../docs/data/player_results.json";
+const T_URL = "../docs/data/tournaments.json";
+
+const PAGE_SIZE = 100;
+let players = [], tournaments = [], resultsLookup = {};
+let sortCol = "cp", sortDir = "desc";
+let currentPage = 1, totalPages = 0;
+
+function esc(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+function fmt(v) { return Number(v).toLocaleString(); }
+
+function badge(rg) {
+  if (!rg) return "";
+  return `<span class="badge badge-${rg}">${rg}</span>`;
+}
+
+async function loadJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
+
+async function loadAll() {
+  try {
+    const [lbData, tData] = await Promise.all([
+      loadJSON(LB_URL).catch(() => null),
+      loadJSON(T_URL).catch(() => null),
+    ]);
+    if (lbData) {
+      players = lbData.players || [];
+      document.getElementById("hSeason").innerHTML = `Season: <strong>${esc(lbData.season)}</strong>`;
+      document.getElementById("hPlayers").innerHTML = `Players: <strong>${fmt(players.length)}</strong>`;
+      document.getElementById("hTourneys").innerHTML = `Tournaments: <strong>${lbData.tournaments || 0}</strong>`;
+    }
+    if (tData) tournaments = tData;
+    renderLeaderboard();
+    renderTournaments();
+  } catch (err) {
+    document.getElementById("lbLoading").innerHTML = `<p style="color:#f85149;">Error: ${esc(err.message)}</p>`;
+    document.getElementById("tLoading").innerHTML = `<p style="color:#f85149;">Error: ${esc(err.message)}</p>`;
+  } finally {
+    document.getElementById("lbLoading").style.display = "none";
+    document.getElementById("tLoading").style.display = "none";
+  }
+}
+
+function getFiltered() {
+  let p = players;
+  const rg = document.getElementById("fRegion").value;
+  const q = document.getElementById("fSearch").value.trim().toLowerCase();
+  const hideAB = document.getElementById("fHideAB").checked;
+  if (rg !== "ALL") p = p.filter(x => x.rg === rg);
+  if (hideAB) p = p.filter(x => !x.ab);
+  if (q) p = p.filter(x => x.n.toLowerCase().includes(q));
+  return p;
+}
+
+function sortPlayers(p) {
+  const d = sortDir === "asc" ? 1 : -1;
+  return [...p].sort((a, b) => {
+    let va = a[sortCol], vb = b[sortCol];
+    if (typeof va === "string") return (va||"").localeCompare(vb||"") * d;
+    return ((va||0) - (vb||0)) * d;
+  });
+}
+
+function renderLeaderboard() {
+  const filtered = sortPlayers(getFiltered());
+  totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  currentPage = Math.min(currentPage, totalPages);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page = filtered.slice(start, start + PAGE_SIZE);
+  document.getElementById("statCount").textContent = `${filtered.length} players`;
+
+  const tbody = document.getElementById("lbBody");
+  tbody.innerHTML = page.map(p => {
+    const ab = p.ab ? `<span class="badge badge-ab">Auto</span>` : "";
+    return `<tr>
+      <td class="rank">${p.r}</td>
+      <td class="name" onclick="openPlayer('${esc(p.n)}')">${esc(p.n)}</td>
+      <td>${badge(p.rg)}</td>
+      <td class="rc">${esc(p.rc)}</td>
+      <td class="cp">${fmt(p.cp)}</td>
+      <td>${fmt(p.bp)}</td>
+      <td>${p.ev}</td>
+      <td>${ab}</td>
+    </tr>`;
+  }).join("");
+
+  // Pagination
+  const pag = document.getElementById("pagination");
+  if (totalPages <= 1) { pag.innerHTML = ""; return; }
+  let html = `<button onclick="goPage(1)" ${currentPage===1?"disabled":""}>&laquo;</button>`;
+  html += `<button onclick="goPage(${currentPage-1})" ${currentPage===1?"disabled":""}>&lsaquo;</button>`;
+  const pageRange = getPageRange();
+  for (const pn of pageRange) {
+    if (pn === "...") html += `<span style="color:#8b949e;padding:0 4px;">...</span>`;
+    else html += `<button onclick="goPage(${pn})" ${pn===currentPage?'style="background:#30363d;"':""}>${pn}</button>`;
+  }
+  html += `<button onclick="goPage(${currentPage+1})" ${currentPage===totalPages?"disabled":""}>&rsaquo;</button>`;
+  html += `<button onclick="goPage(${totalPages})" ${currentPage===totalPages?"disabled":""}>&raquo;</button>`;
+  html += `<span class="info"> Page ${currentPage} of ${totalPages}</span>`;
+  pag.innerHTML = html;
+}
+
+function getPageRange() {
+  const t = totalPages, c = currentPage;
+  if (t <= 7) return Array.from({length:t},(_,i)=>i+1);
+  const r = [];
+  if (c <= 4) { for (let i=1;i<=5;i++) r.push(i); r.push("...",t); }
+  else if (c >= t-3) { r.push(1,"..."); for (let i=t-4;i<=t;i++) r.push(i); }
+  else { r.push(1,"...",c-1,c,c+1,"...",t); }
+  return r;
+}
+
+function goPage(n) { currentPage = Math.max(1, Math.min(n, totalPages)); renderLeaderboard(); }
+
+async function openPlayer(name) {
+  const modal = document.getElementById("playerModal");
+  modal.classList.add("open");
+  document.getElementById("mName").textContent = name;
+  document.getElementById("mSub").textContent = "Loading...";
+  document.getElementById("mTable").style.display = "none";
+  document.getElementById("mLoading").style.display = "block";
+
+  const p = players.find(x => x.n === name);
+  if (!p) {
+    document.getElementById("mSub").textContent = "Player not found.";
+    document.getElementById("mLoading").style.display = "none";
+    return;
+  }
+
+  document.getElementById("mSub").innerHTML =
+    `Region: ${badge(p.rg)} ${esc(p.rc)} &middot; CP: <strong>${fmt(p.cp)}</strong> &middot; Events: ${p.ev}` +
+    (p.ab ? ` &middot; <span class="badge badge-ab">Autobid</span>` : "");
+
+  // Load results on demand
+  if (!resultsLookup[name]) {
+    try {
+      if (Object.keys(resultsLookup).length === 0) {
+        resultsLookup = await loadJSON(RES_URL);
+      }
+    } catch {}
+  }
+
+  const results = resultsLookup[name] || [];
+  document.getElementById("mLoading").style.display = "none";
+  const tbody = document.getElementById("mBody");
+  if (results.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="4" style="color:#8b949e;text-align:center;">No results</td></tr>`;
+  } else {
+    const sorted = [...results].sort((a, b) => (b.c||0) - (a.c||0));
+    tbody.innerHTML = sorted.map(r =>
+      `<tr><td>${esc(r.t)}</td><td>${r.p}</td><td>${esc(r.y)}</td><td class="cp">${fmt(r.c)}</td></tr>`
+    ).join("");
+  }
+  document.getElementById("mTable").style.display = "";
+}
+
+// Tab switching
+document.querySelectorAll(".tabs button").forEach(b => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    document.getElementById("tab-" + b.dataset.tab).classList.add("active");
+  });
+});
+
+// Sorting
+document.querySelectorAll("th[data-c]").forEach(th => {
+  th.addEventListener("click", () => {
+    const c = th.dataset.c;
+    if (sortCol === c) sortDir = sortDir === "asc" ? "desc" : "asc";
+    else { sortCol = c; sortDir = c === "n" ? "asc" : "desc"; }
+    document.querySelectorAll("th .sort").forEach(s => s.classList.remove("active"));
+    const arrow = th.querySelector(".sort");
+    arrow.textContent = sortDir === "asc" ? "▲" : "▼";
+    arrow.classList.add("active");
+    renderLeaderboard();
+  });
+});
+
+// Filter events
+document.getElementById("fRegion").addEventListener("change", () => { currentPage = 1; renderLeaderboard(); });
+document.getElementById("fSearch").addEventListener("input", () => { currentPage = 1; renderLeaderboard(); });
+document.getElementById("fHideAB").addEventListener("change", () => { currentPage = 1; renderLeaderboard(); });
+
+// Modal close
+document.getElementById("mClose").onclick = () => document.getElementById("playerModal").classList.remove("open");
+document.getElementById("playerModal").onclick = e => { if (e.target === e.currentTarget) document.getElementById("playerModal").classList.remove("open"); };
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("playerModal").classList.remove("open"); });
+
+function renderTournaments() {
+  const c = document.getElementById("tourneysList");
+  document.getElementById("tLoading").style.display = "none";
+  if (!tournaments.length) { c.innerHTML = `<div class="empty-state">No tournaments.</div>`; return; }
+  c.innerHTML = tournaments.map(t => {
+    return `<div class="tournament-card">
+      <div class="title">${t.u ? `<a href="${esc(t.u)}" target="_blank">${esc(t.n)}</a>` : esc(t.n)}</div>
+      <div class="meta">
+        <span>${esc(t.t)}</span><span>${t.c || 0} players</span><span>${t.d || "—"}</span>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+loadAll();
+</script>
+</body>
+</html>

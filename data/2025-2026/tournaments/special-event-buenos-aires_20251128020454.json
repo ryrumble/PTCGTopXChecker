@@ -1,0 +1,3517 @@
+{
+  "metadata": {
+    "id": "2026-special-event-buenos-aires_https-labs-limitlesstcg-com-0045_2025-2026",
+    "title": "2026 Special Event Buenos Aires",
+    "title_norm": "2026 Special Event Buenos Aires",
+    "url": "https://labs.limitlesstcg.com/0045/standings",
+    "season": "2025-2026",
+    "tournament_type": "REGIONAL",
+    "num_competitors": 350,
+    "added_at": "2025-11-28T02:04:54.889461Z",
+    "tournament_date": "2025-11-15"
+  },
+  "raw_entries": [
+    {
+      "placement": 1,
+      "raw_name": "Eduardo Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 2,
+      "raw_name": "Denis Provázek",
+      "region_code": "CZ"
+    },
+    {
+      "placement": 3,
+      "raw_name": "Ricardo Vega",
+      "region_code": "CL"
+    },
+    {
+      "placement": 4,
+      "raw_name": "Caio Pires",
+      "region_code": "BR"
+    },
+    {
+      "placement": 5,
+      "raw_name": "Yerco Valencia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 6,
+      "raw_name": "Alexis Hormazábal",
+      "region_code": "CL"
+    },
+    {
+      "placement": 7,
+      "raw_name": "Aramis Gomez Arnaiz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 8,
+      "raw_name": "Jonathan Fabrizio Belucci",
+      "region_code": "AR"
+    },
+    {
+      "placement": 9,
+      "raw_name": "Federico Gallo",
+      "region_code": "ES"
+    },
+    {
+      "placement": 10,
+      "raw_name": "Dre Alderette",
+      "region_code": "US"
+    },
+    {
+      "placement": 11,
+      "raw_name": "Otavio Gouveia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 12,
+      "raw_name": "Manuel Urzúa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 13,
+      "raw_name": "Nino Anderluh",
+      "region_code": "SI"
+    },
+    {
+      "placement": 14,
+      "raw_name": "Francisco Tobar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 15,
+      "raw_name": "Javier Romero Ramos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 16,
+      "raw_name": "Maciej Chojnacki",
+      "region_code": "PL"
+    },
+    {
+      "placement": 17,
+      "raw_name": "Matias Matricardi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 18,
+      "raw_name": "Sebastian Arias",
+      "region_code": "CL"
+    },
+    {
+      "placement": 19,
+      "raw_name": "Jackson Ford",
+      "region_code": "CA"
+    },
+    {
+      "placement": 20,
+      "raw_name": "Facundo Facio",
+      "region_code": "AR"
+    },
+    {
+      "placement": 21,
+      "raw_name": "Alejo Salvador",
+      "region_code": "AR"
+    },
+    {
+      "placement": 22,
+      "raw_name": "Ciaran Farah",
+      "region_code": "CA"
+    },
+    {
+      "placement": 23,
+      "raw_name": "Miguel Lopez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 24,
+      "raw_name": "Felipe Garcia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 25,
+      "raw_name": "Samuel Pérez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 26,
+      "raw_name": "Felipe Cisternas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 27,
+      "raw_name": "Genaro Jean Paul Murga Olaya",
+      "region_code": "PE"
+    },
+    {
+      "placement": 28,
+      "raw_name": "Bruno Santi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 29,
+      "raw_name": "Francisco Osorio",
+      "region_code": "CL"
+    },
+    {
+      "placement": 30,
+      "raw_name": "Franco De Nardo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 31,
+      "raw_name": "Martin Dominguez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 32,
+      "raw_name": "Andres Torres",
+      "region_code": "CO"
+    },
+    {
+      "placement": 33,
+      "raw_name": "Marco Alejandro Dardis",
+      "region_code": "AR"
+    },
+    {
+      "placement": 34,
+      "raw_name": "Daniel Cajahuaringa Rivera",
+      "region_code": "PE"
+    },
+    {
+      "placement": 35,
+      "raw_name": "Tomás Riquelme",
+      "region_code": "CL"
+    },
+    {
+      "placement": 36,
+      "raw_name": "Juan Martín Bravo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 37,
+      "raw_name": "Oscar Vera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 38,
+      "raw_name": "Cristian Gallo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 39,
+      "raw_name": "Eduardo Dominguez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 40,
+      "raw_name": "Jesus Rodriguez",
+      "region_code": "PE"
+    },
+    {
+      "placement": 41,
+      "raw_name": "Diego Cassiraga",
+      "region_code": "AR"
+    },
+    {
+      "placement": 42,
+      "raw_name": "Alejandro Carrillo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 43,
+      "raw_name": "Augusto Beringuer",
+      "region_code": "BR"
+    },
+    {
+      "placement": 44,
+      "raw_name": "José Blanco",
+      "region_code": "CL"
+    },
+    {
+      "placement": 45,
+      "raw_name": "Andres Estefano Gajardo Lopehandia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 46,
+      "raw_name": "Damián Gabriel Riquel",
+      "region_code": "AR"
+    },
+    {
+      "placement": 47,
+      "raw_name": "Diego Varea",
+      "region_code": "PE"
+    },
+    {
+      "placement": 48,
+      "raw_name": "Franco Depetris",
+      "region_code": "AR"
+    },
+    {
+      "placement": 49,
+      "raw_name": "Joel Ortiz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 50,
+      "raw_name": "Alejandro Rivera",
+      "region_code": "CO"
+    },
+    {
+      "placement": 51,
+      "raw_name": "Fernando Lopez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 52,
+      "raw_name": "Sebastian Leiva",
+      "region_code": "CL"
+    },
+    {
+      "placement": 53,
+      "raw_name": "Jose Torres",
+      "region_code": "CL"
+    },
+    {
+      "placement": 54,
+      "raw_name": "Damian Fernandez Urroz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 55,
+      "raw_name": "Benjamín Salina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 56,
+      "raw_name": "Christian Badenas",
+      "region_code": "AR"
+    },
+    {
+      "placement": 57,
+      "raw_name": "Emanuel Diogo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 58,
+      "raw_name": "Sebastian Mora",
+      "region_code": "CL"
+    },
+    {
+      "placement": 59,
+      "raw_name": "Gaston Kitela",
+      "region_code": "AR"
+    },
+    {
+      "placement": 60,
+      "raw_name": "Jonhathan Vazquez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 61,
+      "raw_name": "Sebastián Iturra",
+      "region_code": "CL"
+    },
+    {
+      "placement": 62,
+      "raw_name": "Julian Diaz Ferrara",
+      "region_code": "AR"
+    },
+    {
+      "placement": 63,
+      "raw_name": "Nicolás Magliulo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 64,
+      "raw_name": "Álvaro Guerrero",
+      "region_code": "CL"
+    },
+    {
+      "placement": 65,
+      "raw_name": "Bruno Garza",
+      "region_code": "AR"
+    },
+    {
+      "placement": 66,
+      "raw_name": "Eric Uriel Patlallan",
+      "region_code": "AR"
+    },
+    {
+      "placement": 67,
+      "raw_name": "Giovanny Sasso",
+      "region_code": "BR"
+    },
+    {
+      "placement": 68,
+      "raw_name": "Ruiter Roberto Resende",
+      "region_code": "BR"
+    },
+    {
+      "placement": 69,
+      "raw_name": "Esteban Andrés Figueroa Flores",
+      "region_code": "CL"
+    },
+    {
+      "placement": 70,
+      "raw_name": "Frederico Assis",
+      "region_code": "BR"
+    },
+    {
+      "placement": 71,
+      "raw_name": "Gabriel Pinheiro",
+      "region_code": "BR"
+    },
+    {
+      "placement": 72,
+      "raw_name": "Luis Carlos Alonso Delgado Araujo",
+      "region_code": "PE"
+    },
+    {
+      "placement": 73,
+      "raw_name": "Luis Martinez",
+      "region_code": "PE"
+    },
+    {
+      "placement": 74,
+      "raw_name": "Alexander Alvarado Tolmo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 75,
+      "raw_name": "Matias Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 76,
+      "raw_name": "Daniel Cabrera",
+      "region_code": "UY"
+    },
+    {
+      "placement": 77,
+      "raw_name": "Francisco Toloza",
+      "region_code": "CL"
+    },
+    {
+      "placement": 78,
+      "raw_name": "Jonathan Guglielmo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 79,
+      "raw_name": "Patricio Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 80,
+      "raw_name": "Zach Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 81,
+      "raw_name": "Carlos Sepúlveda Vergara",
+      "region_code": "CL"
+    },
+    {
+      "placement": 82,
+      "raw_name": "Federico Nattkemper",
+      "region_code": "AR"
+    },
+    {
+      "placement": 83,
+      "raw_name": "Natalio Resa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 84,
+      "raw_name": "Lisandro Martin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 85,
+      "raw_name": "Marco Garcia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 86,
+      "raw_name": "Ajay Sridhar",
+      "region_code": "US"
+    },
+    {
+      "placement": 87,
+      "raw_name": "Matias Diaz Caverlotti",
+      "region_code": "CL"
+    },
+    {
+      "placement": 88,
+      "raw_name": "Facundo Pereyra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 89,
+      "raw_name": "Julian Perini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 90,
+      "raw_name": "Jeremy Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 91,
+      "raw_name": "Lucas Paglia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 92,
+      "raw_name": "Facundo Romero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 93,
+      "raw_name": "Rj Squires",
+      "region_code": "US"
+    },
+    {
+      "placement": 94,
+      "raw_name": "Raul Merino",
+      "region_code": "MX"
+    },
+    {
+      "placement": 95,
+      "raw_name": "Franco Lemos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 96,
+      "raw_name": "Matias Vera",
+      "region_code": "AR"
+    },
+    {
+      "placement": 97,
+      "raw_name": "Bruno Felicio",
+      "region_code": "BR"
+    },
+    {
+      "placement": 98,
+      "raw_name": "Isidoro Jaimovich Decotto",
+      "region_code": "AR"
+    },
+    {
+      "placement": 99,
+      "raw_name": "Gianluca Pagano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 100,
+      "raw_name": "Yoel Trujillo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 101,
+      "raw_name": "Daniel Hugar",
+      "region_code": "US"
+    },
+    {
+      "placement": 102,
+      "raw_name": "Ignacio Zazzali",
+      "region_code": "AR"
+    },
+    {
+      "placement": 103,
+      "raw_name": "Matias Velazquez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 104,
+      "raw_name": "Victor Freitas",
+      "region_code": "BR"
+    },
+    {
+      "placement": 105,
+      "raw_name": "Naim Cambe",
+      "region_code": "AR"
+    },
+    {
+      "placement": 106,
+      "raw_name": "Benjamin Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 107,
+      "raw_name": "Camilo Fernández",
+      "region_code": "CL"
+    },
+    {
+      "placement": 108,
+      "raw_name": "Agustin Perkins",
+      "region_code": "AR"
+    },
+    {
+      "placement": 109,
+      "raw_name": "Adriano Manzini Silva",
+      "region_code": "BR"
+    },
+    {
+      "placement": 110,
+      "raw_name": "Ignacio Gutierrez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 111,
+      "raw_name": "Pablo Andres Lippo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 112,
+      "raw_name": "Nicolás Cruz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 113,
+      "raw_name": "Marcelo Pacaje",
+      "region_code": "CL"
+    },
+    {
+      "placement": 114,
+      "raw_name": "Facundo Medina Palacios",
+      "region_code": "AR"
+    },
+    {
+      "placement": 115,
+      "raw_name": "Guillermo Muñoz Tejo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 116,
+      "raw_name": "Christian Federico Vola",
+      "region_code": "AR"
+    },
+    {
+      "placement": 117,
+      "raw_name": "Aleks Rogič",
+      "region_code": "SI"
+    },
+    {
+      "placement": 118,
+      "raw_name": "Fabian Robledo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 119,
+      "raw_name": "Luis Venegas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 120,
+      "raw_name": "Changyu Liu",
+      "region_code": "CN"
+    },
+    {
+      "placement": 121,
+      "raw_name": "Julián Martín Guerra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 122,
+      "raw_name": "Belen Orallo Mackey",
+      "region_code": "AR"
+    },
+    {
+      "placement": 123,
+      "raw_name": "Alonso Orellana",
+      "region_code": "CL"
+    },
+    {
+      "placement": 124,
+      "raw_name": "Esteban O'Compley",
+      "region_code": "CL"
+    },
+    {
+      "placement": 125,
+      "raw_name": "Hiago Thomé",
+      "region_code": "BR"
+    },
+    {
+      "placement": 126,
+      "raw_name": "Franco Nicolás Marquez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 127,
+      "raw_name": "Augusto Yaquemet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 128,
+      "raw_name": "Caio Navarro",
+      "region_code": "BR"
+    },
+    {
+      "placement": 129,
+      "raw_name": "Guillermo Linares",
+      "region_code": "PE"
+    },
+    {
+      "placement": 130,
+      "raw_name": "Eduardo Romanelli",
+      "region_code": "BR"
+    },
+    {
+      "placement": 131,
+      "raw_name": "Santiago Prieto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 132,
+      "raw_name": "Rafael Sepulveda",
+      "region_code": "CL"
+    },
+    {
+      "placement": 133,
+      "raw_name": "Jorge Villar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 134,
+      "raw_name": "Claudio Tapia Balboa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 135,
+      "raw_name": "Federico Garderes",
+      "region_code": "AR"
+    },
+    {
+      "placement": 136,
+      "raw_name": "Juan Cruz Francia",
+      "region_code": "AR"
+    },
+    {
+      "placement": 137,
+      "raw_name": "Manuel Collazos",
+      "region_code": "PE"
+    },
+    {
+      "placement": 138,
+      "raw_name": "Otaner Demarchi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 139,
+      "raw_name": "Stefano Botello",
+      "region_code": "CL"
+    },
+    {
+      "placement": 140,
+      "raw_name": "Roberto Flores",
+      "region_code": "CL"
+    },
+    {
+      "placement": 141,
+      "raw_name": "Lautaro Allende",
+      "region_code": "AR"
+    },
+    {
+      "placement": 142,
+      "raw_name": "Eric Villagra",
+      "region_code": "CL"
+    },
+    {
+      "placement": 143,
+      "raw_name": "Nicolas Zuccotti",
+      "region_code": "UY"
+    },
+    {
+      "placement": 144,
+      "raw_name": "Jose Daniel Baca Crisanto",
+      "region_code": "PE"
+    },
+    {
+      "placement": 145,
+      "raw_name": "Agustin Blas Pugliese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 146,
+      "raw_name": "Carlos Medina Astete",
+      "region_code": "PE"
+    },
+    {
+      "placement": 147,
+      "raw_name": "Ruth Foix",
+      "region_code": "CL"
+    },
+    {
+      "placement": 148,
+      "raw_name": "Miguel Angel Rojas Duk",
+      "region_code": "CL"
+    },
+    {
+      "placement": 149,
+      "raw_name": "Mauro Nahuel Rojas",
+      "region_code": "AR"
+    },
+    {
+      "placement": 150,
+      "raw_name": "Nicolas Capone",
+      "region_code": "AR"
+    },
+    {
+      "placement": 151,
+      "raw_name": "Raul Barahona",
+      "region_code": "CL"
+    },
+    {
+      "placement": 152,
+      "raw_name": "Tobias Tamashiro",
+      "region_code": "AR"
+    },
+    {
+      "placement": 153,
+      "raw_name": "Jorge Guerrero Bardales",
+      "region_code": "PE"
+    },
+    {
+      "placement": 154,
+      "raw_name": "Sebastian Alejandro Riquelme Navarrete",
+      "region_code": "CL"
+    },
+    {
+      "placement": 155,
+      "raw_name": "Agustin Pessano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 156,
+      "raw_name": "Bruno Machado",
+      "region_code": "BR"
+    },
+    {
+      "placement": 157,
+      "raw_name": "Juan Bautista Aramberri",
+      "region_code": "AR"
+    },
+    {
+      "placement": 158,
+      "raw_name": "Nicolás Piquerez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 159,
+      "raw_name": "Martín Piquerez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 160,
+      "raw_name": "Dario Cristian Rebusque",
+      "region_code": "AR"
+    },
+    {
+      "placement": 161,
+      "raw_name": "Leonardo Silva De Souza",
+      "region_code": "BR"
+    },
+    {
+      "placement": 162,
+      "raw_name": "Claudio Bachmann",
+      "region_code": "CL"
+    },
+    {
+      "placement": 163,
+      "raw_name": "Nahuel Avalos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 164,
+      "raw_name": "Joaquin Sanchez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 165,
+      "raw_name": "Francisco Marquet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 166,
+      "raw_name": "Osvaldo Eguren",
+      "region_code": "AR"
+    },
+    {
+      "placement": 167,
+      "raw_name": "Esteban Diaz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 168,
+      "raw_name": "Isidora Torres",
+      "region_code": "CL"
+    },
+    {
+      "placement": 169,
+      "raw_name": "Diego Arcos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 170,
+      "raw_name": "Lourdes Marquet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 171,
+      "raw_name": "Andrew Weiss",
+      "region_code": "US"
+    },
+    {
+      "placement": 172,
+      "raw_name": "Gabriel Galaz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 173,
+      "raw_name": "Miguel Angel Adofacci",
+      "region_code": "CL"
+    },
+    {
+      "placement": 174,
+      "raw_name": "Lucas Gonzalo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 175,
+      "raw_name": "Federico Vega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 176,
+      "raw_name": "Luciano Macchioli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 177,
+      "raw_name": "Martín Hödar Salazar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 178,
+      "raw_name": "Marc-Alexandre Chenail",
+      "region_code": "CA"
+    },
+    {
+      "placement": 179,
+      "raw_name": "Alan Ezequiel Marin Ore",
+      "region_code": "AR"
+    },
+    {
+      "placement": 180,
+      "raw_name": "Alex Maidana",
+      "region_code": "AR"
+    },
+    {
+      "placement": 181,
+      "raw_name": "Ricardo Ferrus",
+      "region_code": "AR"
+    },
+    {
+      "placement": 182,
+      "raw_name": "Carlos Valdés",
+      "region_code": "CL"
+    },
+    {
+      "placement": 183,
+      "raw_name": "Dante Lenell",
+      "region_code": "AR"
+    },
+    {
+      "placement": 184,
+      "raw_name": "Juan Jose Madrigal Cuartas",
+      "region_code": "CO"
+    },
+    {
+      "placement": 185,
+      "raw_name": "Fernando Venegas",
+      "region_code": "EC"
+    },
+    {
+      "placement": 186,
+      "raw_name": "Raul Chan Lanas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 187,
+      "raw_name": "Oscar Moya",
+      "region_code": "CL"
+    },
+    {
+      "placement": 188,
+      "raw_name": "Miguel Alejandro Hernández García",
+      "region_code": "MX"
+    },
+    {
+      "placement": 189,
+      "raw_name": "Valentino Peng",
+      "region_code": "AR"
+    },
+    {
+      "placement": 190,
+      "raw_name": "Franco Thomas Olita",
+      "region_code": "AR"
+    },
+    {
+      "placement": 191,
+      "raw_name": "Fernando Maia Noronha",
+      "region_code": "BR"
+    },
+    {
+      "placement": 192,
+      "raw_name": "Mariano Viejo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 193,
+      "raw_name": "Omar Uribe",
+      "region_code": "PE"
+    },
+    {
+      "placement": 194,
+      "raw_name": "Andres Cordova",
+      "region_code": "CL"
+    },
+    {
+      "placement": 195,
+      "raw_name": "Felipe Ríos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 196,
+      "raw_name": "Stefano Radogna",
+      "region_code": "AR"
+    },
+    {
+      "placement": 197,
+      "raw_name": "Matias Paul",
+      "region_code": "AR"
+    },
+    {
+      "placement": 198,
+      "raw_name": "Felipe Olivero",
+      "region_code": "EC"
+    },
+    {
+      "placement": 199,
+      "raw_name": "Rodrigo Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 200,
+      "raw_name": "Andreas Di Candia",
+      "region_code": "UY"
+    },
+    {
+      "placement": 201,
+      "raw_name": "Andrés Ponfil",
+      "region_code": "AR"
+    },
+    {
+      "placement": 202,
+      "raw_name": "Nicolás Suh",
+      "region_code": "AR"
+    },
+    {
+      "placement": 203,
+      "raw_name": "Luis Bañon",
+      "region_code": "PE"
+    },
+    {
+      "placement": 204,
+      "raw_name": "Michele Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 205,
+      "raw_name": "Lucas Schafer",
+      "region_code": "CL"
+    },
+    {
+      "placement": 206,
+      "raw_name": "Cristian Ferreyra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 207,
+      "raw_name": "Tobias Basin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 208,
+      "raw_name": "Facundo Figoli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 209,
+      "raw_name": "Ignacio Bombau",
+      "region_code": "AR"
+    },
+    {
+      "placement": 210,
+      "raw_name": "Ivo Guzmán Codocea",
+      "region_code": "AR"
+    },
+    {
+      "placement": 211,
+      "raw_name": "Martin Callegari",
+      "region_code": "AR"
+    },
+    {
+      "placement": 212,
+      "raw_name": "Pablo Leiva",
+      "region_code": "CL"
+    },
+    {
+      "placement": 213,
+      "raw_name": "Jorge Maximiliano Rivero Daca",
+      "region_code": "AR"
+    },
+    {
+      "placement": 214,
+      "raw_name": "Laura Webber",
+      "region_code": "BR"
+    },
+    {
+      "placement": 215,
+      "raw_name": "Luciano Bautista",
+      "region_code": "CL"
+    },
+    {
+      "placement": 216,
+      "raw_name": "Sebastián Alessandroni",
+      "region_code": "AR"
+    },
+    {
+      "placement": 217,
+      "raw_name": "Claudio Armijo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 218,
+      "raw_name": "Lukas Norambuena",
+      "region_code": "CL"
+    },
+    {
+      "placement": 219,
+      "raw_name": "Sebastian Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 220,
+      "raw_name": "Alexis Pavichevich",
+      "region_code": "AR"
+    },
+    {
+      "placement": 221,
+      "raw_name": "Raul Nash",
+      "region_code": "CL"
+    },
+    {
+      "placement": 222,
+      "raw_name": "Luis Meza Aranguiz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 223,
+      "raw_name": "Bartosz Pawlik",
+      "region_code": "PL"
+    },
+    {
+      "placement": 224,
+      "raw_name": "Irvin De Los Rios",
+      "region_code": "MX"
+    },
+    {
+      "placement": 225,
+      "raw_name": "Leandro Espindola",
+      "region_code": "AR"
+    },
+    {
+      "placement": 226,
+      "raw_name": "Zheng Liang Deng",
+      "region_code": "CL"
+    },
+    {
+      "placement": 227,
+      "raw_name": "Carlos Guerra",
+      "region_code": "MX"
+    },
+    {
+      "placement": 228,
+      "raw_name": "Nataniel Lovagnini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 229,
+      "raw_name": "Matias Pichun",
+      "region_code": "CL"
+    },
+    {
+      "placement": 230,
+      "raw_name": "Matias Benitez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 231,
+      "raw_name": "David Valdebenito",
+      "region_code": "CL"
+    },
+    {
+      "placement": 232,
+      "raw_name": "Alfonso Herrera",
+      "region_code": "PE"
+    },
+    {
+      "placement": 233,
+      "raw_name": "Simón Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 234,
+      "raw_name": "Braian Ochoa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 235,
+      "raw_name": "Gianluca Frega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 236,
+      "raw_name": "Sebastián Reyes",
+      "region_code": "PE"
+    },
+    {
+      "placement": 237,
+      "raw_name": "Alejandro Lucandrea",
+      "region_code": "AR"
+    },
+    {
+      "placement": 238,
+      "raw_name": "Nicolas Michay Quiñenao",
+      "region_code": "AR"
+    },
+    {
+      "placement": 239,
+      "raw_name": "Bernardo Splendiani",
+      "region_code": "AR"
+    },
+    {
+      "placement": 240,
+      "raw_name": "Gabriel Chiriboga",
+      "region_code": "EC"
+    },
+    {
+      "placement": 241,
+      "raw_name": "Raul Rojas Nuñez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 242,
+      "raw_name": "Mateo San Martino",
+      "region_code": "AR"
+    },
+    {
+      "placement": 243,
+      "raw_name": "Ignacio Viejo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 244,
+      "raw_name": "Steven Hamula",
+      "region_code": "US"
+    },
+    {
+      "placement": 245,
+      "raw_name": "Tomás Reyes",
+      "region_code": "CL"
+    },
+    {
+      "placement": 246,
+      "raw_name": "Pablo Meza",
+      "region_code": "MX"
+    },
+    {
+      "placement": 247,
+      "raw_name": "Diego Baptista",
+      "region_code": "UY"
+    },
+    {
+      "placement": 248,
+      "raw_name": "Diego Lopez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 249,
+      "raw_name": "Nicolás Polito Muñoz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 250,
+      "raw_name": "Nicolas Bralla",
+      "region_code": "CL"
+    },
+    {
+      "placement": 251,
+      "raw_name": "Martin Estévez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 252,
+      "raw_name": "Francisco Bahamondes",
+      "region_code": "CL"
+    },
+    {
+      "placement": 253,
+      "raw_name": "Selvan K",
+      "region_code": "SK"
+    },
+    {
+      "placement": 254,
+      "raw_name": "Ariel Jonatan Song",
+      "region_code": "AR"
+    },
+    {
+      "placement": 255,
+      "raw_name": "Leonardo Fernandez Da Silva",
+      "region_code": "AR"
+    },
+    {
+      "placement": 256,
+      "raw_name": "Tomas Beltrame",
+      "region_code": "AR"
+    },
+    {
+      "placement": 257,
+      "raw_name": "Tomás Blei",
+      "region_code": "AR"
+    },
+    {
+      "placement": 258,
+      "raw_name": "Agustin Buontempo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 259,
+      "raw_name": "Sergio Calvanese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 260,
+      "raw_name": "Federico Barrionuevo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 261,
+      "raw_name": "Gonzalo Asencio",
+      "region_code": "AR"
+    },
+    {
+      "placement": 262,
+      "raw_name": "Nahuel Pena Congregado",
+      "region_code": "AR"
+    },
+    {
+      "placement": 263,
+      "raw_name": "Luis Pedro Ferrari Esbadalate",
+      "region_code": "BR"
+    },
+    {
+      "placement": 264,
+      "raw_name": "Juan David Cruz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 265,
+      "raw_name": "Gonzalo Lema",
+      "region_code": "UY"
+    },
+    {
+      "placement": 266,
+      "raw_name": "Martin Cazenave",
+      "region_code": "CL"
+    },
+    {
+      "placement": 267,
+      "raw_name": "Gino Campanini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 268,
+      "raw_name": "Mikeas Nahuel Leiria",
+      "region_code": "AR"
+    },
+    {
+      "placement": 269,
+      "raw_name": "Luis Alfredo Lorenzo",
+      "region_code": "MX"
+    },
+    {
+      "placement": 270,
+      "raw_name": "Santiago Saferstein",
+      "region_code": "AR"
+    },
+    {
+      "placement": 271,
+      "raw_name": "Mariano Nizzero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 272,
+      "raw_name": "Martin Quezada",
+      "region_code": "AR"
+    },
+    {
+      "placement": 273,
+      "raw_name": "Azael Ubillus",
+      "region_code": "EC"
+    },
+    {
+      "placement": 274,
+      "raw_name": "Agustin Garcia",
+      "region_code": "AR"
+    },
+    {
+      "placement": 275,
+      "raw_name": "Edgardo Morales",
+      "region_code": "CL"
+    },
+    {
+      "placement": 276,
+      "raw_name": "Cristian Barrionuevo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 277,
+      "raw_name": "Pablo Damian Castro Murgolo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 278,
+      "raw_name": "Thomas Javier Fino",
+      "region_code": "AR"
+    },
+    {
+      "placement": 279,
+      "raw_name": "Myna Obara",
+      "region_code": "BR"
+    },
+    {
+      "placement": 280,
+      "raw_name": "Tomas Kuroña",
+      "region_code": "AR"
+    },
+    {
+      "placement": 281,
+      "raw_name": "Marco Jhoneliot Loera Escalante",
+      "region_code": "MX"
+    },
+    {
+      "placement": 282,
+      "raw_name": "Juan Torres",
+      "region_code": "AR"
+    },
+    {
+      "placement": 283,
+      "raw_name": "Rodrigo Ceballos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 284,
+      "raw_name": "Pedro Mercado",
+      "region_code": "AR"
+    },
+    {
+      "placement": 285,
+      "raw_name": "Adrian Delgado",
+      "region_code": "MX"
+    },
+    {
+      "placement": 286,
+      "raw_name": "Felipe Gomez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 287,
+      "raw_name": "Giuliano Imparato",
+      "region_code": "AR"
+    },
+    {
+      "placement": 288,
+      "raw_name": "Santiago Albrecht",
+      "region_code": "AR"
+    },
+    {
+      "placement": 289,
+      "raw_name": "Bruno Nicolas Martín",
+      "region_code": "AR"
+    },
+    {
+      "placement": 290,
+      "raw_name": "Maximiliano Gabbanelli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 291,
+      "raw_name": "Nicolás Alberto Sanchez Acosta",
+      "region_code": "AR"
+    },
+    {
+      "placement": 292,
+      "raw_name": "Bastian Lisboa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 293,
+      "raw_name": "Ezequiel Rey",
+      "region_code": "AR"
+    },
+    {
+      "placement": 294,
+      "raw_name": "Oscar Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 295,
+      "raw_name": "Franco Andrea Monetti",
+      "region_code": "AR"
+    },
+    {
+      "placement": 296,
+      "raw_name": "Jorge Irrazabal",
+      "region_code": "AR"
+    },
+    {
+      "placement": 297,
+      "raw_name": "Juan Affre",
+      "region_code": "AR"
+    },
+    {
+      "placement": 298,
+      "raw_name": "Salvador Faraldo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 299,
+      "raw_name": "Tomas Beltrame",
+      "region_code": "AR"
+    },
+    {
+      "placement": 300,
+      "raw_name": "Juan Sebastian Ortega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 301,
+      "raw_name": "Santiago Matos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 302,
+      "raw_name": "Jose Tello V.",
+      "region_code": "CL"
+    },
+    {
+      "placement": 303,
+      "raw_name": "Yasmin Menezes",
+      "region_code": "BR"
+    },
+    {
+      "placement": 304,
+      "raw_name": "Nicolas Manzo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 305,
+      "raw_name": "Carlos Azamoor",
+      "region_code": "AR"
+    },
+    {
+      "placement": 306,
+      "raw_name": "Federico Laborde",
+      "region_code": "AR"
+    },
+    {
+      "placement": 307,
+      "raw_name": "Mateo Luis Valdesolo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 308,
+      "raw_name": "Nicolás Gimenez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 309,
+      "raw_name": "Bryan Ortiz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 310,
+      "raw_name": "Marcos Urquijo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 311,
+      "raw_name": "Wilson Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 312,
+      "raw_name": "Nakay Kesler",
+      "region_code": "AR"
+    },
+    {
+      "placement": 313,
+      "raw_name": "Facundo Alvarez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 314,
+      "raw_name": "Guillermo Fernandez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 315,
+      "raw_name": "Ignacio De Chiano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 316,
+      "raw_name": "Federico Vara",
+      "region_code": "AR"
+    },
+    {
+      "placement": 317,
+      "raw_name": "Luis Teran",
+      "region_code": "PE"
+    },
+    {
+      "placement": 318,
+      "raw_name": "Raissa Alves Arruda",
+      "region_code": "BR"
+    },
+    {
+      "placement": 319,
+      "raw_name": "Rigoberto Meneses",
+      "region_code": "AR"
+    },
+    {
+      "placement": 320,
+      "raw_name": "Lucas Gabriel Albanese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 321,
+      "raw_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 322,
+      "raw_name": "Nicolas Buczak",
+      "region_code": "AR"
+    },
+    {
+      "placement": 323,
+      "raw_name": "Cristian Ozuna",
+      "region_code": "AR"
+    },
+    {
+      "placement": 324,
+      "raw_name": "Raul Alejandro Vidable",
+      "region_code": "AR"
+    },
+    {
+      "placement": 325,
+      "raw_name": "Federico Lousa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 326,
+      "raw_name": "Matias Martin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 327,
+      "raw_name": "Luciano Norberto Livschitz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 328,
+      "raw_name": "Matias Sumonte",
+      "region_code": "CL"
+    },
+    {
+      "placement": 329,
+      "raw_name": "Florencia Sanchez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 330,
+      "raw_name": "Ezequiel Jerez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 331,
+      "raw_name": "Mauro Fernandez",
+      "region_code": "US"
+    },
+    {
+      "placement": 332,
+      "raw_name": "Alex Brest",
+      "region_code": "AR"
+    },
+    {
+      "placement": 333,
+      "raw_name": "Manuel Ferrero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 334,
+      "raw_name": "Nehuen Covelo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 335,
+      "raw_name": "Sebastian Carreira",
+      "region_code": "AR"
+    },
+    {
+      "placement": 336,
+      "raw_name": "Juliana Caldani",
+      "region_code": "AR"
+    },
+    {
+      "placement": 337,
+      "raw_name": "Agustin Moral",
+      "region_code": "AR"
+    },
+    {
+      "placement": 338,
+      "raw_name": "Cristian Perez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 339,
+      "raw_name": "Augusto Mayoral",
+      "region_code": "AR"
+    },
+    {
+      "placement": 340,
+      "raw_name": "Francisco Stahl",
+      "region_code": "AR"
+    },
+    {
+      "placement": 341,
+      "raw_name": "Pascal Donoso Candia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 342,
+      "raw_name": "Juan Nielsen",
+      "region_code": "AR"
+    },
+    {
+      "placement": 343,
+      "raw_name": "Francisco Alca Chacon",
+      "region_code": "PE"
+    },
+    {
+      "placement": 344,
+      "raw_name": "Leandro Angeli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 345,
+      "raw_name": "Matias Andres Angeli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 346,
+      "raw_name": "Alejo Fittipaldi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 347,
+      "raw_name": "Alexander Alex Panozo Avila",
+      "region_code": "AR"
+    },
+    {
+      "placement": 348,
+      "raw_name": "Facundo Cayo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 349,
+      "raw_name": "Julián Antonio Zapata",
+      "region_code": "AR"
+    },
+    {
+      "placement": 350,
+      "raw_name": "Leandro Calonico",
+      "region_code": "AR"
+    }
+  ],
+  "normalized_entries": [
+    {
+      "placement": 1,
+      "normalized_name": "Eduardo Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 2,
+      "normalized_name": "Denis Provázek",
+      "region_code": "CZ"
+    },
+    {
+      "placement": 3,
+      "normalized_name": "Ricardo Vega",
+      "region_code": "CL"
+    },
+    {
+      "placement": 4,
+      "normalized_name": "Caio Pires",
+      "region_code": "BR"
+    },
+    {
+      "placement": 5,
+      "normalized_name": "Yerco Valencia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 6,
+      "normalized_name": "Alexis Hormazábal",
+      "region_code": "CL"
+    },
+    {
+      "placement": 7,
+      "normalized_name": "Aramis Gomez Arnaiz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 8,
+      "normalized_name": "Jonathan Fabrizio Belucci",
+      "region_code": "AR"
+    },
+    {
+      "placement": 9,
+      "normalized_name": "Federico Gallo",
+      "region_code": "ES"
+    },
+    {
+      "placement": 10,
+      "normalized_name": "Dre Alderette",
+      "region_code": "US"
+    },
+    {
+      "placement": 11,
+      "normalized_name": "Otavio Gouveia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 12,
+      "normalized_name": "Manuel Urzúa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 13,
+      "normalized_name": "Nino Anderluh",
+      "region_code": "SI"
+    },
+    {
+      "placement": 14,
+      "normalized_name": "Francisco Tobar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 15,
+      "normalized_name": "Javier Romero Ramos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 16,
+      "normalized_name": "Maciej Chojnacki",
+      "region_code": "PL"
+    },
+    {
+      "placement": 17,
+      "normalized_name": "Matias Matricardi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 18,
+      "normalized_name": "Sebastian Arias",
+      "region_code": "CL"
+    },
+    {
+      "placement": 19,
+      "normalized_name": "Jackson Ford",
+      "region_code": "CA"
+    },
+    {
+      "placement": 20,
+      "normalized_name": "Facundo Facio",
+      "region_code": "AR"
+    },
+    {
+      "placement": 21,
+      "normalized_name": "Alejo Salvador",
+      "region_code": "AR"
+    },
+    {
+      "placement": 22,
+      "normalized_name": "Ciaran Farah",
+      "region_code": "CA"
+    },
+    {
+      "placement": 23,
+      "normalized_name": "Miguel Lopez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 24,
+      "normalized_name": "Felipe Garcia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 25,
+      "normalized_name": "Samuel Pérez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 26,
+      "normalized_name": "Felipe Cisternas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 27,
+      "normalized_name": "Genaro Jean Paul Murga Olaya",
+      "region_code": "PE"
+    },
+    {
+      "placement": 28,
+      "normalized_name": "Bruno Santi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 29,
+      "normalized_name": "Francisco Osorio",
+      "region_code": "CL"
+    },
+    {
+      "placement": 30,
+      "normalized_name": "Franco De Nardo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 31,
+      "normalized_name": "Martin Dominguez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 32,
+      "normalized_name": "Andres Torres",
+      "region_code": "CO"
+    },
+    {
+      "placement": 33,
+      "normalized_name": "Marco Alejandro Dardis",
+      "region_code": "AR"
+    },
+    {
+      "placement": 34,
+      "normalized_name": "Daniel Cajahuaringa Rivera",
+      "region_code": "PE"
+    },
+    {
+      "placement": 35,
+      "normalized_name": "Tomás Riquelme",
+      "region_code": "CL"
+    },
+    {
+      "placement": 36,
+      "normalized_name": "Juan Martín Bravo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 37,
+      "normalized_name": "Oscar Vera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 38,
+      "normalized_name": "Cristian Gallo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 39,
+      "normalized_name": "Eduardo Dominguez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 40,
+      "normalized_name": "Jesus Rodriguez",
+      "region_code": "PE"
+    },
+    {
+      "placement": 41,
+      "normalized_name": "Diego Cassiraga",
+      "region_code": "AR"
+    },
+    {
+      "placement": 42,
+      "normalized_name": "Alejandro Carrillo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 43,
+      "normalized_name": "Augusto Beringuer",
+      "region_code": "BR"
+    },
+    {
+      "placement": 44,
+      "normalized_name": "José Blanco",
+      "region_code": "CL"
+    },
+    {
+      "placement": 45,
+      "normalized_name": "Andres Estefano Gajardo Lopehandia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 46,
+      "normalized_name": "Damián Gabriel Riquel",
+      "region_code": "AR"
+    },
+    {
+      "placement": 47,
+      "normalized_name": "Diego Varea",
+      "region_code": "PE"
+    },
+    {
+      "placement": 48,
+      "normalized_name": "Franco Depetris",
+      "region_code": "AR"
+    },
+    {
+      "placement": 49,
+      "normalized_name": "Joel Ortiz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 50,
+      "normalized_name": "Alejandro Rivera",
+      "region_code": "CO"
+    },
+    {
+      "placement": 51,
+      "normalized_name": "Fernando Lopez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 52,
+      "normalized_name": "Sebastian Leiva",
+      "region_code": "CL"
+    },
+    {
+      "placement": 53,
+      "normalized_name": "Jose Torres",
+      "region_code": "CL"
+    },
+    {
+      "placement": 54,
+      "normalized_name": "Damian Fernandez Urroz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 55,
+      "normalized_name": "Benjamín Salina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 56,
+      "normalized_name": "Christian Badenas",
+      "region_code": "AR"
+    },
+    {
+      "placement": 57,
+      "normalized_name": "Emanuel Diogo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 58,
+      "normalized_name": "Sebastian Mora",
+      "region_code": "CL"
+    },
+    {
+      "placement": 59,
+      "normalized_name": "Gaston Kitela",
+      "region_code": "AR"
+    },
+    {
+      "placement": 60,
+      "normalized_name": "Jonhathan Vazquez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 61,
+      "normalized_name": "Sebastián Iturra",
+      "region_code": "CL"
+    },
+    {
+      "placement": 62,
+      "normalized_name": "Julian Diaz Ferrara",
+      "region_code": "AR"
+    },
+    {
+      "placement": 63,
+      "normalized_name": "Nicolás Magliulo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 64,
+      "normalized_name": "Álvaro Guerrero",
+      "region_code": "CL"
+    },
+    {
+      "placement": 65,
+      "normalized_name": "Bruno Garza",
+      "region_code": "AR"
+    },
+    {
+      "placement": 66,
+      "normalized_name": "Eric Uriel Patlallan",
+      "region_code": "AR"
+    },
+    {
+      "placement": 67,
+      "normalized_name": "Giovanny Sasso",
+      "region_code": "BR"
+    },
+    {
+      "placement": 68,
+      "normalized_name": "Ruiter Roberto Resende",
+      "region_code": "BR"
+    },
+    {
+      "placement": 69,
+      "normalized_name": "Esteban Andrés Figueroa Flores",
+      "region_code": "CL"
+    },
+    {
+      "placement": 70,
+      "normalized_name": "Frederico Assis",
+      "region_code": "BR"
+    },
+    {
+      "placement": 71,
+      "normalized_name": "Gabriel Pinheiro",
+      "region_code": "BR"
+    },
+    {
+      "placement": 72,
+      "normalized_name": "Luis Carlos Alonso Delgado Araujo",
+      "region_code": "PE"
+    },
+    {
+      "placement": 73,
+      "normalized_name": "Luis Martinez",
+      "region_code": "PE"
+    },
+    {
+      "placement": 74,
+      "normalized_name": "Alexander Alvarado Tolmo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 75,
+      "normalized_name": "Matias Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 76,
+      "normalized_name": "Daniel Cabrera",
+      "region_code": "UY"
+    },
+    {
+      "placement": 77,
+      "normalized_name": "Francisco Toloza",
+      "region_code": "CL"
+    },
+    {
+      "placement": 78,
+      "normalized_name": "Jonathan Guglielmo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 79,
+      "normalized_name": "Patricio Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 80,
+      "normalized_name": "Zach Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 81,
+      "normalized_name": "Carlos Sepúlveda Vergara",
+      "region_code": "CL"
+    },
+    {
+      "placement": 82,
+      "normalized_name": "Federico Nattkemper",
+      "region_code": "AR"
+    },
+    {
+      "placement": 83,
+      "normalized_name": "Natalio Resa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 84,
+      "normalized_name": "Lisandro Martin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 85,
+      "normalized_name": "Marco Garcia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 86,
+      "normalized_name": "Ajay Sridhar",
+      "region_code": "US"
+    },
+    {
+      "placement": 87,
+      "normalized_name": "Matias Diaz Caverlotti",
+      "region_code": "CL"
+    },
+    {
+      "placement": 88,
+      "normalized_name": "Facundo Pereyra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 89,
+      "normalized_name": "Julian Perini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 90,
+      "normalized_name": "Jeremy Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 91,
+      "normalized_name": "Lucas Paglia",
+      "region_code": "BR"
+    },
+    {
+      "placement": 92,
+      "normalized_name": "Facundo Romero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 93,
+      "normalized_name": "Rj Squires",
+      "region_code": "US"
+    },
+    {
+      "placement": 94,
+      "normalized_name": "Raul Merino",
+      "region_code": "MX"
+    },
+    {
+      "placement": 95,
+      "normalized_name": "Franco Lemos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 96,
+      "normalized_name": "Matias Vera",
+      "region_code": "AR"
+    },
+    {
+      "placement": 97,
+      "normalized_name": "Bruno Felicio",
+      "region_code": "BR"
+    },
+    {
+      "placement": 98,
+      "normalized_name": "Isidoro Jaimovich Decotto",
+      "region_code": "AR"
+    },
+    {
+      "placement": 99,
+      "normalized_name": "Gianluca Pagano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 100,
+      "normalized_name": "Yoel Trujillo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 101,
+      "normalized_name": "Daniel Hugar",
+      "region_code": "US"
+    },
+    {
+      "placement": 102,
+      "normalized_name": "Ignacio Zazzali",
+      "region_code": "AR"
+    },
+    {
+      "placement": 103,
+      "normalized_name": "Matias Velazquez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 104,
+      "normalized_name": "Victor Freitas",
+      "region_code": "BR"
+    },
+    {
+      "placement": 105,
+      "normalized_name": "Naim Cambe",
+      "region_code": "AR"
+    },
+    {
+      "placement": 106,
+      "normalized_name": "Benjamin Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 107,
+      "normalized_name": "Camilo Fernández",
+      "region_code": "CL"
+    },
+    {
+      "placement": 108,
+      "normalized_name": "Agustin Perkins",
+      "region_code": "AR"
+    },
+    {
+      "placement": 109,
+      "normalized_name": "Adriano Manzini Silva",
+      "region_code": "BR"
+    },
+    {
+      "placement": 110,
+      "normalized_name": "Ignacio Gutierrez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 111,
+      "normalized_name": "Pablo Andres Lippo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 112,
+      "normalized_name": "Nicolás Cruz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 113,
+      "normalized_name": "Marcelo Pacaje",
+      "region_code": "CL"
+    },
+    {
+      "placement": 114,
+      "normalized_name": "Facundo Medina Palacios",
+      "region_code": "AR"
+    },
+    {
+      "placement": 115,
+      "normalized_name": "Guillermo Muñoz Tejo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 116,
+      "normalized_name": "Christian Federico Vola",
+      "region_code": "AR"
+    },
+    {
+      "placement": 117,
+      "normalized_name": "Aleks Rogič",
+      "region_code": "SI"
+    },
+    {
+      "placement": 118,
+      "normalized_name": "Fabian Robledo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 119,
+      "normalized_name": "Luis Venegas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 120,
+      "normalized_name": "Changyu Liu",
+      "region_code": "CN"
+    },
+    {
+      "placement": 121,
+      "normalized_name": "Julián Martín Guerra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 122,
+      "normalized_name": "Belen Orallo Mackey",
+      "region_code": "AR"
+    },
+    {
+      "placement": 123,
+      "normalized_name": "Alonso Orellana",
+      "region_code": "CL"
+    },
+    {
+      "placement": 124,
+      "normalized_name": "Esteban O'Compley",
+      "region_code": "CL"
+    },
+    {
+      "placement": 125,
+      "normalized_name": "Hiago Thomé",
+      "region_code": "BR"
+    },
+    {
+      "placement": 126,
+      "normalized_name": "Franco Nicolás Marquez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 127,
+      "normalized_name": "Augusto Yaquemet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 128,
+      "normalized_name": "Caio Navarro",
+      "region_code": "BR"
+    },
+    {
+      "placement": 129,
+      "normalized_name": "Guillermo Linares",
+      "region_code": "PE"
+    },
+    {
+      "placement": 130,
+      "normalized_name": "Eduardo Romanelli",
+      "region_code": "BR"
+    },
+    {
+      "placement": 131,
+      "normalized_name": "Santiago Prieto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 132,
+      "normalized_name": "Rafael Sepulveda",
+      "region_code": "CL"
+    },
+    {
+      "placement": 133,
+      "normalized_name": "Jorge Villar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 134,
+      "normalized_name": "Claudio Tapia Balboa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 135,
+      "normalized_name": "Federico Garderes",
+      "region_code": "AR"
+    },
+    {
+      "placement": 136,
+      "normalized_name": "Juan Cruz Francia",
+      "region_code": "AR"
+    },
+    {
+      "placement": 137,
+      "normalized_name": "Manuel Collazos",
+      "region_code": "PE"
+    },
+    {
+      "placement": 138,
+      "normalized_name": "Otaner Demarchi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 139,
+      "normalized_name": "Stefano Botello",
+      "region_code": "CL"
+    },
+    {
+      "placement": 140,
+      "normalized_name": "Roberto Flores",
+      "region_code": "CL"
+    },
+    {
+      "placement": 141,
+      "normalized_name": "Lautaro Allende",
+      "region_code": "AR"
+    },
+    {
+      "placement": 142,
+      "normalized_name": "Eric Villagra",
+      "region_code": "CL"
+    },
+    {
+      "placement": 143,
+      "normalized_name": "Nicolas Zuccotti",
+      "region_code": "UY"
+    },
+    {
+      "placement": 144,
+      "normalized_name": "Jose Daniel Baca Crisanto",
+      "region_code": "PE"
+    },
+    {
+      "placement": 145,
+      "normalized_name": "Agustin Blas Pugliese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 146,
+      "normalized_name": "Carlos Medina Astete",
+      "region_code": "PE"
+    },
+    {
+      "placement": 147,
+      "normalized_name": "Ruth Foix",
+      "region_code": "CL"
+    },
+    {
+      "placement": 148,
+      "normalized_name": "Miguel Angel Rojas Duk",
+      "region_code": "CL"
+    },
+    {
+      "placement": 149,
+      "normalized_name": "Mauro Nahuel Rojas",
+      "region_code": "AR"
+    },
+    {
+      "placement": 150,
+      "normalized_name": "Nicolas Capone",
+      "region_code": "AR"
+    },
+    {
+      "placement": 151,
+      "normalized_name": "Raul Barahona",
+      "region_code": "CL"
+    },
+    {
+      "placement": 152,
+      "normalized_name": "Tobias Tamashiro",
+      "region_code": "AR"
+    },
+    {
+      "placement": 153,
+      "normalized_name": "Jorge Guerrero Bardales",
+      "region_code": "PE"
+    },
+    {
+      "placement": 154,
+      "normalized_name": "Sebastian Alejandro Riquelme Navarrete",
+      "region_code": "CL"
+    },
+    {
+      "placement": 155,
+      "normalized_name": "Agustin Pessano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 156,
+      "normalized_name": "Bruno Machado",
+      "region_code": "BR"
+    },
+    {
+      "placement": 157,
+      "normalized_name": "Juan Bautista Aramberri",
+      "region_code": "AR"
+    },
+    {
+      "placement": 158,
+      "normalized_name": "Nicolás Piquerez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 159,
+      "normalized_name": "Martín Piquerez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 160,
+      "normalized_name": "Dario Cristian Rebusque",
+      "region_code": "AR"
+    },
+    {
+      "placement": 161,
+      "normalized_name": "Leonardo Silva De Souza",
+      "region_code": "BR"
+    },
+    {
+      "placement": 162,
+      "normalized_name": "Claudio Bachmann",
+      "region_code": "CL"
+    },
+    {
+      "placement": 163,
+      "normalized_name": "Nahuel Avalos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 164,
+      "normalized_name": "Joaquin Sanchez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 165,
+      "normalized_name": "Francisco Marquet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 166,
+      "normalized_name": "Osvaldo Eguren",
+      "region_code": "AR"
+    },
+    {
+      "placement": 167,
+      "normalized_name": "Esteban Diaz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 168,
+      "normalized_name": "Isidora Torres",
+      "region_code": "CL"
+    },
+    {
+      "placement": 169,
+      "normalized_name": "Diego Arcos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 170,
+      "normalized_name": "Lourdes Marquet",
+      "region_code": "AR"
+    },
+    {
+      "placement": 171,
+      "normalized_name": "Andrew Weiss",
+      "region_code": "US"
+    },
+    {
+      "placement": 172,
+      "normalized_name": "Gabriel Galaz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 173,
+      "normalized_name": "Miguel Angel Adofacci",
+      "region_code": "CL"
+    },
+    {
+      "placement": 174,
+      "normalized_name": "Lucas Gonzalo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 175,
+      "normalized_name": "Federico Vega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 176,
+      "normalized_name": "Luciano Macchioli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 177,
+      "normalized_name": "Martín Hödar Salazar",
+      "region_code": "CL"
+    },
+    {
+      "placement": 178,
+      "normalized_name": "Marc-Alexandre Chenail",
+      "region_code": "CA"
+    },
+    {
+      "placement": 179,
+      "normalized_name": "Alan Ezequiel Marin Ore",
+      "region_code": "AR"
+    },
+    {
+      "placement": 180,
+      "normalized_name": "Alex Maidana",
+      "region_code": "AR"
+    },
+    {
+      "placement": 181,
+      "normalized_name": "Ricardo Ferrus",
+      "region_code": "AR"
+    },
+    {
+      "placement": 182,
+      "normalized_name": "Carlos Valdés",
+      "region_code": "CL"
+    },
+    {
+      "placement": 183,
+      "normalized_name": "Dante Lenell",
+      "region_code": "AR"
+    },
+    {
+      "placement": 184,
+      "normalized_name": "Juan Jose Madrigal Cuartas",
+      "region_code": "CO"
+    },
+    {
+      "placement": 185,
+      "normalized_name": "Fernando Venegas",
+      "region_code": "EC"
+    },
+    {
+      "placement": 186,
+      "normalized_name": "Raul Chan Lanas",
+      "region_code": "CL"
+    },
+    {
+      "placement": 187,
+      "normalized_name": "Oscar Moya",
+      "region_code": "CL"
+    },
+    {
+      "placement": 188,
+      "normalized_name": "Miguel Alejandro Hernández García",
+      "region_code": "MX"
+    },
+    {
+      "placement": 189,
+      "normalized_name": "Valentino Peng",
+      "region_code": "AR"
+    },
+    {
+      "placement": 190,
+      "normalized_name": "Franco Thomas Olita",
+      "region_code": "AR"
+    },
+    {
+      "placement": 191,
+      "normalized_name": "Fernando Maia Noronha",
+      "region_code": "BR"
+    },
+    {
+      "placement": 192,
+      "normalized_name": "Mariano Viejo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 193,
+      "normalized_name": "Omar Uribe",
+      "region_code": "PE"
+    },
+    {
+      "placement": 194,
+      "normalized_name": "Andres Cordova",
+      "region_code": "CL"
+    },
+    {
+      "placement": 195,
+      "normalized_name": "Felipe Ríos",
+      "region_code": "CL"
+    },
+    {
+      "placement": 196,
+      "normalized_name": "Stefano Radogna",
+      "region_code": "AR"
+    },
+    {
+      "placement": 197,
+      "normalized_name": "Matias Paul",
+      "region_code": "AR"
+    },
+    {
+      "placement": 198,
+      "normalized_name": "Felipe Olivero",
+      "region_code": "EC"
+    },
+    {
+      "placement": 199,
+      "normalized_name": "Rodrigo Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 200,
+      "normalized_name": "Andreas Di Candia",
+      "region_code": "UY"
+    },
+    {
+      "placement": 201,
+      "normalized_name": "Andrés Ponfil",
+      "region_code": "AR"
+    },
+    {
+      "placement": 202,
+      "normalized_name": "Nicolás Suh",
+      "region_code": "AR"
+    },
+    {
+      "placement": 203,
+      "normalized_name": "Luis Bañon",
+      "region_code": "PE"
+    },
+    {
+      "placement": 204,
+      "normalized_name": "Michele Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 205,
+      "normalized_name": "Lucas Schafer",
+      "region_code": "CL"
+    },
+    {
+      "placement": 206,
+      "normalized_name": "Cristian Ferreyra",
+      "region_code": "AR"
+    },
+    {
+      "placement": 207,
+      "normalized_name": "Tobias Basin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 208,
+      "normalized_name": "Facundo Figoli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 209,
+      "normalized_name": "Ignacio Bombau",
+      "region_code": "AR"
+    },
+    {
+      "placement": 210,
+      "normalized_name": "Ivo Guzmán Codocea",
+      "region_code": "AR"
+    },
+    {
+      "placement": 211,
+      "normalized_name": "Martin Callegari",
+      "region_code": "AR"
+    },
+    {
+      "placement": 212,
+      "normalized_name": "Pablo Leiva",
+      "region_code": "CL"
+    },
+    {
+      "placement": 213,
+      "normalized_name": "Jorge Maximiliano Rivero Daca",
+      "region_code": "AR"
+    },
+    {
+      "placement": 214,
+      "normalized_name": "Laura Webber",
+      "region_code": "BR"
+    },
+    {
+      "placement": 215,
+      "normalized_name": "Luciano Bautista",
+      "region_code": "CL"
+    },
+    {
+      "placement": 216,
+      "normalized_name": "Sebastián Alessandroni",
+      "region_code": "AR"
+    },
+    {
+      "placement": 217,
+      "normalized_name": "Claudio Armijo",
+      "region_code": "CL"
+    },
+    {
+      "placement": 218,
+      "normalized_name": "Lukas Norambuena",
+      "region_code": "CL"
+    },
+    {
+      "placement": 219,
+      "normalized_name": "Sebastian Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 220,
+      "normalized_name": "Alexis Pavichevich",
+      "region_code": "AR"
+    },
+    {
+      "placement": 221,
+      "normalized_name": "Raul Nash",
+      "region_code": "CL"
+    },
+    {
+      "placement": 222,
+      "normalized_name": "Luis Meza Aranguiz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 223,
+      "normalized_name": "Bartosz Pawlik",
+      "region_code": "PL"
+    },
+    {
+      "placement": 224,
+      "normalized_name": "Irvin De Los Rios",
+      "region_code": "MX"
+    },
+    {
+      "placement": 225,
+      "normalized_name": "Leandro Espindola",
+      "region_code": "AR"
+    },
+    {
+      "placement": 226,
+      "normalized_name": "Zheng Liang Deng",
+      "region_code": "CL"
+    },
+    {
+      "placement": 227,
+      "normalized_name": "Carlos Guerra",
+      "region_code": "MX"
+    },
+    {
+      "placement": 228,
+      "normalized_name": "Nataniel Lovagnini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 229,
+      "normalized_name": "Matias Pichun",
+      "region_code": "CL"
+    },
+    {
+      "placement": 230,
+      "normalized_name": "Matias Benitez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 231,
+      "normalized_name": "David Valdebenito",
+      "region_code": "CL"
+    },
+    {
+      "placement": 232,
+      "normalized_name": "Alfonso Herrera",
+      "region_code": "PE"
+    },
+    {
+      "placement": 233,
+      "normalized_name": "Simón Soto",
+      "region_code": "CL"
+    },
+    {
+      "placement": 234,
+      "normalized_name": "Braian Ochoa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 235,
+      "normalized_name": "Gianluca Frega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 236,
+      "normalized_name": "Sebastián Reyes",
+      "region_code": "PE"
+    },
+    {
+      "placement": 237,
+      "normalized_name": "Alejandro Lucandrea",
+      "region_code": "AR"
+    },
+    {
+      "placement": 238,
+      "normalized_name": "Nicolas Michay Quiñenao",
+      "region_code": "AR"
+    },
+    {
+      "placement": 239,
+      "normalized_name": "Bernardo Splendiani",
+      "region_code": "AR"
+    },
+    {
+      "placement": 240,
+      "normalized_name": "Gabriel Chiriboga",
+      "region_code": "EC"
+    },
+    {
+      "placement": 241,
+      "normalized_name": "Raul Rojas Nuñez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 242,
+      "normalized_name": "Mateo San Martino",
+      "region_code": "AR"
+    },
+    {
+      "placement": 243,
+      "normalized_name": "Ignacio Viejo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 244,
+      "normalized_name": "Steven Hamula",
+      "region_code": "US"
+    },
+    {
+      "placement": 245,
+      "normalized_name": "Tomás Reyes",
+      "region_code": "CL"
+    },
+    {
+      "placement": 246,
+      "normalized_name": "Pablo Meza",
+      "region_code": "MX"
+    },
+    {
+      "placement": 247,
+      "normalized_name": "Diego Baptista",
+      "region_code": "UY"
+    },
+    {
+      "placement": 248,
+      "normalized_name": "Diego Lopez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 249,
+      "normalized_name": "Nicolás Polito Muñoz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 250,
+      "normalized_name": "Nicolas Bralla",
+      "region_code": "CL"
+    },
+    {
+      "placement": 251,
+      "normalized_name": "Martin Estévez",
+      "region_code": "MX"
+    },
+    {
+      "placement": 252,
+      "normalized_name": "Francisco Bahamondes",
+      "region_code": "CL"
+    },
+    {
+      "placement": 253,
+      "normalized_name": "Selvan K",
+      "region_code": "SK"
+    },
+    {
+      "placement": 254,
+      "normalized_name": "Ariel Jonatan Song",
+      "region_code": "AR"
+    },
+    {
+      "placement": 255,
+      "normalized_name": "Leonardo Fernandez Da Silva",
+      "region_code": "AR"
+    },
+    {
+      "placement": 256,
+      "normalized_name": "Tomas Beltrame",
+      "region_code": "AR"
+    },
+    {
+      "placement": 257,
+      "normalized_name": "Tomás Blei",
+      "region_code": "AR"
+    },
+    {
+      "placement": 258,
+      "normalized_name": "Agustin Buontempo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 259,
+      "normalized_name": "Sergio Calvanese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 260,
+      "normalized_name": "Federico Barrionuevo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 261,
+      "normalized_name": "Gonzalo Asencio",
+      "region_code": "AR"
+    },
+    {
+      "placement": 262,
+      "normalized_name": "Nahuel Pena Congregado",
+      "region_code": "AR"
+    },
+    {
+      "placement": 263,
+      "normalized_name": "Luis Pedro Ferrari Esbadalate",
+      "region_code": "BR"
+    },
+    {
+      "placement": 264,
+      "normalized_name": "Juan David Cruz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 265,
+      "normalized_name": "Gonzalo Lema",
+      "region_code": "UY"
+    },
+    {
+      "placement": 266,
+      "normalized_name": "Martin Cazenave",
+      "region_code": "CL"
+    },
+    {
+      "placement": 267,
+      "normalized_name": "Gino Campanini",
+      "region_code": "AR"
+    },
+    {
+      "placement": 268,
+      "normalized_name": "Mikeas Nahuel Leiria",
+      "region_code": "AR"
+    },
+    {
+      "placement": 269,
+      "normalized_name": "Luis Alfredo Lorenzo",
+      "region_code": "MX"
+    },
+    {
+      "placement": 270,
+      "normalized_name": "Santiago Saferstein",
+      "region_code": "AR"
+    },
+    {
+      "placement": 271,
+      "normalized_name": "Mariano Nizzero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 272,
+      "normalized_name": "Martin Quezada",
+      "region_code": "AR"
+    },
+    {
+      "placement": 273,
+      "normalized_name": "Azael Ubillus",
+      "region_code": "EC"
+    },
+    {
+      "placement": 274,
+      "normalized_name": "Agustin Garcia",
+      "region_code": "AR"
+    },
+    {
+      "placement": 275,
+      "normalized_name": "Edgardo Morales",
+      "region_code": "CL"
+    },
+    {
+      "placement": 276,
+      "normalized_name": "Cristian Barrionuevo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 277,
+      "normalized_name": "Pablo Damian Castro Murgolo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 278,
+      "normalized_name": "Thomas Javier Fino",
+      "region_code": "AR"
+    },
+    {
+      "placement": 279,
+      "normalized_name": "Myna Obara",
+      "region_code": "BR"
+    },
+    {
+      "placement": 280,
+      "normalized_name": "Tomas Kuroña",
+      "region_code": "AR"
+    },
+    {
+      "placement": 281,
+      "normalized_name": "Marco Jhoneliot Loera Escalante",
+      "region_code": "MX"
+    },
+    {
+      "placement": 282,
+      "normalized_name": "Juan Torres",
+      "region_code": "AR"
+    },
+    {
+      "placement": 283,
+      "normalized_name": "Rodrigo Ceballos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 284,
+      "normalized_name": "Pedro Mercado",
+      "region_code": "AR"
+    },
+    {
+      "placement": 285,
+      "normalized_name": "Adrian Delgado",
+      "region_code": "MX"
+    },
+    {
+      "placement": 286,
+      "normalized_name": "Felipe Gomez",
+      "region_code": "CL"
+    },
+    {
+      "placement": 287,
+      "normalized_name": "Giuliano Imparato",
+      "region_code": "AR"
+    },
+    {
+      "placement": 288,
+      "normalized_name": "Santiago Albrecht",
+      "region_code": "AR"
+    },
+    {
+      "placement": 289,
+      "normalized_name": "Bruno Nicolas Martín",
+      "region_code": "AR"
+    },
+    {
+      "placement": 290,
+      "normalized_name": "Maximiliano Gabbanelli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 291,
+      "normalized_name": "Nicolás Alberto Sanchez Acosta",
+      "region_code": "AR"
+    },
+    {
+      "placement": 292,
+      "normalized_name": "Bastian Lisboa",
+      "region_code": "CL"
+    },
+    {
+      "placement": 293,
+      "normalized_name": "Ezequiel Rey",
+      "region_code": "AR"
+    },
+    {
+      "placement": 294,
+      "normalized_name": "Oscar Valenzuela",
+      "region_code": "CL"
+    },
+    {
+      "placement": 295,
+      "normalized_name": "Franco Andrea Monetti",
+      "region_code": "AR"
+    },
+    {
+      "placement": 296,
+      "normalized_name": "Jorge Irrazabal",
+      "region_code": "AR"
+    },
+    {
+      "placement": 297,
+      "normalized_name": "Juan Affre",
+      "region_code": "AR"
+    },
+    {
+      "placement": 298,
+      "normalized_name": "Salvador Faraldo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 299,
+      "normalized_name": "Tomas Beltrame",
+      "region_code": "AR"
+    },
+    {
+      "placement": 300,
+      "normalized_name": "Juan Sebastian Ortega",
+      "region_code": "AR"
+    },
+    {
+      "placement": 301,
+      "normalized_name": "Santiago Matos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 302,
+      "normalized_name": "Jose Tello V.",
+      "region_code": "CL"
+    },
+    {
+      "placement": 303,
+      "normalized_name": "Yasmin Menezes",
+      "region_code": "BR"
+    },
+    {
+      "placement": 304,
+      "normalized_name": "Nicolas Manzo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 305,
+      "normalized_name": "Carlos Azamoor",
+      "region_code": "AR"
+    },
+    {
+      "placement": 306,
+      "normalized_name": "Federico Laborde",
+      "region_code": "AR"
+    },
+    {
+      "placement": 307,
+      "normalized_name": "Mateo Luis Valdesolo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 308,
+      "normalized_name": "Nicolás Gimenez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 309,
+      "normalized_name": "Bryan Ortiz",
+      "region_code": "CL"
+    },
+    {
+      "placement": 310,
+      "normalized_name": "Marcos Urquijo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 311,
+      "normalized_name": "Wilson Molina",
+      "region_code": "CL"
+    },
+    {
+      "placement": 312,
+      "normalized_name": "Nakay Kesler",
+      "region_code": "AR"
+    },
+    {
+      "placement": 313,
+      "normalized_name": "Facundo Alvarez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 314,
+      "normalized_name": "Guillermo Fernandez",
+      "region_code": "UY"
+    },
+    {
+      "placement": 315,
+      "normalized_name": "Ignacio De Chiano",
+      "region_code": "AR"
+    },
+    {
+      "placement": 316,
+      "normalized_name": "Federico Vara",
+      "region_code": "AR"
+    },
+    {
+      "placement": 317,
+      "normalized_name": "Luis Teran",
+      "region_code": "PE"
+    },
+    {
+      "placement": 318,
+      "normalized_name": "Raissa Alves Arruda",
+      "region_code": "BR"
+    },
+    {
+      "placement": 319,
+      "normalized_name": "Rigoberto Meneses",
+      "region_code": "AR"
+    },
+    {
+      "placement": 320,
+      "normalized_name": "Lucas Gabriel Albanese",
+      "region_code": "AR"
+    },
+    {
+      "placement": 321,
+      "normalized_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 322,
+      "normalized_name": "Nicolas Buczak",
+      "region_code": "AR"
+    },
+    {
+      "placement": 323,
+      "normalized_name": "Cristian Ozuna",
+      "region_code": "AR"
+    },
+    {
+      "placement": 324,
+      "normalized_name": "Raul Alejandro Vidable",
+      "region_code": "AR"
+    },
+    {
+      "placement": 325,
+      "normalized_name": "Federico Lousa",
+      "region_code": "AR"
+    },
+    {
+      "placement": 326,
+      "normalized_name": "Matias Martin",
+      "region_code": "AR"
+    },
+    {
+      "placement": 327,
+      "normalized_name": "Luciano Norberto Livschitz",
+      "region_code": "AR"
+    },
+    {
+      "placement": 328,
+      "normalized_name": "Matias Sumonte",
+      "region_code": "CL"
+    },
+    {
+      "placement": 329,
+      "normalized_name": "Florencia Sanchez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 330,
+      "normalized_name": "Ezequiel Jerez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 331,
+      "normalized_name": "Mauro Fernandez",
+      "region_code": "US"
+    },
+    {
+      "placement": 332,
+      "normalized_name": "Alex Brest",
+      "region_code": "AR"
+    },
+    {
+      "placement": 333,
+      "normalized_name": "Manuel Ferrero",
+      "region_code": "AR"
+    },
+    {
+      "placement": 334,
+      "normalized_name": "Nehuen Covelo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 335,
+      "normalized_name": "Sebastian Carreira",
+      "region_code": "AR"
+    },
+    {
+      "placement": 336,
+      "normalized_name": "Juliana Caldani",
+      "region_code": "AR"
+    },
+    {
+      "placement": 337,
+      "normalized_name": "Agustin Moral",
+      "region_code": "AR"
+    },
+    {
+      "placement": 338,
+      "normalized_name": "Cristian Perez",
+      "region_code": "AR"
+    },
+    {
+      "placement": 339,
+      "normalized_name": "Augusto Mayoral",
+      "region_code": "AR"
+    },
+    {
+      "placement": 340,
+      "normalized_name": "Francisco Stahl",
+      "region_code": "AR"
+    },
+    {
+      "placement": 341,
+      "normalized_name": "Pascal Donoso Candia",
+      "region_code": "CL"
+    },
+    {
+      "placement": 342,
+      "normalized_name": "Juan Nielsen",
+      "region_code": "AR"
+    },
+    {
+      "placement": 343,
+      "normalized_name": "Francisco Alca Chacon",
+      "region_code": "PE"
+    },
+    {
+      "placement": 344,
+      "normalized_name": "Leandro Angeli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 345,
+      "normalized_name": "Matias Andres Angeli",
+      "region_code": "AR"
+    },
+    {
+      "placement": 346,
+      "normalized_name": "Alejo Fittipaldi",
+      "region_code": "AR"
+    },
+    {
+      "placement": 347,
+      "normalized_name": "Alexander Alex Panozo Avila",
+      "region_code": "AR"
+    },
+    {
+      "placement": 348,
+      "normalized_name": "Facundo Cayo",
+      "region_code": "AR"
+    },
+    {
+      "placement": 349,
+      "normalized_name": "Julián Antonio Zapata",
+      "region_code": "AR"
+    },
+    {
+      "placement": 350,
+      "normalized_name": "Leandro Calonico",
+      "region_code": "AR"
+    }
+  ]
+}

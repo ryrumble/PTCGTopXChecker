@@ -1,0 +1,907 @@
+{
+  "metadata": {
+    "id": "special-event-cape-town-datawrong_https-www-pokedata-ovh-standings_2025-2026",
+    "title": "Special Event Cape Town DATAWRONG",
+    "title_norm": "Special Event Cape Town DATAWRONG",
+    "url": "https://www.pokedata.ovh/standings/0000197/masters/",
+    "season": "2025-2026",
+    "tournament_type": "REGIONAL",
+    "num_competitors": 89,
+    "tournament_date": "2026-03-28",
+    "added_at": "2026-05-16T18:42:53.987367Z"
+  },
+  "raw_entries": [
+    {
+      "placement": 1,
+      "raw_name": "Calvin Van Der Merwe",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 2,
+      "raw_name": "Zach Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 3,
+      "raw_name": "Devan Marais",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 4,
+      "raw_name": "Jonah Alter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 5,
+      "raw_name": "Barne Marais",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 6,
+      "raw_name": "Brandon Baughn",
+      "region_code": "US"
+    },
+    {
+      "placement": 7,
+      "raw_name": "Kevin Krueger",
+      "region_code": "US"
+    },
+    {
+      "placement": 8,
+      "raw_name": "Simon Otter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 9,
+      "raw_name": "Darren Ho",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 10,
+      "raw_name": "Harper Kayser",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 11,
+      "raw_name": "Gabriel Smart",
+      "region_code": "US"
+    },
+    {
+      "placement": 12,
+      "raw_name": "Clinton Matos",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 13,
+      "raw_name": "Meitar Segal",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 14,
+      "raw_name": "Ethan Webber",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 15,
+      "raw_name": "Ethan Lee",
+      "region_code": "MY"
+    },
+    {
+      "placement": 16,
+      "raw_name": "Tiaan Schreuder",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 17,
+      "raw_name": "Dylan Manasse",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 18,
+      "raw_name": "Shailesh Inderjeeth",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 19,
+      "raw_name": "Renier Smit",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 20,
+      "raw_name": "Margo De Beer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 21,
+      "raw_name": "Rishay Naidoo",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 22,
+      "raw_name": "Jateen Algu",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 23,
+      "raw_name": "Cameron Mackay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 24,
+      "raw_name": "Jean Louw",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 25,
+      "raw_name": "Sean Robinson",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 26,
+      "raw_name": "Tauriq Dolley",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 27,
+      "raw_name": "Calvin Botha",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 28,
+      "raw_name": "Eric Dai",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 29,
+      "raw_name": "Rudolph Du Plessis",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 30,
+      "raw_name": "Muhammad Bulbulia",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 31,
+      "raw_name": "Johann Bester",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 32,
+      "raw_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 33,
+      "raw_name": "Shane Pow Chong",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 34,
+      "raw_name": "Nick Van Niekerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 35,
+      "raw_name": "Tristan Bridger",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 36,
+      "raw_name": "Sean Rice",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 37,
+      "raw_name": "Henk Scheepers",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 38,
+      "raw_name": "Alex Van Niekerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 39,
+      "raw_name": "Denise Pillay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 40,
+      "raw_name": "Jia-Hao Ma",
+      "region_code": "NL"
+    },
+    {
+      "placement": 41,
+      "raw_name": "Sheldon Kuppan",
+      "region_code": "NL"
+    },
+    {
+      "placement": 42,
+      "raw_name": "Romano Pillay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 43,
+      "raw_name": "Anthony Francisco",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 44,
+      "raw_name": "Tariq Kathrada",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 45,
+      "raw_name": "Jess Klette",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 46,
+      "raw_name": "Sulaiman Kajee",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 47,
+      "raw_name": "Stefan Munro",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 48,
+      "raw_name": "Daniel Van Der Watt",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 49,
+      "raw_name": "Christopher Almond",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 50,
+      "raw_name": "Heinrich Kriel",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 51,
+      "raw_name": "Albert Dai",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 52,
+      "raw_name": "Liam Baxter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 53,
+      "raw_name": "Michele Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 54,
+      "raw_name": "Mahomed Mahomed",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 55,
+      "raw_name": "Luke Jonkers",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 56,
+      "raw_name": "Ziyaad Kharva",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 57,
+      "raw_name": "Hendri De Klerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 58,
+      "raw_name": "Bernhard De Beer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 59,
+      "raw_name": "Shay Terblanche",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 60,
+      "raw_name": "Jason Roode",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 61,
+      "raw_name": "Kavish Naidoo",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 62,
+      "raw_name": "Kazuma Aihara",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 63,
+      "raw_name": "Bradly Carpenter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 64,
+      "raw_name": "Gabriel Rymer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 65,
+      "raw_name": "Lucelle Beaver",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 66,
+      "raw_name": "Ebrahim Mohamed",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 67,
+      "raw_name": "Jemaine Singh",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 68,
+      "raw_name": "Taichiro Fujino",
+      "region_code": "JP"
+    },
+    {
+      "placement": 69,
+      "raw_name": "Solomon Shurge",
+      "region_code": "US"
+    },
+    {
+      "placement": 70,
+      "raw_name": "Taariq Randeree",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 71,
+      "raw_name": "Simon Garvie",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 72,
+      "raw_name": "Pieter Bruwer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 73,
+      "raw_name": "Tegwen Sampson",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 74,
+      "raw_name": "Junaid Omar",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 75,
+      "raw_name": "Gareth Stock",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 76,
+      "raw_name": "Nadia De Kock",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 77,
+      "raw_name": "Leslie Dwolatzky",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 78,
+      "raw_name": "Teshal Sahue",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 79,
+      "raw_name": "Tyson Wadeley",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 80,
+      "raw_name": "Nicholas Taylor",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 81,
+      "raw_name": "Rory Harrison",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 82,
+      "raw_name": "Mj Breytenbach",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 83,
+      "raw_name": "Kyle Adams",
+      "region_code": "US"
+    },
+    {
+      "placement": 84,
+      "raw_name": "Timothy Jansens Van Rensburg",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 85,
+      "raw_name": "Daniel Tang",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 86,
+      "raw_name": "Steven Rymer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 87,
+      "raw_name": "Lorenzo Bruno",
+      "region_code": "IT"
+    },
+    {
+      "placement": 88,
+      "raw_name": "Julius Stopforth",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 89,
+      "raw_name": "Stefano Da Silva F. C.",
+      "region_code": "IT"
+    }
+  ],
+  "normalized_entries": [
+    {
+      "placement": 1,
+      "normalized_name": "Calvin Van Der Merwe",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 2,
+      "normalized_name": "Zach Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 3,
+      "normalized_name": "Devan Marais",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 4,
+      "normalized_name": "Jonah Alter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 5,
+      "normalized_name": "Barne Marais",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 6,
+      "normalized_name": "Brandon Baughn",
+      "region_code": "US"
+    },
+    {
+      "placement": 7,
+      "normalized_name": "Kevin Krueger",
+      "region_code": "US"
+    },
+    {
+      "placement": 8,
+      "normalized_name": "Simon Otter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 9,
+      "normalized_name": "Darren Ho",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 10,
+      "normalized_name": "Harper Kayser",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 11,
+      "normalized_name": "Gabriel Smart",
+      "region_code": "US"
+    },
+    {
+      "placement": 12,
+      "normalized_name": "Clinton Matos",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 13,
+      "normalized_name": "Meitar Segal",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 14,
+      "normalized_name": "Ethan Webber",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 15,
+      "normalized_name": "Ethan Lee",
+      "region_code": "MY"
+    },
+    {
+      "placement": 16,
+      "normalized_name": "Tiaan Schreuder",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 17,
+      "normalized_name": "Dylan Manasse",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 18,
+      "normalized_name": "Shailesh Inderjeeth",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 19,
+      "normalized_name": "Renier Smit",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 20,
+      "normalized_name": "Margo De Beer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 21,
+      "normalized_name": "Rishay Naidoo",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 22,
+      "normalized_name": "Jateen Algu",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 23,
+      "normalized_name": "Cameron Mackay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 24,
+      "normalized_name": "Jean Louw",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 25,
+      "normalized_name": "Sean Robinson",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 26,
+      "normalized_name": "Tauriq Dolley",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 27,
+      "normalized_name": "Calvin Botha",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 28,
+      "normalized_name": "Eric Dai",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 29,
+      "normalized_name": "Rudolph Du Plessis",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 30,
+      "normalized_name": "Muhammad Bulbulia",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 31,
+      "normalized_name": "Johann Bester",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 32,
+      "normalized_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 33,
+      "normalized_name": "Shane Pow Chong",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 34,
+      "normalized_name": "Nick Van Niekerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 35,
+      "normalized_name": "Tristan Bridger",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 36,
+      "normalized_name": "Sean Rice",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 37,
+      "normalized_name": "Henk Scheepers",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 38,
+      "normalized_name": "Alex Van Niekerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 39,
+      "normalized_name": "Denise Pillay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 40,
+      "normalized_name": "Jia-Hao Ma",
+      "region_code": "NL"
+    },
+    {
+      "placement": 41,
+      "normalized_name": "Sheldon Kuppan",
+      "region_code": "NL"
+    },
+    {
+      "placement": 42,
+      "normalized_name": "Romano Pillay",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 43,
+      "normalized_name": "Anthony Francisco",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 44,
+      "normalized_name": "Tariq Kathrada",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 45,
+      "normalized_name": "Jess Klette",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 46,
+      "normalized_name": "Sulaiman Kajee",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 47,
+      "normalized_name": "Stefan Munro",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 48,
+      "normalized_name": "Daniel Van Der Watt",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 49,
+      "normalized_name": "Christopher Almond",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 50,
+      "normalized_name": "Heinrich Kriel",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 51,
+      "normalized_name": "Albert Dai",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 52,
+      "normalized_name": "Liam Baxter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 53,
+      "normalized_name": "Michele Lesage",
+      "region_code": "CA"
+    },
+    {
+      "placement": 54,
+      "normalized_name": "Mahomed Mahomed",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 55,
+      "normalized_name": "Luke Jonkers",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 56,
+      "normalized_name": "Ziyaad Kharva",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 57,
+      "normalized_name": "Hendri De Klerk",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 58,
+      "normalized_name": "Bernhard De Beer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 59,
+      "normalized_name": "Shay Terblanche",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 60,
+      "normalized_name": "Jason Roode",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 61,
+      "normalized_name": "Kavish Naidoo",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 62,
+      "normalized_name": "Kazuma Aihara",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 63,
+      "normalized_name": "Bradly Carpenter",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 64,
+      "normalized_name": "Gabriel Rymer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 65,
+      "normalized_name": "Lucelle Beaver",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 66,
+      "normalized_name": "Ebrahim Mohamed",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 67,
+      "normalized_name": "Jemaine Singh",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 68,
+      "normalized_name": "Taichiro Fujino",
+      "region_code": "JP"
+    },
+    {
+      "placement": 69,
+      "normalized_name": "Solomon Shurge",
+      "region_code": "US"
+    },
+    {
+      "placement": 70,
+      "normalized_name": "Taariq Randeree",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 71,
+      "normalized_name": "Simon Garvie",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 72,
+      "normalized_name": "Pieter Bruwer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 73,
+      "normalized_name": "Tegwen Sampson",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 74,
+      "normalized_name": "Junaid Omar",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 75,
+      "normalized_name": "Gareth Stock",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 76,
+      "normalized_name": "Nadia De Kock",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 77,
+      "normalized_name": "Leslie Dwolatzky",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 78,
+      "normalized_name": "Teshal Sahue",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 79,
+      "normalized_name": "Tyson Wadeley",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 80,
+      "normalized_name": "Nicholas Taylor",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 81,
+      "normalized_name": "Rory Harrison",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 82,
+      "normalized_name": "Mj Breytenbach",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 83,
+      "normalized_name": "Kyle Adams",
+      "region_code": "US"
+    },
+    {
+      "placement": 84,
+      "normalized_name": "Timothy Jansens Van Rensburg",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 85,
+      "normalized_name": "Daniel Tang",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 86,
+      "normalized_name": "Steven Rymer",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 87,
+      "normalized_name": "Lorenzo Bruno",
+      "region_code": "IT"
+    },
+    {
+      "placement": 88,
+      "normalized_name": "Julius Stopforth",
+      "region_code": "ZA"
+    },
+    {
+      "placement": 89,
+      "normalized_name": "Stefano Da Silva F. C.",
+      "region_code": "IT"
+    }
+  ]
+}

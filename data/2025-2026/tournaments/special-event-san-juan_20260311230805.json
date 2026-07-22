@@ -1,0 +1,3567 @@
+{
+  "metadata": {
+    "id": "2026-special-event-san-juan_https-labs-limitlesstcg-com-0056_2025-2026",
+    "title": "2026 Special Event San Juan",
+    "title_norm": "2026 Special Event San Juan",
+    "url": "https://labs.limitlesstcg.com/0056/standings",
+    "season": "2025-2026",
+    "tournament_type": "REGIONAL",
+    "num_competitors": 355,
+    "tournament_date": "2026-03-07",
+    "added_at": "2026-03-11T23:08:05.036357Z"
+  },
+  "raw_entries": [
+    {
+      "placement": 1,
+      "raw_name": "Miguel Alejandro Hernández García",
+      "region_code": "MX"
+    },
+    {
+      "placement": 2,
+      "raw_name": "Ross Cawthon",
+      "region_code": "US"
+    },
+    {
+      "placement": 3,
+      "raw_name": "Jonathan Bieligk",
+      "region_code": "US"
+    },
+    {
+      "placement": 4,
+      "raw_name": "Joseph Bjerg",
+      "region_code": "US"
+    },
+    {
+      "placement": 5,
+      "raw_name": "Zach Elliott",
+      "region_code": "US"
+    },
+    {
+      "placement": 6,
+      "raw_name": "Gabriel Perez",
+      "region_code": "US"
+    },
+    {
+      "placement": 7,
+      "raw_name": "Vincent Owen",
+      "region_code": "US"
+    },
+    {
+      "placement": 8,
+      "raw_name": "Felipe Luna",
+      "region_code": "MX"
+    },
+    {
+      "placement": 9,
+      "raw_name": "William Hwang",
+      "region_code": "US"
+    },
+    {
+      "placement": 10,
+      "raw_name": "Julio Santos De Leon",
+      "region_code": "US"
+    },
+    {
+      "placement": 11,
+      "raw_name": "Matt Bacnis",
+      "region_code": "US"
+    },
+    {
+      "placement": 12,
+      "raw_name": "Hunter Smith",
+      "region_code": "US"
+    },
+    {
+      "placement": 13,
+      "raw_name": "Sahil Parekh",
+      "region_code": "US"
+    },
+    {
+      "placement": 14,
+      "raw_name": "Sebastian Lashmet",
+      "region_code": "US"
+    },
+    {
+      "placement": 15,
+      "raw_name": "Brendan Acri",
+      "region_code": "US"
+    },
+    {
+      "placement": 16,
+      "raw_name": "Maddox Corcoran",
+      "region_code": "US"
+    },
+    {
+      "placement": 17,
+      "raw_name": "Jose Marrero",
+      "region_code": "US"
+    },
+    {
+      "placement": 18,
+      "raw_name": "Finn Schleusner",
+      "region_code": "DE"
+    },
+    {
+      "placement": 19,
+      "raw_name": "Mitchell Alvarez De La Rosa",
+      "region_code": "US"
+    },
+    {
+      "placement": 20,
+      "raw_name": "Royer Espinosa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 21,
+      "raw_name": "Kenny Packala",
+      "region_code": "US"
+    },
+    {
+      "placement": 22,
+      "raw_name": "Sammy Allen",
+      "region_code": "US"
+    },
+    {
+      "placement": 23,
+      "raw_name": "Trenton Ross",
+      "region_code": "US"
+    },
+    {
+      "placement": 24,
+      "raw_name": "Jorge Arteaga",
+      "region_code": "US"
+    },
+    {
+      "placement": 25,
+      "raw_name": "Eduardo Meléndez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 26,
+      "raw_name": "Jie Ran",
+      "region_code": "US"
+    },
+    {
+      "placement": 27,
+      "raw_name": "David Zheng",
+      "region_code": "US"
+    },
+    {
+      "placement": 28,
+      "raw_name": "Ivan Lukens",
+      "region_code": "US"
+    },
+    {
+      "placement": 29,
+      "raw_name": "Cody Criner",
+      "region_code": "US"
+    },
+    {
+      "placement": 30,
+      "raw_name": "Brooks Mcgee",
+      "region_code": "US"
+    },
+    {
+      "placement": 31,
+      "raw_name": "Sebastian Marin",
+      "region_code": "CO"
+    },
+    {
+      "placement": 32,
+      "raw_name": "Ian Munro",
+      "region_code": "US"
+    },
+    {
+      "placement": 33,
+      "raw_name": "Cameron Ware",
+      "region_code": "US"
+    },
+    {
+      "placement": 34,
+      "raw_name": "Dre Alderette",
+      "region_code": "US"
+    },
+    {
+      "placement": 35,
+      "raw_name": "Fausto Emil Rodriguez Villar",
+      "region_code": "DO"
+    },
+    {
+      "placement": 36,
+      "raw_name": "Yosha Riley",
+      "region_code": "US"
+    },
+    {
+      "placement": 37,
+      "raw_name": "Eric Aubertin",
+      "region_code": "CA"
+    },
+    {
+      "placement": 38,
+      "raw_name": "Sanjeev Viswan",
+      "region_code": "US"
+    },
+    {
+      "placement": 39,
+      "raw_name": "Evelyn Estridge",
+      "region_code": "US"
+    },
+    {
+      "placement": 40,
+      "raw_name": "Abelardo Fukasawa",
+      "region_code": "BR"
+    },
+    {
+      "placement": 41,
+      "raw_name": "Sergio Orozco",
+      "region_code": "CO"
+    },
+    {
+      "placement": 42,
+      "raw_name": "Justin Brothers",
+      "region_code": "US"
+    },
+    {
+      "placement": 43,
+      "raw_name": "Ian Gridley",
+      "region_code": "US"
+    },
+    {
+      "placement": 44,
+      "raw_name": "Nahuel Avalos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 45,
+      "raw_name": "Jose Avalos",
+      "region_code": "MX"
+    },
+    {
+      "placement": 46,
+      "raw_name": "Nico Gist",
+      "region_code": "US"
+    },
+    {
+      "placement": 47,
+      "raw_name": "Anastazja Clappison",
+      "region_code": "CA"
+    },
+    {
+      "placement": 48,
+      "raw_name": "Jose Marzan",
+      "region_code": "PR"
+    },
+    {
+      "placement": 49,
+      "raw_name": "Frederick Cardona",
+      "region_code": "PR"
+    },
+    {
+      "placement": 50,
+      "raw_name": "Pablo Carrizales",
+      "region_code": "MX"
+    },
+    {
+      "placement": 51,
+      "raw_name": "Jerrick Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 52,
+      "raw_name": "Caleb Rogerson",
+      "region_code": "US"
+    },
+    {
+      "placement": 53,
+      "raw_name": "Cristian Perez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 54,
+      "raw_name": "Alejandro Garcia",
+      "region_code": "US"
+    },
+    {
+      "placement": 55,
+      "raw_name": "Ramon Miranda",
+      "region_code": "PR"
+    },
+    {
+      "placement": 56,
+      "raw_name": "Gabriel Paler",
+      "region_code": "PR"
+    },
+    {
+      "placement": 57,
+      "raw_name": "Nick Spence",
+      "region_code": "US"
+    },
+    {
+      "placement": 58,
+      "raw_name": "Seth Sargent",
+      "region_code": "US"
+    },
+    {
+      "placement": 59,
+      "raw_name": "Russell Monteiro Johnson",
+      "region_code": "US"
+    },
+    {
+      "placement": 60,
+      "raw_name": "Kenneth Mauder",
+      "region_code": "US"
+    },
+    {
+      "placement": 61,
+      "raw_name": "Brennon Conner",
+      "region_code": "US"
+    },
+    {
+      "placement": 62,
+      "raw_name": "Wilson Lopez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 63,
+      "raw_name": "Jomar Lopez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 64,
+      "raw_name": "Jacob Mccool",
+      "region_code": "US"
+    },
+    {
+      "placement": 65,
+      "raw_name": "James Bratton",
+      "region_code": "US"
+    },
+    {
+      "placement": 66,
+      "raw_name": "Asher Campbell",
+      "region_code": "US"
+    },
+    {
+      "placement": 67,
+      "raw_name": "Mike Pianka",
+      "region_code": "US"
+    },
+    {
+      "placement": 68,
+      "raw_name": "Canaan Mellard",
+      "region_code": "US"
+    },
+    {
+      "placement": 69,
+      "raw_name": "Hal Stewart",
+      "region_code": "US"
+    },
+    {
+      "placement": 70,
+      "raw_name": "Jay Cristiano",
+      "region_code": "CA"
+    },
+    {
+      "placement": 71,
+      "raw_name": "David Edelson",
+      "region_code": "US"
+    },
+    {
+      "placement": 72,
+      "raw_name": "Vance Kelley",
+      "region_code": "US"
+    },
+    {
+      "placement": 73,
+      "raw_name": "Ezequiel Gonzales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 74,
+      "raw_name": "Michael Zheng",
+      "region_code": "US"
+    },
+    {
+      "placement": 75,
+      "raw_name": "Jalen Jones",
+      "region_code": "US"
+    },
+    {
+      "placement": 76,
+      "raw_name": "Aidan Khus",
+      "region_code": "US"
+    },
+    {
+      "placement": 77,
+      "raw_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 78,
+      "raw_name": "Tony Vuong",
+      "region_code": "US"
+    },
+    {
+      "placement": 79,
+      "raw_name": "Laura Favela",
+      "region_code": "MX"
+    },
+    {
+      "placement": 80,
+      "raw_name": "Carlos Rosado",
+      "region_code": "US"
+    },
+    {
+      "placement": 81,
+      "raw_name": "Kristopher Kemp",
+      "region_code": "US"
+    },
+    {
+      "placement": 82,
+      "raw_name": "Joseph Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 83,
+      "raw_name": "Jiekai Du",
+      "region_code": "US"
+    },
+    {
+      "placement": 84,
+      "raw_name": "Matthew Walter",
+      "region_code": "US"
+    },
+    {
+      "placement": 85,
+      "raw_name": "Welinton Martinez",
+      "region_code": "DO"
+    },
+    {
+      "placement": 86,
+      "raw_name": "Cristiano Castaneda",
+      "region_code": "US"
+    },
+    {
+      "placement": 87,
+      "raw_name": "Francisco Bonano Suazo",
+      "region_code": "CO"
+    },
+    {
+      "placement": 88,
+      "raw_name": "Tyler Price",
+      "region_code": "US"
+    },
+    {
+      "placement": 89,
+      "raw_name": "Nicolas Darge",
+      "region_code": "DE"
+    },
+    {
+      "placement": 90,
+      "raw_name": "Irving Roman Diaz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 91,
+      "raw_name": "Nick Dela Torre",
+      "region_code": "US"
+    },
+    {
+      "placement": 92,
+      "raw_name": "Ramon Morales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 93,
+      "raw_name": "Jeffrey Eric Falberg",
+      "region_code": "US"
+    },
+    {
+      "placement": 94,
+      "raw_name": "Anibal Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 95,
+      "raw_name": "James Coyle",
+      "region_code": "US"
+    },
+    {
+      "placement": 96,
+      "raw_name": "Reyad Khan",
+      "region_code": "US"
+    },
+    {
+      "placement": 97,
+      "raw_name": "John M Torres",
+      "region_code": "PR"
+    },
+    {
+      "placement": 98,
+      "raw_name": "Javier Rosano",
+      "region_code": "MX"
+    },
+    {
+      "placement": 99,
+      "raw_name": "Jose Zelaya",
+      "region_code": "US"
+    },
+    {
+      "placement": 100,
+      "raw_name": "Tiger Hickman",
+      "region_code": "US"
+    },
+    {
+      "placement": 101,
+      "raw_name": "Carleigh Young",
+      "region_code": "US"
+    },
+    {
+      "placement": 102,
+      "raw_name": "Victor De Velasco",
+      "region_code": "MX"
+    },
+    {
+      "placement": 103,
+      "raw_name": "Teegan Hall",
+      "region_code": "US"
+    },
+    {
+      "placement": 104,
+      "raw_name": "Cody Graham",
+      "region_code": "US"
+    },
+    {
+      "placement": 105,
+      "raw_name": "Olivier Gosselin",
+      "region_code": "US"
+    },
+    {
+      "placement": 106,
+      "raw_name": "Alex Vega",
+      "region_code": "US"
+    },
+    {
+      "placement": 107,
+      "raw_name": "Ryan Rigsby",
+      "region_code": "US"
+    },
+    {
+      "placement": 108,
+      "raw_name": "Giovanni Sierra",
+      "region_code": "PR"
+    },
+    {
+      "placement": 109,
+      "raw_name": "Tarun Eisen",
+      "region_code": "US"
+    },
+    {
+      "placement": 110,
+      "raw_name": "Brett Hartmann",
+      "region_code": "US"
+    },
+    {
+      "placement": 111,
+      "raw_name": "Jason Calderon",
+      "region_code": "US"
+    },
+    {
+      "placement": 112,
+      "raw_name": "Jason Burch",
+      "region_code": "US"
+    },
+    {
+      "placement": 113,
+      "raw_name": "Christian Solis",
+      "region_code": "PR"
+    },
+    {
+      "placement": 114,
+      "raw_name": "Harrison Browning",
+      "region_code": "US"
+    },
+    {
+      "placement": 115,
+      "raw_name": "Anderson George",
+      "region_code": "US"
+    },
+    {
+      "placement": 116,
+      "raw_name": "Andre Miranda",
+      "region_code": "BR"
+    },
+    {
+      "placement": 117,
+      "raw_name": "Irvin De Los Rios",
+      "region_code": "MX"
+    },
+    {
+      "placement": 118,
+      "raw_name": "Sheldon K",
+      "region_code": "SK"
+    },
+    {
+      "placement": 119,
+      "raw_name": "Juan Jose Madrigal",
+      "region_code": "CO"
+    },
+    {
+      "placement": 120,
+      "raw_name": "Gabriel Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 121,
+      "raw_name": "Christian Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 122,
+      "raw_name": "Andres Torres",
+      "region_code": "CO"
+    },
+    {
+      "placement": 123,
+      "raw_name": "Larry Smith",
+      "region_code": "US"
+    },
+    {
+      "placement": 124,
+      "raw_name": "Kai Shahmeen Kasim",
+      "region_code": "US"
+    },
+    {
+      "placement": 125,
+      "raw_name": "Jeremy Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 126,
+      "raw_name": "Christopher Wigelsworth",
+      "region_code": "US"
+    },
+    {
+      "placement": 127,
+      "raw_name": "Jackson Rousseau",
+      "region_code": "US"
+    },
+    {
+      "placement": 128,
+      "raw_name": "Ajay Sridhar",
+      "region_code": "US"
+    },
+    {
+      "placement": 129,
+      "raw_name": "Ransen Ramirez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 130,
+      "raw_name": "Gaer Garduno Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 131,
+      "raw_name": "Ronald Vazquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 132,
+      "raw_name": "Carlos Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 133,
+      "raw_name": "Yizhi Ren",
+      "region_code": "US"
+    },
+    {
+      "placement": 134,
+      "raw_name": "Howie Rylant",
+      "region_code": "US"
+    },
+    {
+      "placement": 135,
+      "raw_name": "Christian Lespier",
+      "region_code": "PR"
+    },
+    {
+      "placement": 136,
+      "raw_name": "Paul Cacioppo",
+      "region_code": "US"
+    },
+    {
+      "placement": 137,
+      "raw_name": "Israel Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 138,
+      "raw_name": "Bryan Wayne",
+      "region_code": "PR"
+    },
+    {
+      "placement": 139,
+      "raw_name": "Gabriel Perez Guzman",
+      "region_code": "PR"
+    },
+    {
+      "placement": 140,
+      "raw_name": "Lyann Rios",
+      "region_code": "PR"
+    },
+    {
+      "placement": 141,
+      "raw_name": "Ashla Gaetano",
+      "region_code": "US"
+    },
+    {
+      "placement": 142,
+      "raw_name": "D'Artagnan Fancher",
+      "region_code": "US"
+    },
+    {
+      "placement": 143,
+      "raw_name": "Joseph Perez",
+      "region_code": "US"
+    },
+    {
+      "placement": 144,
+      "raw_name": "Kenny Ortiz",
+      "region_code": "DO"
+    },
+    {
+      "placement": 145,
+      "raw_name": "Vladimir Soto",
+      "region_code": "PR"
+    },
+    {
+      "placement": 146,
+      "raw_name": "Carlos Alberto Vasquez Rivera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 147,
+      "raw_name": "Diego Garcia Rueda",
+      "region_code": "MX"
+    },
+    {
+      "placement": 148,
+      "raw_name": "Hunter Hawkins",
+      "region_code": "US"
+    },
+    {
+      "placement": 149,
+      "raw_name": "Luis Gerena",
+      "region_code": "PR"
+    },
+    {
+      "placement": 150,
+      "raw_name": "Frank Luciano",
+      "region_code": "US"
+    },
+    {
+      "placement": 151,
+      "raw_name": "Sigfredo Cancel",
+      "region_code": "PR"
+    },
+    {
+      "placement": 152,
+      "raw_name": "Aaron Rucker",
+      "region_code": "US"
+    },
+    {
+      "placement": 153,
+      "raw_name": "Andres Estrada",
+      "region_code": "US"
+    },
+    {
+      "placement": 154,
+      "raw_name": "Sebastiam Garcia",
+      "region_code": "PR"
+    },
+    {
+      "placement": 155,
+      "raw_name": "Vaughn Weber",
+      "region_code": "US"
+    },
+    {
+      "placement": 156,
+      "raw_name": "Carlos Casanova",
+      "region_code": "VE"
+    },
+    {
+      "placement": 157,
+      "raw_name": "Ryan Bowman",
+      "region_code": "US"
+    },
+    {
+      "placement": 158,
+      "raw_name": "Steven Hamula",
+      "region_code": "US"
+    },
+    {
+      "placement": 159,
+      "raw_name": "Sujith Nalabolu",
+      "region_code": "US"
+    },
+    {
+      "placement": 160,
+      "raw_name": "Bruno Watanabe",
+      "region_code": "BR"
+    },
+    {
+      "placement": 161,
+      "raw_name": "Tom Hellkamp",
+      "region_code": "US"
+    },
+    {
+      "placement": 162,
+      "raw_name": "Steven Mashke",
+      "region_code": "US"
+    },
+    {
+      "placement": 163,
+      "raw_name": "Armando Arce",
+      "region_code": "PR"
+    },
+    {
+      "placement": 164,
+      "raw_name": "Kelvin Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 165,
+      "raw_name": "Victor Carrillo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 166,
+      "raw_name": "Louis Qin",
+      "region_code": "US"
+    },
+    {
+      "placement": 167,
+      "raw_name": "William Timmermeyer",
+      "region_code": "US"
+    },
+    {
+      "placement": 168,
+      "raw_name": "Axel Wloczuk",
+      "region_code": "PR"
+    },
+    {
+      "placement": 169,
+      "raw_name": "James Morris",
+      "region_code": "US"
+    },
+    {
+      "placement": 170,
+      "raw_name": "Lennon Baugh",
+      "region_code": "US"
+    },
+    {
+      "placement": 171,
+      "raw_name": "Alexander Martinez Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 172,
+      "raw_name": "Julio Curiel",
+      "region_code": "MX"
+    },
+    {
+      "placement": 173,
+      "raw_name": "Luis Negron",
+      "region_code": "PR"
+    },
+    {
+      "placement": 174,
+      "raw_name": "Jose Medina",
+      "region_code": "PR"
+    },
+    {
+      "placement": 175,
+      "raw_name": "Eduardo Barragan",
+      "region_code": "MX"
+    },
+    {
+      "placement": 176,
+      "raw_name": "Edward Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 177,
+      "raw_name": "Beatriz Díaz Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 178,
+      "raw_name": "Sam Rindal",
+      "region_code": "US"
+    },
+    {
+      "placement": 179,
+      "raw_name": "Raul Merino",
+      "region_code": "PE"
+    },
+    {
+      "placement": 180,
+      "raw_name": "Alexander Chea",
+      "region_code": "US"
+    },
+    {
+      "placement": 181,
+      "raw_name": "Victor Velez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 182,
+      "raw_name": "Giomar Roberto",
+      "region_code": "PR"
+    },
+    {
+      "placement": 183,
+      "raw_name": "Ryan Fitzmaurice",
+      "region_code": "US"
+    },
+    {
+      "placement": 184,
+      "raw_name": "Nathan Brower",
+      "region_code": "US"
+    },
+    {
+      "placement": 185,
+      "raw_name": "Jacobo Vega",
+      "region_code": "US"
+    },
+    {
+      "placement": 186,
+      "raw_name": "Samuel Ruiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 187,
+      "raw_name": "Matthew Brower",
+      "region_code": "US"
+    },
+    {
+      "placement": 188,
+      "raw_name": "Ming Weng",
+      "region_code": "US"
+    },
+    {
+      "placement": 189,
+      "raw_name": "Alberto Cortes",
+      "region_code": "MX"
+    },
+    {
+      "placement": 190,
+      "raw_name": "Manuel Pinzón",
+      "region_code": "CO"
+    },
+    {
+      "placement": 191,
+      "raw_name": "Stephen Lowe",
+      "region_code": "US"
+    },
+    {
+      "placement": 192,
+      "raw_name": "Lucas Bratton",
+      "region_code": "US"
+    },
+    {
+      "placement": 193,
+      "raw_name": "Guillermo Rosales",
+      "region_code": "MX"
+    },
+    {
+      "placement": 194,
+      "raw_name": "Joshua Minor",
+      "region_code": "US"
+    },
+    {
+      "placement": 195,
+      "raw_name": "Franco De Crescenzo",
+      "region_code": "MX"
+    },
+    {
+      "placement": 196,
+      "raw_name": "Franco Takahashi",
+      "region_code": "US"
+    },
+    {
+      "placement": 197,
+      "raw_name": "Luis Maldonado",
+      "region_code": "US"
+    },
+    {
+      "placement": 198,
+      "raw_name": "Luis Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 199,
+      "raw_name": "Leah Roy",
+      "region_code": "US"
+    },
+    {
+      "placement": 200,
+      "raw_name": "Carlos Herrera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 201,
+      "raw_name": "Wilson Rowland",
+      "region_code": "US"
+    },
+    {
+      "placement": 202,
+      "raw_name": "Emmanuel Collado",
+      "region_code": "DO"
+    },
+    {
+      "placement": 203,
+      "raw_name": "Alex Alvarez",
+      "region_code": "US"
+    },
+    {
+      "placement": 204,
+      "raw_name": "Jose Gomez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 205,
+      "raw_name": "Fernando Cornelio",
+      "region_code": "MX"
+    },
+    {
+      "placement": 206,
+      "raw_name": "Solomon Shurge",
+      "region_code": "US"
+    },
+    {
+      "placement": 207,
+      "raw_name": "Raul Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 208,
+      "raw_name": "Reby Hardy",
+      "region_code": "US"
+    },
+    {
+      "placement": 209,
+      "raw_name": "Yamil Negron",
+      "region_code": "PR"
+    },
+    {
+      "placement": 210,
+      "raw_name": "Omar Marrero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 211,
+      "raw_name": "Leonardo Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 212,
+      "raw_name": "Luis Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 213,
+      "raw_name": "Angelique Rivera",
+      "region_code": "US"
+    },
+    {
+      "placement": 214,
+      "raw_name": "Victor Garcia",
+      "region_code": "MX"
+    },
+    {
+      "placement": 215,
+      "raw_name": "Keidy Rivera Vélez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 216,
+      "raw_name": "Cole Haugaard",
+      "region_code": "US"
+    },
+    {
+      "placement": 217,
+      "raw_name": "Forrest Burks",
+      "region_code": "US"
+    },
+    {
+      "placement": 218,
+      "raw_name": "Ariel Ruiz Rentas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 219,
+      "raw_name": "Eli Sang",
+      "region_code": "US"
+    },
+    {
+      "placement": 220,
+      "raw_name": "Kamal Crooks",
+      "region_code": "US"
+    },
+    {
+      "placement": 221,
+      "raw_name": "Jan Lugo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 222,
+      "raw_name": "Hector Cardona Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 223,
+      "raw_name": "Lyra Kraemer",
+      "region_code": "US"
+    },
+    {
+      "placement": 224,
+      "raw_name": "Brandon Giner",
+      "region_code": "PR"
+    },
+    {
+      "placement": 225,
+      "raw_name": "Sergio Quintero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 226,
+      "raw_name": "Jesus M Soto Caban",
+      "region_code": "PR"
+    },
+    {
+      "placement": 227,
+      "raw_name": "Eduardo Tzapin",
+      "region_code": "US"
+    },
+    {
+      "placement": 228,
+      "raw_name": "Benjamin Ruiz",
+      "region_code": "MX"
+    },
+    {
+      "placement": 229,
+      "raw_name": "Seth Christopher",
+      "region_code": "US"
+    },
+    {
+      "placement": 230,
+      "raw_name": "Emerson Morales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 231,
+      "raw_name": "Billy Chan",
+      "region_code": "CA"
+    },
+    {
+      "placement": 232,
+      "raw_name": "Ian Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 233,
+      "raw_name": "Benjamin Chang",
+      "region_code": "US"
+    },
+    {
+      "placement": 234,
+      "raw_name": "Jose Roberto Cabriales De Hoyos",
+      "region_code": "MX"
+    },
+    {
+      "placement": 235,
+      "raw_name": "Trevor Williams",
+      "region_code": "US"
+    },
+    {
+      "placement": 236,
+      "raw_name": "Yafed Marrero Ocasio",
+      "region_code": "PR"
+    },
+    {
+      "placement": 237,
+      "raw_name": "Richard Warlow Jr",
+      "region_code": "US"
+    },
+    {
+      "placement": 238,
+      "raw_name": "Patrick Rampton",
+      "region_code": "US"
+    },
+    {
+      "placement": 239,
+      "raw_name": "Kenny Capo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 240,
+      "raw_name": "Brendan Dixon",
+      "region_code": "US"
+    },
+    {
+      "placement": 241,
+      "raw_name": "Kenneth Melendez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 242,
+      "raw_name": "Victor Hernandez Cosme",
+      "region_code": "PR"
+    },
+    {
+      "placement": 243,
+      "raw_name": "James Dougherty",
+      "region_code": "US"
+    },
+    {
+      "placement": 244,
+      "raw_name": "Isaiah Jacques",
+      "region_code": "US"
+    },
+    {
+      "placement": 245,
+      "raw_name": "Luis Diaz",
+      "region_code": "US"
+    },
+    {
+      "placement": 246,
+      "raw_name": "Ariel Alvarado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 247,
+      "raw_name": "Xavier De La Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 248,
+      "raw_name": "Frank Marchante",
+      "region_code": "GB"
+    },
+    {
+      "placement": 249,
+      "raw_name": "Joseph Benonis",
+      "region_code": "US"
+    },
+    {
+      "placement": 250,
+      "raw_name": "Shennell Spencer",
+      "region_code": "US"
+    },
+    {
+      "placement": 251,
+      "raw_name": "Michaela Zelaya",
+      "region_code": "US"
+    },
+    {
+      "placement": 252,
+      "raw_name": "Alexander Perez Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 253,
+      "raw_name": "Yetziel Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 254,
+      "raw_name": "Edgad Hernadez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 255,
+      "raw_name": "Adam Jones",
+      "region_code": "US"
+    },
+    {
+      "placement": 256,
+      "raw_name": "Fabian Echevarria",
+      "region_code": "PR"
+    },
+    {
+      "placement": 257,
+      "raw_name": "Li Lin",
+      "region_code": "US"
+    },
+    {
+      "placement": 258,
+      "raw_name": "Grant Henderson",
+      "region_code": "UY"
+    },
+    {
+      "placement": 259,
+      "raw_name": "Alex Batista",
+      "region_code": "PR"
+    },
+    {
+      "placement": 260,
+      "raw_name": "Leonardo Abreu",
+      "region_code": "PR"
+    },
+    {
+      "placement": 261,
+      "raw_name": "Audrey Violet",
+      "region_code": "US"
+    },
+    {
+      "placement": 262,
+      "raw_name": "Vincent Sullivan-Jacques",
+      "region_code": "US"
+    },
+    {
+      "placement": 263,
+      "raw_name": "Joshua Arroyo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 264,
+      "raw_name": "Jace Flinn",
+      "region_code": "US"
+    },
+    {
+      "placement": 265,
+      "raw_name": "Brian Mcginley",
+      "region_code": "US"
+    },
+    {
+      "placement": 266,
+      "raw_name": "Carlos Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 267,
+      "raw_name": "Jeremy Adorno",
+      "region_code": "PR"
+    },
+    {
+      "placement": 268,
+      "raw_name": "Andrés Pietrantoni",
+      "region_code": "US"
+    },
+    {
+      "placement": 269,
+      "raw_name": "Keneth Medina",
+      "region_code": "PR"
+    },
+    {
+      "placement": 270,
+      "raw_name": "Utziel Aldarondo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 271,
+      "raw_name": "Kevin Fuentes",
+      "region_code": "PR"
+    },
+    {
+      "placement": 272,
+      "raw_name": "Matthew Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 273,
+      "raw_name": "Airam Nunez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 274,
+      "raw_name": "Efrain Matos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 275,
+      "raw_name": "Ludwig Llanos Perez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 276,
+      "raw_name": "Kaleb Jacobson",
+      "region_code": "US"
+    },
+    {
+      "placement": 277,
+      "raw_name": "Juan Rafael Batista Donastorg",
+      "region_code": "DO"
+    },
+    {
+      "placement": 278,
+      "raw_name": "Kenneth Luque",
+      "region_code": "PR"
+    },
+    {
+      "placement": 279,
+      "raw_name": "Leslie J Morales Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 280,
+      "raw_name": "Jack Montañez Vázquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 281,
+      "raw_name": "Jose De Jesus",
+      "region_code": "PR"
+    },
+    {
+      "placement": 282,
+      "raw_name": "Waldemar Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 283,
+      "raw_name": "Mason Hidde",
+      "region_code": "US"
+    },
+    {
+      "placement": 284,
+      "raw_name": "Caroline De Leon Velazquez",
+      "region_code": "US"
+    },
+    {
+      "placement": 285,
+      "raw_name": "Tron Sherman",
+      "region_code": "US"
+    },
+    {
+      "placement": 286,
+      "raw_name": "Gabriel Chaparro",
+      "region_code": "PR"
+    },
+    {
+      "placement": 287,
+      "raw_name": "Daniel Lespier Valls",
+      "region_code": "PR"
+    },
+    {
+      "placement": 288,
+      "raw_name": "Josue Collazo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 289,
+      "raw_name": "Johnathan Zayas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 290,
+      "raw_name": "Norberto Jimenez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 291,
+      "raw_name": "Edgardo Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 292,
+      "raw_name": "Owens Carrillo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 293,
+      "raw_name": "Joey Zamora",
+      "region_code": "US"
+    },
+    {
+      "placement": 294,
+      "raw_name": "Jose Torres",
+      "region_code": "PR"
+    },
+    {
+      "placement": 295,
+      "raw_name": "Lumen Velez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 296,
+      "raw_name": "Reynaldo Vega",
+      "region_code": "PR"
+    },
+    {
+      "placement": 297,
+      "raw_name": "Joshua Ocasio",
+      "region_code": "PR"
+    },
+    {
+      "placement": 298,
+      "raw_name": "Rosal Edith Lozada Salgado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 299,
+      "raw_name": "Oscar Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 300,
+      "raw_name": "Jose Figueroa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 301,
+      "raw_name": "Christian Ramirez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 302,
+      "raw_name": "Austin Wright",
+      "region_code": "US"
+    },
+    {
+      "placement": 303,
+      "raw_name": "Jorge Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 304,
+      "raw_name": "Jason Pagan",
+      "region_code": "US"
+    },
+    {
+      "placement": 305,
+      "raw_name": "Elisea Gallagher",
+      "region_code": "US"
+    },
+    {
+      "placement": 306,
+      "raw_name": "Seth Savage",
+      "region_code": "UZ"
+    },
+    {
+      "placement": 307,
+      "raw_name": "Xavier Flores",
+      "region_code": "US"
+    },
+    {
+      "placement": 308,
+      "raw_name": "Bryan Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 309,
+      "raw_name": "Gabriela A Lebron",
+      "region_code": "US"
+    },
+    {
+      "placement": 310,
+      "raw_name": "Michael Dicosola",
+      "region_code": "US"
+    },
+    {
+      "placement": 311,
+      "raw_name": "Kristian Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 312,
+      "raw_name": "Ricardo Rivera Luciano",
+      "region_code": "PR"
+    },
+    {
+      "placement": 313,
+      "raw_name": "Ricardo Rojas",
+      "region_code": "DO"
+    },
+    {
+      "placement": 314,
+      "raw_name": "James Juliano",
+      "region_code": "US"
+    },
+    {
+      "placement": 315,
+      "raw_name": "Welden Fournier",
+      "region_code": "US"
+    },
+    {
+      "placement": 316,
+      "raw_name": "Joel Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 317,
+      "raw_name": "Ramon Escriba",
+      "region_code": "PR"
+    },
+    {
+      "placement": 318,
+      "raw_name": "Luis Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 319,
+      "raw_name": "Jan Montañez Vázquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 320,
+      "raw_name": "Angel Fraticelli Cartagena",
+      "region_code": "US"
+    },
+    {
+      "placement": 321,
+      "raw_name": "Matthew Middleton",
+      "region_code": "US"
+    },
+    {
+      "placement": 322,
+      "raw_name": "Bryan Cardona Gonzalez",
+      "region_code": "US"
+    },
+    {
+      "placement": 323,
+      "raw_name": "Luis Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 324,
+      "raw_name": "Alexandro Gonzalez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 325,
+      "raw_name": "Marissa Antuneztapia",
+      "region_code": "US"
+    },
+    {
+      "placement": 326,
+      "raw_name": "Kevin Rogerson",
+      "region_code": "US"
+    },
+    {
+      "placement": 327,
+      "raw_name": "Tyla Holloway",
+      "region_code": "US"
+    },
+    {
+      "placement": 328,
+      "raw_name": "Orlando Gutierrez",
+      "region_code": "US"
+    },
+    {
+      "placement": 329,
+      "raw_name": "Edwin Mercado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 330,
+      "raw_name": "Roberto Fontanez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 331,
+      "raw_name": "Luis Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 332,
+      "raw_name": "Randy Rodríguez Santos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 333,
+      "raw_name": "Jacksiel Colon Rodriguez",
+      "region_code": "UZ"
+    },
+    {
+      "placement": 334,
+      "raw_name": "Marcos Arimendi",
+      "region_code": "PR"
+    },
+    {
+      "placement": 335,
+      "raw_name": "Diego Contes",
+      "region_code": "PR"
+    },
+    {
+      "placement": 336,
+      "raw_name": "Michael Latronico Jr",
+      "region_code": "US"
+    },
+    {
+      "placement": 337,
+      "raw_name": "Kevin Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 338,
+      "raw_name": "Anthony Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 339,
+      "raw_name": "Myrielis Rivera Burgos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 340,
+      "raw_name": "Eric Zayas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 341,
+      "raw_name": "Henry Thompson",
+      "region_code": "US"
+    },
+    {
+      "placement": 342,
+      "raw_name": "Juan Fulgencio",
+      "region_code": "US"
+    },
+    {
+      "placement": 343,
+      "raw_name": "Nayip Abimael Pagán Marrero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 344,
+      "raw_name": "Irvin Telles",
+      "region_code": "PR"
+    },
+    {
+      "placement": 345,
+      "raw_name": "Felix Xavier Agosto Sherman",
+      "region_code": "PR"
+    },
+    {
+      "placement": 346,
+      "raw_name": "Ricardo López",
+      "region_code": "PR"
+    },
+    {
+      "placement": 347,
+      "raw_name": "Daniel Leitner",
+      "region_code": "US"
+    },
+    {
+      "placement": 348,
+      "raw_name": "Christopher Capizzuto",
+      "region_code": "US"
+    },
+    {
+      "placement": 349,
+      "raw_name": "Christopher Sanchez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 350,
+      "raw_name": "Nathaniel Figueroa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 351,
+      "raw_name": "Anthony Padilla",
+      "region_code": "US"
+    },
+    {
+      "placement": 352,
+      "raw_name": "Luis Xavier",
+      "region_code": "PR"
+    },
+    {
+      "placement": 353,
+      "raw_name": "Juan Pereira",
+      "region_code": "PR"
+    },
+    {
+      "placement": 354,
+      "raw_name": "Braidery Camacho",
+      "region_code": "US"
+    },
+    {
+      "placement": 355,
+      "raw_name": "Kristi Schroeder",
+      "region_code": "US"
+    }
+  ],
+  "normalized_entries": [
+    {
+      "placement": 1,
+      "normalized_name": "Miguel Alejandro Hernández García",
+      "region_code": "MX"
+    },
+    {
+      "placement": 2,
+      "normalized_name": "Ross Cawthon",
+      "region_code": "US"
+    },
+    {
+      "placement": 3,
+      "normalized_name": "Jonathan Bieligk",
+      "region_code": "US"
+    },
+    {
+      "placement": 4,
+      "normalized_name": "Joseph Bjerg",
+      "region_code": "US"
+    },
+    {
+      "placement": 5,
+      "normalized_name": "Zach Elliott",
+      "region_code": "US"
+    },
+    {
+      "placement": 6,
+      "normalized_name": "Gabriel Perez",
+      "region_code": "US"
+    },
+    {
+      "placement": 7,
+      "normalized_name": "Vincent Owen",
+      "region_code": "US"
+    },
+    {
+      "placement": 8,
+      "normalized_name": "Felipe Luna",
+      "region_code": "MX"
+    },
+    {
+      "placement": 9,
+      "normalized_name": "William Hwang",
+      "region_code": "US"
+    },
+    {
+      "placement": 10,
+      "normalized_name": "Julio Santos De Leon",
+      "region_code": "US"
+    },
+    {
+      "placement": 11,
+      "normalized_name": "Matt Bacnis",
+      "region_code": "US"
+    },
+    {
+      "placement": 12,
+      "normalized_name": "Hunter Smith",
+      "region_code": "US"
+    },
+    {
+      "placement": 13,
+      "normalized_name": "Sahil Parekh",
+      "region_code": "US"
+    },
+    {
+      "placement": 14,
+      "normalized_name": "Sebastian Lashmet",
+      "region_code": "US"
+    },
+    {
+      "placement": 15,
+      "normalized_name": "Brendan Acri",
+      "region_code": "US"
+    },
+    {
+      "placement": 16,
+      "normalized_name": "Maddox Corcoran",
+      "region_code": "US"
+    },
+    {
+      "placement": 17,
+      "normalized_name": "Jose Marrero",
+      "region_code": "US"
+    },
+    {
+      "placement": 18,
+      "normalized_name": "Finn Schleusner",
+      "region_code": "DE"
+    },
+    {
+      "placement": 19,
+      "normalized_name": "Mitchell Alvarez De La Rosa",
+      "region_code": "US"
+    },
+    {
+      "placement": 20,
+      "normalized_name": "Royer Espinosa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 21,
+      "normalized_name": "Kenny Packala",
+      "region_code": "US"
+    },
+    {
+      "placement": 22,
+      "normalized_name": "Sammy Allen",
+      "region_code": "US"
+    },
+    {
+      "placement": 23,
+      "normalized_name": "Trenton Ross",
+      "region_code": "US"
+    },
+    {
+      "placement": 24,
+      "normalized_name": "Jorge Arteaga",
+      "region_code": "US"
+    },
+    {
+      "placement": 25,
+      "normalized_name": "Eduardo Meléndez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 26,
+      "normalized_name": "Jie Ran",
+      "region_code": "US"
+    },
+    {
+      "placement": 27,
+      "normalized_name": "David Zheng",
+      "region_code": "US"
+    },
+    {
+      "placement": 28,
+      "normalized_name": "Ivan Lukens",
+      "region_code": "US"
+    },
+    {
+      "placement": 29,
+      "normalized_name": "Cody Criner",
+      "region_code": "US"
+    },
+    {
+      "placement": 30,
+      "normalized_name": "Brooks Mcgee",
+      "region_code": "US"
+    },
+    {
+      "placement": 31,
+      "normalized_name": "Sebastian Marin",
+      "region_code": "CO"
+    },
+    {
+      "placement": 32,
+      "normalized_name": "Ian Munro",
+      "region_code": "US"
+    },
+    {
+      "placement": 33,
+      "normalized_name": "Cameron Ware",
+      "region_code": "US"
+    },
+    {
+      "placement": 34,
+      "normalized_name": "Dre Alderette",
+      "region_code": "US"
+    },
+    {
+      "placement": 35,
+      "normalized_name": "Fausto Emil Rodriguez Villar",
+      "region_code": "DO"
+    },
+    {
+      "placement": 36,
+      "normalized_name": "Yosha Riley",
+      "region_code": "US"
+    },
+    {
+      "placement": 37,
+      "normalized_name": "Eric Aubertin",
+      "region_code": "CA"
+    },
+    {
+      "placement": 38,
+      "normalized_name": "Sanjeev Viswan",
+      "region_code": "US"
+    },
+    {
+      "placement": 39,
+      "normalized_name": "Evelyn Estridge",
+      "region_code": "US"
+    },
+    {
+      "placement": 40,
+      "normalized_name": "Abelardo Fukasawa",
+      "region_code": "BR"
+    },
+    {
+      "placement": 41,
+      "normalized_name": "Sergio Orozco",
+      "region_code": "CO"
+    },
+    {
+      "placement": 42,
+      "normalized_name": "Justin Brothers",
+      "region_code": "US"
+    },
+    {
+      "placement": 43,
+      "normalized_name": "Ian Gridley",
+      "region_code": "US"
+    },
+    {
+      "placement": 44,
+      "normalized_name": "Nahuel Avalos",
+      "region_code": "AR"
+    },
+    {
+      "placement": 45,
+      "normalized_name": "Jose Avalos",
+      "region_code": "MX"
+    },
+    {
+      "placement": 46,
+      "normalized_name": "Nico Gist",
+      "region_code": "US"
+    },
+    {
+      "placement": 47,
+      "normalized_name": "Anastazja Clappison",
+      "region_code": "CA"
+    },
+    {
+      "placement": 48,
+      "normalized_name": "Jose Marzan",
+      "region_code": "PR"
+    },
+    {
+      "placement": 49,
+      "normalized_name": "Frederick Cardona",
+      "region_code": "PR"
+    },
+    {
+      "placement": 50,
+      "normalized_name": "Pablo Carrizales",
+      "region_code": "MX"
+    },
+    {
+      "placement": 51,
+      "normalized_name": "Jerrick Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 52,
+      "normalized_name": "Caleb Rogerson",
+      "region_code": "US"
+    },
+    {
+      "placement": 53,
+      "normalized_name": "Cristian Perez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 54,
+      "normalized_name": "Alejandro Garcia",
+      "region_code": "US"
+    },
+    {
+      "placement": 55,
+      "normalized_name": "Ramon Miranda",
+      "region_code": "PR"
+    },
+    {
+      "placement": 56,
+      "normalized_name": "Gabriel Paler",
+      "region_code": "PR"
+    },
+    {
+      "placement": 57,
+      "normalized_name": "Nick Spence",
+      "region_code": "US"
+    },
+    {
+      "placement": 58,
+      "normalized_name": "Seth Sargent",
+      "region_code": "US"
+    },
+    {
+      "placement": 59,
+      "normalized_name": "Russell Monteiro Johnson",
+      "region_code": "US"
+    },
+    {
+      "placement": 60,
+      "normalized_name": "Kenneth Mauder",
+      "region_code": "US"
+    },
+    {
+      "placement": 61,
+      "normalized_name": "Brennon Conner",
+      "region_code": "US"
+    },
+    {
+      "placement": 62,
+      "normalized_name": "Wilson Lopez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 63,
+      "normalized_name": "Jomar Lopez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 64,
+      "normalized_name": "Jacob Mccool",
+      "region_code": "US"
+    },
+    {
+      "placement": 65,
+      "normalized_name": "James Bratton",
+      "region_code": "US"
+    },
+    {
+      "placement": 66,
+      "normalized_name": "Asher Campbell",
+      "region_code": "US"
+    },
+    {
+      "placement": 67,
+      "normalized_name": "Mike Pianka",
+      "region_code": "US"
+    },
+    {
+      "placement": 68,
+      "normalized_name": "Canaan Mellard",
+      "region_code": "US"
+    },
+    {
+      "placement": 69,
+      "normalized_name": "Hal Stewart",
+      "region_code": "US"
+    },
+    {
+      "placement": 70,
+      "normalized_name": "Jay Cristiano",
+      "region_code": "CA"
+    },
+    {
+      "placement": 71,
+      "normalized_name": "David Edelson",
+      "region_code": "US"
+    },
+    {
+      "placement": 72,
+      "normalized_name": "Vance Kelley",
+      "region_code": "US"
+    },
+    {
+      "placement": 73,
+      "normalized_name": "Ezequiel Gonzales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 74,
+      "normalized_name": "Michael Zheng",
+      "region_code": "US"
+    },
+    {
+      "placement": 75,
+      "normalized_name": "Jalen Jones",
+      "region_code": "US"
+    },
+    {
+      "placement": 76,
+      "normalized_name": "Aidan Khus",
+      "region_code": "US"
+    },
+    {
+      "placement": 77,
+      "normalized_name": "Abe Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 78,
+      "normalized_name": "Tony Vuong",
+      "region_code": "US"
+    },
+    {
+      "placement": 79,
+      "normalized_name": "Laura Favela",
+      "region_code": "MX"
+    },
+    {
+      "placement": 80,
+      "normalized_name": "Carlos Rosado",
+      "region_code": "US"
+    },
+    {
+      "placement": 81,
+      "normalized_name": "Kristopher Kemp",
+      "region_code": "US"
+    },
+    {
+      "placement": 82,
+      "normalized_name": "Joseph Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 83,
+      "normalized_name": "Jiekai Du",
+      "region_code": "US"
+    },
+    {
+      "placement": 84,
+      "normalized_name": "Matthew Walter",
+      "region_code": "US"
+    },
+    {
+      "placement": 85,
+      "normalized_name": "Welinton Martinez",
+      "region_code": "DO"
+    },
+    {
+      "placement": 86,
+      "normalized_name": "Cristiano Castaneda",
+      "region_code": "US"
+    },
+    {
+      "placement": 87,
+      "normalized_name": "Francisco Bonano Suazo",
+      "region_code": "CO"
+    },
+    {
+      "placement": 88,
+      "normalized_name": "Tyler Price",
+      "region_code": "US"
+    },
+    {
+      "placement": 89,
+      "normalized_name": "Nicolas Darge",
+      "region_code": "DE"
+    },
+    {
+      "placement": 90,
+      "normalized_name": "Irving Roman Diaz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 91,
+      "normalized_name": "Nick Dela Torre",
+      "region_code": "US"
+    },
+    {
+      "placement": 92,
+      "normalized_name": "Ramon Morales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 93,
+      "normalized_name": "Jeffrey Eric Falberg",
+      "region_code": "US"
+    },
+    {
+      "placement": 94,
+      "normalized_name": "Anibal Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 95,
+      "normalized_name": "James Coyle",
+      "region_code": "US"
+    },
+    {
+      "placement": 96,
+      "normalized_name": "Reyad Khan",
+      "region_code": "US"
+    },
+    {
+      "placement": 97,
+      "normalized_name": "John M Torres",
+      "region_code": "PR"
+    },
+    {
+      "placement": 98,
+      "normalized_name": "Javier Rosano",
+      "region_code": "MX"
+    },
+    {
+      "placement": 99,
+      "normalized_name": "Jose Zelaya",
+      "region_code": "US"
+    },
+    {
+      "placement": 100,
+      "normalized_name": "Tiger Hickman",
+      "region_code": "US"
+    },
+    {
+      "placement": 101,
+      "normalized_name": "Carleigh Young",
+      "region_code": "US"
+    },
+    {
+      "placement": 102,
+      "normalized_name": "Victor De Velasco",
+      "region_code": "MX"
+    },
+    {
+      "placement": 103,
+      "normalized_name": "Teegan Hall",
+      "region_code": "US"
+    },
+    {
+      "placement": 104,
+      "normalized_name": "Cody Graham",
+      "region_code": "US"
+    },
+    {
+      "placement": 105,
+      "normalized_name": "Olivier Gosselin",
+      "region_code": "US"
+    },
+    {
+      "placement": 106,
+      "normalized_name": "Alex Vega",
+      "region_code": "US"
+    },
+    {
+      "placement": 107,
+      "normalized_name": "Ryan Rigsby",
+      "region_code": "US"
+    },
+    {
+      "placement": 108,
+      "normalized_name": "Giovanni Sierra",
+      "region_code": "PR"
+    },
+    {
+      "placement": 109,
+      "normalized_name": "Tarun Eisen",
+      "region_code": "US"
+    },
+    {
+      "placement": 110,
+      "normalized_name": "Brett Hartmann",
+      "region_code": "US"
+    },
+    {
+      "placement": 111,
+      "normalized_name": "Jason Calderon",
+      "region_code": "US"
+    },
+    {
+      "placement": 112,
+      "normalized_name": "Jason Burch",
+      "region_code": "US"
+    },
+    {
+      "placement": 113,
+      "normalized_name": "Christian Solis",
+      "region_code": "PR"
+    },
+    {
+      "placement": 114,
+      "normalized_name": "Harrison Browning",
+      "region_code": "US"
+    },
+    {
+      "placement": 115,
+      "normalized_name": "Anderson George",
+      "region_code": "US"
+    },
+    {
+      "placement": 116,
+      "normalized_name": "Andre Miranda",
+      "region_code": "BR"
+    },
+    {
+      "placement": 117,
+      "normalized_name": "Irvin De Los Rios",
+      "region_code": "MX"
+    },
+    {
+      "placement": 118,
+      "normalized_name": "Sheldon K",
+      "region_code": "SK"
+    },
+    {
+      "placement": 119,
+      "normalized_name": "Juan Jose Madrigal",
+      "region_code": "CO"
+    },
+    {
+      "placement": 120,
+      "normalized_name": "Gabriel Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 121,
+      "normalized_name": "Christian Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 122,
+      "normalized_name": "Andres Torres",
+      "region_code": "CO"
+    },
+    {
+      "placement": 123,
+      "normalized_name": "Larry Smith",
+      "region_code": "US"
+    },
+    {
+      "placement": 124,
+      "normalized_name": "Kai Shahmeen Kasim",
+      "region_code": "US"
+    },
+    {
+      "placement": 125,
+      "normalized_name": "Jeremy Gumila",
+      "region_code": "US"
+    },
+    {
+      "placement": 126,
+      "normalized_name": "Christopher Wigelsworth",
+      "region_code": "US"
+    },
+    {
+      "placement": 127,
+      "normalized_name": "Jackson Rousseau",
+      "region_code": "US"
+    },
+    {
+      "placement": 128,
+      "normalized_name": "Ajay Sridhar",
+      "region_code": "US"
+    },
+    {
+      "placement": 129,
+      "normalized_name": "Ransen Ramirez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 130,
+      "normalized_name": "Gaer Garduno Morales",
+      "region_code": "US"
+    },
+    {
+      "placement": 131,
+      "normalized_name": "Ronald Vazquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 132,
+      "normalized_name": "Carlos Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 133,
+      "normalized_name": "Yizhi Ren",
+      "region_code": "US"
+    },
+    {
+      "placement": 134,
+      "normalized_name": "Howie Rylant",
+      "region_code": "US"
+    },
+    {
+      "placement": 135,
+      "normalized_name": "Christian Lespier",
+      "region_code": "PR"
+    },
+    {
+      "placement": 136,
+      "normalized_name": "Paul Cacioppo",
+      "region_code": "US"
+    },
+    {
+      "placement": 137,
+      "normalized_name": "Israel Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 138,
+      "normalized_name": "Bryan Wayne",
+      "region_code": "PR"
+    },
+    {
+      "placement": 139,
+      "normalized_name": "Gabriel Perez Guzman",
+      "region_code": "PR"
+    },
+    {
+      "placement": 140,
+      "normalized_name": "Lyann Rios",
+      "region_code": "PR"
+    },
+    {
+      "placement": 141,
+      "normalized_name": "Ashla Gaetano",
+      "region_code": "US"
+    },
+    {
+      "placement": 142,
+      "normalized_name": "D'Artagnan Fancher",
+      "region_code": "US"
+    },
+    {
+      "placement": 143,
+      "normalized_name": "Joseph Perez",
+      "region_code": "US"
+    },
+    {
+      "placement": 144,
+      "normalized_name": "Kenny Ortiz",
+      "region_code": "DO"
+    },
+    {
+      "placement": 145,
+      "normalized_name": "Vladimir Soto",
+      "region_code": "PR"
+    },
+    {
+      "placement": 146,
+      "normalized_name": "Carlos Alberto Vasquez Rivera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 147,
+      "normalized_name": "Diego Garcia Rueda",
+      "region_code": "MX"
+    },
+    {
+      "placement": 148,
+      "normalized_name": "Hunter Hawkins",
+      "region_code": "US"
+    },
+    {
+      "placement": 149,
+      "normalized_name": "Luis Gerena",
+      "region_code": "PR"
+    },
+    {
+      "placement": 150,
+      "normalized_name": "Frank Luciano",
+      "region_code": "US"
+    },
+    {
+      "placement": 151,
+      "normalized_name": "Sigfredo Cancel",
+      "region_code": "PR"
+    },
+    {
+      "placement": 152,
+      "normalized_name": "Aaron Rucker",
+      "region_code": "US"
+    },
+    {
+      "placement": 153,
+      "normalized_name": "Andres Estrada",
+      "region_code": "US"
+    },
+    {
+      "placement": 154,
+      "normalized_name": "Sebastiam Garcia",
+      "region_code": "PR"
+    },
+    {
+      "placement": 155,
+      "normalized_name": "Vaughn Weber",
+      "region_code": "US"
+    },
+    {
+      "placement": 156,
+      "normalized_name": "Carlos Casanova",
+      "region_code": "VE"
+    },
+    {
+      "placement": 157,
+      "normalized_name": "Ryan Bowman",
+      "region_code": "US"
+    },
+    {
+      "placement": 158,
+      "normalized_name": "Steven Hamula",
+      "region_code": "US"
+    },
+    {
+      "placement": 159,
+      "normalized_name": "Sujith Nalabolu",
+      "region_code": "US"
+    },
+    {
+      "placement": 160,
+      "normalized_name": "Bruno Watanabe",
+      "region_code": "BR"
+    },
+    {
+      "placement": 161,
+      "normalized_name": "Tom Hellkamp",
+      "region_code": "US"
+    },
+    {
+      "placement": 162,
+      "normalized_name": "Steven Mashke",
+      "region_code": "US"
+    },
+    {
+      "placement": 163,
+      "normalized_name": "Armando Arce",
+      "region_code": "PR"
+    },
+    {
+      "placement": 164,
+      "normalized_name": "Kelvin Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 165,
+      "normalized_name": "Victor Carrillo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 166,
+      "normalized_name": "Louis Qin",
+      "region_code": "US"
+    },
+    {
+      "placement": 167,
+      "normalized_name": "William Timmermeyer",
+      "region_code": "US"
+    },
+    {
+      "placement": 168,
+      "normalized_name": "Axel Wloczuk",
+      "region_code": "PR"
+    },
+    {
+      "placement": 169,
+      "normalized_name": "James Morris",
+      "region_code": "US"
+    },
+    {
+      "placement": 170,
+      "normalized_name": "Lennon Baugh",
+      "region_code": "US"
+    },
+    {
+      "placement": 171,
+      "normalized_name": "Alexander Martinez Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 172,
+      "normalized_name": "Julio Curiel",
+      "region_code": "MX"
+    },
+    {
+      "placement": 173,
+      "normalized_name": "Luis Negron",
+      "region_code": "PR"
+    },
+    {
+      "placement": 174,
+      "normalized_name": "Jose Medina",
+      "region_code": "PR"
+    },
+    {
+      "placement": 175,
+      "normalized_name": "Eduardo Barragan",
+      "region_code": "MX"
+    },
+    {
+      "placement": 176,
+      "normalized_name": "Edward Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 177,
+      "normalized_name": "Beatriz Díaz Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 178,
+      "normalized_name": "Sam Rindal",
+      "region_code": "US"
+    },
+    {
+      "placement": 179,
+      "normalized_name": "Raul Merino",
+      "region_code": "PE"
+    },
+    {
+      "placement": 180,
+      "normalized_name": "Alexander Chea",
+      "region_code": "US"
+    },
+    {
+      "placement": 181,
+      "normalized_name": "Victor Velez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 182,
+      "normalized_name": "Giomar Roberto",
+      "region_code": "PR"
+    },
+    {
+      "placement": 183,
+      "normalized_name": "Ryan Fitzmaurice",
+      "region_code": "US"
+    },
+    {
+      "placement": 184,
+      "normalized_name": "Nathan Brower",
+      "region_code": "US"
+    },
+    {
+      "placement": 185,
+      "normalized_name": "Jacobo Vega",
+      "region_code": "US"
+    },
+    {
+      "placement": 186,
+      "normalized_name": "Samuel Ruiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 187,
+      "normalized_name": "Matthew Brower",
+      "region_code": "US"
+    },
+    {
+      "placement": 188,
+      "normalized_name": "Ming Weng",
+      "region_code": "US"
+    },
+    {
+      "placement": 189,
+      "normalized_name": "Alberto Cortes",
+      "region_code": "MX"
+    },
+    {
+      "placement": 190,
+      "normalized_name": "Manuel Pinzón",
+      "region_code": "CO"
+    },
+    {
+      "placement": 191,
+      "normalized_name": "Stephen Lowe",
+      "region_code": "US"
+    },
+    {
+      "placement": 192,
+      "normalized_name": "Lucas Bratton",
+      "region_code": "US"
+    },
+    {
+      "placement": 193,
+      "normalized_name": "Guillermo Rosales",
+      "region_code": "MX"
+    },
+    {
+      "placement": 194,
+      "normalized_name": "Joshua Minor",
+      "region_code": "US"
+    },
+    {
+      "placement": 195,
+      "normalized_name": "Franco De Crescenzo",
+      "region_code": "MX"
+    },
+    {
+      "placement": 196,
+      "normalized_name": "Franco Takahashi",
+      "region_code": "US"
+    },
+    {
+      "placement": 197,
+      "normalized_name": "Luis Maldonado",
+      "region_code": "US"
+    },
+    {
+      "placement": 198,
+      "normalized_name": "Luis Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 199,
+      "normalized_name": "Leah Roy",
+      "region_code": "US"
+    },
+    {
+      "placement": 200,
+      "normalized_name": "Carlos Herrera",
+      "region_code": "MX"
+    },
+    {
+      "placement": 201,
+      "normalized_name": "Wilson Rowland",
+      "region_code": "US"
+    },
+    {
+      "placement": 202,
+      "normalized_name": "Emmanuel Collado",
+      "region_code": "DO"
+    },
+    {
+      "placement": 203,
+      "normalized_name": "Alex Alvarez",
+      "region_code": "US"
+    },
+    {
+      "placement": 204,
+      "normalized_name": "Jose Gomez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 205,
+      "normalized_name": "Fernando Cornelio",
+      "region_code": "MX"
+    },
+    {
+      "placement": 206,
+      "normalized_name": "Solomon Shurge",
+      "region_code": "US"
+    },
+    {
+      "placement": 207,
+      "normalized_name": "Raul Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 208,
+      "normalized_name": "Reby Hardy",
+      "region_code": "US"
+    },
+    {
+      "placement": 209,
+      "normalized_name": "Yamil Negron",
+      "region_code": "PR"
+    },
+    {
+      "placement": 210,
+      "normalized_name": "Omar Marrero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 211,
+      "normalized_name": "Leonardo Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 212,
+      "normalized_name": "Luis Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 213,
+      "normalized_name": "Angelique Rivera",
+      "region_code": "US"
+    },
+    {
+      "placement": 214,
+      "normalized_name": "Victor Garcia",
+      "region_code": "MX"
+    },
+    {
+      "placement": 215,
+      "normalized_name": "Keidy Rivera Vélez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 216,
+      "normalized_name": "Cole Haugaard",
+      "region_code": "US"
+    },
+    {
+      "placement": 217,
+      "normalized_name": "Forrest Burks",
+      "region_code": "US"
+    },
+    {
+      "placement": 218,
+      "normalized_name": "Ariel Ruiz Rentas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 219,
+      "normalized_name": "Eli Sang",
+      "region_code": "US"
+    },
+    {
+      "placement": 220,
+      "normalized_name": "Kamal Crooks",
+      "region_code": "US"
+    },
+    {
+      "placement": 221,
+      "normalized_name": "Jan Lugo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 222,
+      "normalized_name": "Hector Cardona Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 223,
+      "normalized_name": "Lyra Kraemer",
+      "region_code": "US"
+    },
+    {
+      "placement": 224,
+      "normalized_name": "Brandon Giner",
+      "region_code": "PR"
+    },
+    {
+      "placement": 225,
+      "normalized_name": "Sergio Quintero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 226,
+      "normalized_name": "Jesus M Soto Caban",
+      "region_code": "PR"
+    },
+    {
+      "placement": 227,
+      "normalized_name": "Eduardo Tzapin",
+      "region_code": "US"
+    },
+    {
+      "placement": 228,
+      "normalized_name": "Benjamin Ruiz",
+      "region_code": "MX"
+    },
+    {
+      "placement": 229,
+      "normalized_name": "Seth Christopher",
+      "region_code": "US"
+    },
+    {
+      "placement": 230,
+      "normalized_name": "Emerson Morales",
+      "region_code": "PR"
+    },
+    {
+      "placement": 231,
+      "normalized_name": "Billy Chan",
+      "region_code": "CA"
+    },
+    {
+      "placement": 232,
+      "normalized_name": "Ian Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 233,
+      "normalized_name": "Benjamin Chang",
+      "region_code": "US"
+    },
+    {
+      "placement": 234,
+      "normalized_name": "Jose Roberto Cabriales De Hoyos",
+      "region_code": "MX"
+    },
+    {
+      "placement": 235,
+      "normalized_name": "Trevor Williams",
+      "region_code": "US"
+    },
+    {
+      "placement": 236,
+      "normalized_name": "Yafed Marrero Ocasio",
+      "region_code": "PR"
+    },
+    {
+      "placement": 237,
+      "normalized_name": "Richard Warlow Jr",
+      "region_code": "US"
+    },
+    {
+      "placement": 238,
+      "normalized_name": "Patrick Rampton",
+      "region_code": "US"
+    },
+    {
+      "placement": 239,
+      "normalized_name": "Kenny Capo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 240,
+      "normalized_name": "Brendan Dixon",
+      "region_code": "US"
+    },
+    {
+      "placement": 241,
+      "normalized_name": "Kenneth Melendez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 242,
+      "normalized_name": "Victor Hernandez Cosme",
+      "region_code": "PR"
+    },
+    {
+      "placement": 243,
+      "normalized_name": "James Dougherty",
+      "region_code": "US"
+    },
+    {
+      "placement": 244,
+      "normalized_name": "Isaiah Jacques",
+      "region_code": "US"
+    },
+    {
+      "placement": 245,
+      "normalized_name": "Luis Diaz",
+      "region_code": "US"
+    },
+    {
+      "placement": 246,
+      "normalized_name": "Ariel Alvarado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 247,
+      "normalized_name": "Xavier De La Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 248,
+      "normalized_name": "Frank Marchante",
+      "region_code": "GB"
+    },
+    {
+      "placement": 249,
+      "normalized_name": "Joseph Benonis",
+      "region_code": "US"
+    },
+    {
+      "placement": 250,
+      "normalized_name": "Shennell Spencer",
+      "region_code": "US"
+    },
+    {
+      "placement": 251,
+      "normalized_name": "Michaela Zelaya",
+      "region_code": "US"
+    },
+    {
+      "placement": 252,
+      "normalized_name": "Alexander Perez Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 253,
+      "normalized_name": "Yetziel Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 254,
+      "normalized_name": "Edgad Hernadez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 255,
+      "normalized_name": "Adam Jones",
+      "region_code": "US"
+    },
+    {
+      "placement": 256,
+      "normalized_name": "Fabian Echevarria",
+      "region_code": "PR"
+    },
+    {
+      "placement": 257,
+      "normalized_name": "Li Lin",
+      "region_code": "US"
+    },
+    {
+      "placement": 258,
+      "normalized_name": "Grant Henderson",
+      "region_code": "UY"
+    },
+    {
+      "placement": 259,
+      "normalized_name": "Alex Batista",
+      "region_code": "PR"
+    },
+    {
+      "placement": 260,
+      "normalized_name": "Leonardo Abreu",
+      "region_code": "PR"
+    },
+    {
+      "placement": 261,
+      "normalized_name": "Audrey Violet",
+      "region_code": "US"
+    },
+    {
+      "placement": 262,
+      "normalized_name": "Vincent Sullivan-Jacques",
+      "region_code": "US"
+    },
+    {
+      "placement": 263,
+      "normalized_name": "Joshua Arroyo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 264,
+      "normalized_name": "Jace Flinn",
+      "region_code": "US"
+    },
+    {
+      "placement": 265,
+      "normalized_name": "Brian Mcginley",
+      "region_code": "US"
+    },
+    {
+      "placement": 266,
+      "normalized_name": "Carlos Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 267,
+      "normalized_name": "Jeremy Adorno",
+      "region_code": "PR"
+    },
+    {
+      "placement": 268,
+      "normalized_name": "Andrés Pietrantoni",
+      "region_code": "US"
+    },
+    {
+      "placement": 269,
+      "normalized_name": "Keneth Medina",
+      "region_code": "PR"
+    },
+    {
+      "placement": 270,
+      "normalized_name": "Utziel Aldarondo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 271,
+      "normalized_name": "Kevin Fuentes",
+      "region_code": "PR"
+    },
+    {
+      "placement": 272,
+      "normalized_name": "Matthew Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 273,
+      "normalized_name": "Airam Nunez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 274,
+      "normalized_name": "Efrain Matos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 275,
+      "normalized_name": "Ludwig Llanos Perez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 276,
+      "normalized_name": "Kaleb Jacobson",
+      "region_code": "US"
+    },
+    {
+      "placement": 277,
+      "normalized_name": "Juan Rafael Batista Donastorg",
+      "region_code": "DO"
+    },
+    {
+      "placement": 278,
+      "normalized_name": "Kenneth Luque",
+      "region_code": "PR"
+    },
+    {
+      "placement": 279,
+      "normalized_name": "Leslie J Morales Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 280,
+      "normalized_name": "Jack Montañez Vázquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 281,
+      "normalized_name": "Jose De Jesus",
+      "region_code": "PR"
+    },
+    {
+      "placement": 282,
+      "normalized_name": "Waldemar Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 283,
+      "normalized_name": "Mason Hidde",
+      "region_code": "US"
+    },
+    {
+      "placement": 284,
+      "normalized_name": "Caroline De Leon Velazquez",
+      "region_code": "US"
+    },
+    {
+      "placement": 285,
+      "normalized_name": "Tron Sherman",
+      "region_code": "US"
+    },
+    {
+      "placement": 286,
+      "normalized_name": "Gabriel Chaparro",
+      "region_code": "PR"
+    },
+    {
+      "placement": 287,
+      "normalized_name": "Daniel Lespier Valls",
+      "region_code": "PR"
+    },
+    {
+      "placement": 288,
+      "normalized_name": "Josue Collazo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 289,
+      "normalized_name": "Johnathan Zayas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 290,
+      "normalized_name": "Norberto Jimenez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 291,
+      "normalized_name": "Edgardo Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 292,
+      "normalized_name": "Owens Carrillo",
+      "region_code": "PR"
+    },
+    {
+      "placement": 293,
+      "normalized_name": "Joey Zamora",
+      "region_code": "US"
+    },
+    {
+      "placement": 294,
+      "normalized_name": "Jose Torres",
+      "region_code": "PR"
+    },
+    {
+      "placement": 295,
+      "normalized_name": "Lumen Velez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 296,
+      "normalized_name": "Reynaldo Vega",
+      "region_code": "PR"
+    },
+    {
+      "placement": 297,
+      "normalized_name": "Joshua Ocasio",
+      "region_code": "PR"
+    },
+    {
+      "placement": 298,
+      "normalized_name": "Rosal Edith Lozada Salgado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 299,
+      "normalized_name": "Oscar Nieves",
+      "region_code": "PR"
+    },
+    {
+      "placement": 300,
+      "normalized_name": "Jose Figueroa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 301,
+      "normalized_name": "Christian Ramirez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 302,
+      "normalized_name": "Austin Wright",
+      "region_code": "US"
+    },
+    {
+      "placement": 303,
+      "normalized_name": "Jorge Rivera",
+      "region_code": "PR"
+    },
+    {
+      "placement": 304,
+      "normalized_name": "Jason Pagan",
+      "region_code": "US"
+    },
+    {
+      "placement": 305,
+      "normalized_name": "Elisea Gallagher",
+      "region_code": "US"
+    },
+    {
+      "placement": 306,
+      "normalized_name": "Seth Savage",
+      "region_code": "UZ"
+    },
+    {
+      "placement": 307,
+      "normalized_name": "Xavier Flores",
+      "region_code": "US"
+    },
+    {
+      "placement": 308,
+      "normalized_name": "Bryan Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 309,
+      "normalized_name": "Gabriela A Lebron",
+      "region_code": "US"
+    },
+    {
+      "placement": 310,
+      "normalized_name": "Michael Dicosola",
+      "region_code": "US"
+    },
+    {
+      "placement": 311,
+      "normalized_name": "Kristian Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 312,
+      "normalized_name": "Ricardo Rivera Luciano",
+      "region_code": "PR"
+    },
+    {
+      "placement": 313,
+      "normalized_name": "Ricardo Rojas",
+      "region_code": "DO"
+    },
+    {
+      "placement": 314,
+      "normalized_name": "James Juliano",
+      "region_code": "US"
+    },
+    {
+      "placement": 315,
+      "normalized_name": "Welden Fournier",
+      "region_code": "US"
+    },
+    {
+      "placement": 316,
+      "normalized_name": "Joel Rodriguez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 317,
+      "normalized_name": "Ramon Escriba",
+      "region_code": "PR"
+    },
+    {
+      "placement": 318,
+      "normalized_name": "Luis Cruz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 319,
+      "normalized_name": "Jan Montañez Vázquez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 320,
+      "normalized_name": "Angel Fraticelli Cartagena",
+      "region_code": "US"
+    },
+    {
+      "placement": 321,
+      "normalized_name": "Matthew Middleton",
+      "region_code": "US"
+    },
+    {
+      "placement": 322,
+      "normalized_name": "Bryan Cardona Gonzalez",
+      "region_code": "US"
+    },
+    {
+      "placement": 323,
+      "normalized_name": "Luis Santiago",
+      "region_code": "PR"
+    },
+    {
+      "placement": 324,
+      "normalized_name": "Alexandro Gonzalez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 325,
+      "normalized_name": "Marissa Antuneztapia",
+      "region_code": "US"
+    },
+    {
+      "placement": 326,
+      "normalized_name": "Kevin Rogerson",
+      "region_code": "US"
+    },
+    {
+      "placement": 327,
+      "normalized_name": "Tyla Holloway",
+      "region_code": "US"
+    },
+    {
+      "placement": 328,
+      "normalized_name": "Orlando Gutierrez",
+      "region_code": "US"
+    },
+    {
+      "placement": 329,
+      "normalized_name": "Edwin Mercado",
+      "region_code": "PR"
+    },
+    {
+      "placement": 330,
+      "normalized_name": "Roberto Fontanez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 331,
+      "normalized_name": "Luis Ramos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 332,
+      "normalized_name": "Randy Rodríguez Santos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 333,
+      "normalized_name": "Jacksiel Colon Rodriguez",
+      "region_code": "UZ"
+    },
+    {
+      "placement": 334,
+      "normalized_name": "Marcos Arimendi",
+      "region_code": "PR"
+    },
+    {
+      "placement": 335,
+      "normalized_name": "Diego Contes",
+      "region_code": "PR"
+    },
+    {
+      "placement": 336,
+      "normalized_name": "Michael Latronico Jr",
+      "region_code": "US"
+    },
+    {
+      "placement": 337,
+      "normalized_name": "Kevin Ortiz",
+      "region_code": "PR"
+    },
+    {
+      "placement": 338,
+      "normalized_name": "Anthony Hernandez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 339,
+      "normalized_name": "Myrielis Rivera Burgos",
+      "region_code": "PR"
+    },
+    {
+      "placement": 340,
+      "normalized_name": "Eric Zayas",
+      "region_code": "PR"
+    },
+    {
+      "placement": 341,
+      "normalized_name": "Henry Thompson",
+      "region_code": "US"
+    },
+    {
+      "placement": 342,
+      "normalized_name": "Juan Fulgencio",
+      "region_code": "US"
+    },
+    {
+      "placement": 343,
+      "normalized_name": "Nayip Abimael Pagán Marrero",
+      "region_code": "PR"
+    },
+    {
+      "placement": 344,
+      "normalized_name": "Irvin Telles",
+      "region_code": "PR"
+    },
+    {
+      "placement": 345,
+      "normalized_name": "Felix Xavier Agosto Sherman",
+      "region_code": "PR"
+    },
+    {
+      "placement": 346,
+      "normalized_name": "Ricardo López",
+      "region_code": "PR"
+    },
+    {
+      "placement": 347,
+      "normalized_name": "Daniel Leitner",
+      "region_code": "US"
+    },
+    {
+      "placement": 348,
+      "normalized_name": "Christopher Capizzuto",
+      "region_code": "US"
+    },
+    {
+      "placement": 349,
+      "normalized_name": "Christopher Sanchez",
+      "region_code": "PR"
+    },
+    {
+      "placement": 350,
+      "normalized_name": "Nathaniel Figueroa",
+      "region_code": "PR"
+    },
+    {
+      "placement": 351,
+      "normalized_name": "Anthony Padilla",
+      "region_code": "US"
+    },
+    {
+      "placement": 352,
+      "normalized_name": "Luis Xavier",
+      "region_code": "PR"
+    },
+    {
+      "placement": 353,
+      "normalized_name": "Juan Pereira",
+      "region_code": "PR"
+    },
+    {
+      "placement": 354,
+      "normalized_name": "Braidery Camacho",
+      "region_code": "US"
+    },
+    {
+      "placement": 355,
+      "normalized_name": "Kristi Schroeder",
+      "region_code": "US"
+    }
+  ]
+}
