@@ -49,6 +49,14 @@
   .controls input { min-width: 180px; }
   .controls select:focus, .controls input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
   .controls .stat { margin-left: auto; color: #4b5563; font-size: 15px; font-weight: 500; }
+  .checkbox-group {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1.5px solid #c4c8d0; border-radius: 8px; padding: 7px 14px;
+    background: #f9fafb; cursor: pointer; user-select: none;
+  }
+  .checkbox-group:hover { border-color: #2563eb; background: #eef0f4; }
+  .checkbox-group input { margin: 0; width: 16px; height: 16px; cursor: pointer; }
+  .checkbox-group label { cursor: pointer; font-weight: 500; }
 
   .table-wrap {
     overflow-x: auto; border-radius: 10px; border: 1px solid #d4d6dd;
@@ -180,7 +188,7 @@
       </select>
       <label>Search</label>
       <input type="text" id="fSearch" placeholder="Name...">
-      <label><input type="checkbox" id="fHideAB" checked> Hide autobid</label>
+      <span class="checkbox-group"><input type="checkbox" id="fHideAB" checked><label for="fHideAB">Hide autobid</label></span>
       <span class="stat" id="statCount">0 players</span>
     </div>
     <div class="table-wrap">
