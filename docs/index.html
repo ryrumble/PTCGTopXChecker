@@ -23,6 +23,10 @@
   header .meta { color: #4b5563; font-size: 15px; }
   header .meta span { margin-right: 20px; }
   header .meta strong { color: #111827; }
+  header select {
+    background: #ffffff; border: 1px solid #b0b4be; border-radius: 8px;
+    color: #111827; padding: 6px 10px; font-size: 14px;
+  }
 
   .tabs { display: flex; gap: 0; border-bottom: 2px solid #d4d6dd; margin-bottom: 20px; }
   .tabs button {
@@ -163,7 +167,9 @@
     <div>
       <h1>PKMN Top X Checker</h1>
       <div class="meta">
-        <span id="hSeason">Season: <strong>—</strong></span>
+        <label for="fSeason">Season
+          <select id="fSeason" aria-label="Season"></select>
+        </label>
         <span id="hPlayers">Players: <strong>—</strong></span>
         <span id="hTourneys">Tournaments: <strong>—</strong></span>
       </div>
@@ -229,9 +235,9 @@
 </div>
 
 <script>
-const LB_URL = "data/leaderboard.json";
-const RES_URL = "data/player_results.json";
-const T_URL = "data/tournaments.json";
+const SEASONS_URL = "data/seasons.json";
+let seasons = [], currentSeason = "";
+function seasonURL(name) { return `data/${encodeURIComponent(currentSeason)}/${name}`; }
 
 const PAGE_SIZE = 100;
 let players = [], tournaments = [], resultsLookup = {};
@@ -254,13 +260,19 @@ async function loadJSON(url) {
 
 async function loadAll() {
   try {
+    if (!seasons.length) {
+      seasons = await loadJSON(SEASONS_URL);
+      const selector = document.getElementById("fSeason");
+      selector.innerHTML = seasons.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+      currentSeason = seasons[0] || "";
+    }
     const [lbData, tData] = await Promise.all([
-      loadJSON(LB_URL).catch(() => null),
-      loadJSON(T_URL).catch(() => null),
+      loadJSON(seasonURL("leaderboard.json")).catch(() => null),
+      loadJSON(seasonURL("tournaments.json")).catch(() => null),
     ]);
+    resultsLookup = {};
     if (lbData) {
       players = lbData.players || [];
-      document.getElementById("hSeason").innerHTML = `Season: <strong>${esc(lbData.season)}</strong>`;
       document.getElementById("hPlayers").innerHTML = `Players: <strong>${fmt(players.length)}</strong>`;
       document.getElementById("hTourneys").innerHTML = `Tournaments: <strong>${lbData.tournaments || 0}</strong>`;
     }
@@ -370,7 +382,7 @@ async function openPlayer(name) {
   if (!resultsLookup[name]) {
     try {
       if (Object.keys(resultsLookup).length === 0) {
-        resultsLookup = await loadJSON(RES_URL);
+        resultsLookup = await loadJSON(seasonURL("player_results.json"));
       }
     } catch {}
   }
@@ -436,6 +448,12 @@ function renderTournaments() {
     </div>`;
   }).join("");
 }
+
+document.getElementById("fSeason").addEventListener("change", (e) => {
+  currentSeason = e.target.value;
+  currentPage = 1;
+  loadAll();
+});
 
 loadAll();
 </script>

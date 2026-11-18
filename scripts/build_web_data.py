@@ -1,20 +1,41 @@
-"""Build web-optimized data files from season_aggregate.json for docs/."""
+"""Build web-optimized data files for every season with an aggregate."""
 
 import json
 from pathlib import Path
 
-SEASON = "2025-2026"
-SRC = Path("data") / SEASON / "season_aggregate.json"
-DOCS_DATA = Path("docs") / "data"
+DATA_DIR = Path("data")
+DOCS_DATA = Path("docs/data")
+SEASONS_FILE = "seasons.json"
 
 
-def main():
-    with open(SRC, encoding="utf-8") as f:
+def discover_seasons(data_dir: Path = DATA_DIR) -> list[str]:
+    """Return season names that have an aggregate, newest first."""
+    return sorted(
+        (path.parent.name for path in data_dir.glob("*/season_aggregate.json")),
+        reverse=True,
+    )
+
+
+def _write_json(path: Path, payload: object) -> int:
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False)
+    return path.stat().st_size
+
+
+def build_season(
+    season: str,
+    *,
+    data_dir: Path = DATA_DIR,
+    docs_data: Path = DOCS_DATA,
+) -> dict[str, int]:
+    """Write the compact leaderboard, results lookup and tournament list for one season."""
+    src = data_dir / season / "season_aggregate.json"
+    with src.open(encoding="utf-8") as f:
         raw = json.load(f)
 
     leaderboard = raw.get("leaderboard", [])
     tournaments = raw.get("tournaments", [])
-    season = raw.get("season", SEASON)
+    season = raw.get("season", season)
 
     # Build compact leaderboard (no TournamentResults, short keys)
     compact_lb = []
@@ -41,40 +62,54 @@ def main():
                 for r in results
             ]
 
-    DOCS_DATA.mkdir(parents=True, exist_ok=True)
+    out_dir = docs_data / season
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Write optimized leaderboard
-    lb_path = DOCS_DATA / "leaderboard.json"
-    with open(lb_path, "w", encoding="utf-8") as f:
-        json.dump({"season": season, "players": compact_lb, "tournaments": len(tournaments)}, f, ensure_ascii=False)
-    lb_kb = lb_path.stat().st_size / 1024
-    print(f"Leaderboard: {len(compact_lb)} players, {lb_kb:.0f} KB")
+    sizes = {
+        "leaderboard": _write_json(
+            out_dir / "leaderboard.json",
+            {"season": season, "players": compact_lb, "tournaments": len(tournaments)},
+        ),
+        "player_results": _write_json(out_dir / "player_results.json", player_results_lookup),
+        "tournaments": _write_json(
+            out_dir / "tournaments.json",
+            [
+                {
+                    "n": t.get("title", ""),
+                    "t": t.get("tournament_type", ""),
+                    "c": t.get("num_competitors", 0),
+                    "d": t.get("tournament_date", ""),
+                    "u": t.get("url", ""),
+                }
+                for t in tournaments
+            ],
+        ),
+    }
 
-    # Write player results lookup
-    results_path = DOCS_DATA / "player_results.json"
-    with open(results_path, "w", encoding="utf-8") as f:
-        json.dump(player_results_lookup, f, ensure_ascii=False)
-    rl_kb = results_path.stat().st_size / 1024
-    print(f"Player results: {len(player_results_lookup)} players, {rl_kb:.0f} KB")
+    print(
+        f"{season}: {len(compact_lb)} players, {len(player_results_lookup)} with results, "
+        f"{len(tournaments)} tournaments ({sum(sizes.values()) / 1024:.0f} KB)"
+    )
+    return sizes
 
-    # Write tournament metadata (compact)
-    compact_tourneys = []
-    for t in tournaments:
-        compact_tourneys.append({
-            "n": t.get("title", ""),
-            "t": t.get("tournament_type", ""),
-            "c": t.get("num_competitors", 0),
-            "d": t.get("tournament_date", ""),
-            "u": t.get("url", ""),
-        })
-    tourneys_path = DOCS_DATA / "tournaments.json"
-    with open(tourneys_path, "w", encoding="utf-8") as f:
-        json.dump(compact_tourneys, f, ensure_ascii=False)
-    tk_kb = tourneys_path.stat().st_size / 1024
-    print(f"Tournaments: {len(compact_tourneys)} entries, {tk_kb:.0f} KB")
 
-    total_kb = lb_kb + rl_kb + tk_kb
-    print(f"\nTotal: {total_kb:.0f} KB (was {SRC.stat().st_size / 1024:.0f} KB)")
+def main(
+    *,
+    data_dir: Path = DATA_DIR,
+    docs_data: Path = DOCS_DATA,
+) -> list[str]:
+    """Rebuild every season's web data and the season index used by the site."""
+    seasons = discover_seasons(data_dir)
+    if not seasons:
+        raise SystemExit(f"No season aggregates found under {data_dir}/")
+
+    docs_data.mkdir(parents=True, exist_ok=True)
+    for season in seasons:
+        build_season(season, data_dir=data_dir, docs_data=docs_data)
+
+    _write_json(docs_data / SEASONS_FILE, seasons)
+    print(f"Seasons: {', '.join(seasons)}")
+    return seasons
 
 
 if __name__ == "__main__":
