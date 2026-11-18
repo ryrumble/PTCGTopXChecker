@@ -337,5 +337,39 @@ The **Total CP Analysis** tab allows you to compare total Championship Points fr
 - The parser correctly handles HTML format and separates CP from Play Points (PP)
 - All Total CP Analysis features are isolated from the main tournament tracking functionality
 
+### Moneyball Efficiency (More Charts → Moneyball)
+
+The **Moneyball** sub-tab shows which players extracted the most Championship Points from the smallest fields. It is a view over the normal season aggregate; it does not change the leaderboard or tournament data.
+
+An event's **size tier** is derived from the CP kicker ladder rather than an arbitrary competitor cutoff: an event with N competitors reaches every bracket whose kicker is ≤ N (0, 4, 8, 17, 33, 65, 129, 257, 513, 1,025, 2,049). A finish's **efficiency** is `CP / (size tier + 1)`, and a player's **Moneyball score** is the average efficiency of their top 5 CP-scoring finishes (the same Best Finish Limit used for `TotalCP`). The `+1` prevents division by zero at tier 0.
+
+For example, a 350-CP regional win scores **5.30** at a tier-65 event (65–128 players) but only **0.17** at a tier-2,049 event (2,049+ players), so two players with identical total CP can be an order of magnitude apart in efficiency.
+
+Options in the tab:
+
+- **Region**: `ALL` (default) or a single region group.
+- **Min finishes**: minimum number of CP-scoring finishes required to qualify (default **4**).
+- **Top X**: how many ranked players to show (default **200**).
+- **Include autobid winners**: on by default, since winning a small regional earns an autobid and excluding those players would hide the effect.
+
+The tab shows a scatter plot of Total CP vs. Moneyball score (top 10 labelled) and a sortable table with rank, region, total CP, score, average event tier, smallest field attended, and number of counting finishes. Click any column header to re-sort.
+
+**Exploring a player:** double-click any row to open the same tournament-results window used by the Leaderboard tab. For Moneyball players it adds **Players**, **Kicker tier**, **Efficiency**, and **Top 5** columns, plus a summary of counting finishes and average efficiency — so you can see exactly which small-field events drove the score. The **Find player** box highlights matching rows in the table and rings the matching points in the chart (case-insensitive substring search); the highlight survives column re-sorts.
+
+Programmatic use:
+
+```python
+from moneyball import moneyball_leaderboard
+
+df = moneyball_leaderboard(
+    "2025-2026",
+    region_group="ALL",
+    min_counting_finishes=4,
+    top_x=200,
+    include_autobid=True,
+)
+print(df.head(10))
+```
+
 
 

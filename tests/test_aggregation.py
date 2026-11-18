@@ -82,6 +82,13 @@ class TestPlayerStats:
         assert ps.placements == [1, 5]
         assert len(ps.tournament_results) == 2
 
+    def test_add_result_stores_event_size_and_id(self):
+        ps = PlayerStats(name="Alice", region_code="US")
+        ps.add_result(350, 1, "Regional 1", "REGIONAL", 80, "regional-1_2025-2026")
+        result = ps.tournament_results[0]
+        assert result["num_competitors"] == 80
+        assert result["tournament_id"] == "regional-1_2025-2026"
+
     def test_empty_stats(self):
         ps = PlayerStats(name="Alice", region_code="US")
         assert ps.cp_finishes == []

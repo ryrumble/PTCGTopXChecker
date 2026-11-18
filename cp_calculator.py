@@ -51,6 +51,29 @@ IC_BRACKETS = _make_brackets_ic()
 REGIONAL_BRACKETS = _make_brackets_regional()
 
 
+def kicker_ladder(tournament_type: str) -> list[int]:
+    """Return the sorted CP kicker thresholds for a tournament type.
+
+    The ladder is the same for IC and Regional/SPE events, but deriving it
+    from the bracket tables keeps it in sync if a season's tables change.
+    """
+    brackets = IC_BRACKETS if tournament_type.strip().upper() == "IC" else REGIONAL_BRACKETS
+    return sorted({b.kicker for b in brackets})
+
+
+def max_kicker_for_field(num_competitors: int, tournament_type: str = "REGIONAL") -> int:
+    """Largest kicker threshold reached by a field of this size.
+
+    An event with N competitors reaches every CP bracket whose kicker is
+    <= N, and no more. That gives a CP-aware "size tier" for the event:
+    0 for a tiny field, up to 2,049 for the largest regionals.
+    """
+    if num_competitors <= 0:
+        return 0
+    reached = [k for k in kicker_ladder(tournament_type) if k <= num_competitors]
+    return reached[-1] if reached else 0
+
+
 def calculate_cp(
     tournament_type: str, placement: int, num_competitors: int
 ) -> int:

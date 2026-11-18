@@ -8,7 +8,7 @@ from tkinter import messagebox, ttk
 from typing import TYPE_CHECKING
 
 from aggregation import invalidate_season_caches
-from gui.constants import DEFAULT_SEASON
+from gui.constants import DEFAULT_SEASON, SEASONS
 from logger import logger
 
 if TYPE_CHECKING:
@@ -57,8 +57,10 @@ class TournamentEditor(tk.Toplevel):
         season_row = ttk.Frame(meta_frame)
         season_row.pack(fill=tk.X, padx=5, pady=2)
         ttk.Label(season_row, text="Season:", width=12).pack(side=tk.LEFT)
-        self.meta_season_var = tk.StringVar(value=meta.get("season", ""))
-        ttk.Entry(season_row, textvariable=self.meta_season_var, width=15).pack(side=tk.LEFT, padx=5)
+        self.meta_season_var = tk.StringVar(value=meta.get("season", "") or DEFAULT_SEASON)
+        ttk.Combobox(
+            season_row, textvariable=self.meta_season_var, values=SEASONS, width=15, state="readonly",
+        ).pack(side=tk.LEFT, padx=5)
 
         comp_row = ttk.Frame(meta_frame)
         comp_row.pack(fill=tk.X, padx=5, pady=2)

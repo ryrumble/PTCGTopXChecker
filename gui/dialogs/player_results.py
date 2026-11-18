@@ -11,6 +11,29 @@ if TYPE_CHECKING:
     from gui.app import App
 
 
+def result_columns(results: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """Columns to display; efficiency columns appear only when the data has them.
+
+    Basic Leaderboard results get the original four columns. Moneyball results
+    additionally carry field size, kicker tier, efficiency and a top-5 flag.
+    """
+    columns = [
+        ("tournament", "Tournament"),
+        ("placement", "Placement"),
+        ("type", "Type"),
+        ("cp", "CP"),
+    ]
+    if any("num_competitors" in r for r in results):
+        columns += [
+            ("num_competitors", "Players"),
+            ("tier", "Kicker tier"),
+            ("efficiency", "Efficiency"),
+        ]
+    if any("counts" in r for r in results):
+        columns.append(("counts", "Top 5"))
+    return columns
+
+
 class PlayerResultsViewer(tk.Toplevel):
     """Window showing a player's tournament results."""
 
@@ -21,14 +44,36 @@ class PlayerResultsViewer(tk.Toplevel):
 
         header = ttk.Frame(self)
         header.pack(fill=tk.X, padx=10, pady=5)
-        ttk.Label(header, text=f"Tournament Results for {player_name}", font=("", 12, "bold")).pack()
+        ttk.Label(
+            header, text=f"Tournament Results for {player_name}", font=("", 12, "bold")
+        ).pack(anchor="w")
+
+        all_columns = result_columns(results)
+        columns = tuple(col for col, _ in all_columns)
+
+        counting = [r for r in results if r.get("counts")]
+        if counting:
+            avg = sum(float(r.get("efficiency") or 0) for r in counting) / len(counting)
+            fields = [
+                int(r.get("num_competitors") or 0)
+                for r in counting
+                if r.get("num_competitors")
+            ]
+            smallest = min(fields) if fields else 0
+            ttk.Label(
+                header,
+                text=(
+                    f"{len(counting)} counting finishes · avg efficiency {avg:.3f} "
+                    f"· smallest field {smallest:,}"
+                ),
+                foreground="#4b5563",
+            ).pack(anchor="w")
 
         table_frame = ttk.Frame(self)
         table_frame.pack(fill=tk.BOTH, padx=10, pady=5, expand=True)
 
-        columns = ("tournament", "placement", "type", "cp")
         tree = ttk.Treeview(table_frame, columns=columns, show="headings")
-        for col, text in zip(columns, ["Tournament", "Placement", "Type", "CP"]):
+        for col, text in all_columns:
             tree.heading(col, text=text)
             tree.column(col, width=80)
 
@@ -44,16 +89,13 @@ class PlayerResultsViewer(tk.Toplevel):
 
         if results:
             for result in sorted(results, key=lambda x: x.get("cp", 0), reverse=True):
-                tree.insert(
-                    "",
-                    tk.END,
-                    values=(
-                        result.get("tournament", "Unknown"),
-                        result.get("placement", "N/A"),
-                        result.get("type", "N/A"),
-                        result.get("cp", 0),
-                    ),
-                )
+                values = []
+                for col, _ in all_columns:
+                    value = result.get(col, "")
+                    if col == "counts":
+                        value = "Yes" if value else ""
+                    values.append(value)
+                tree.insert("", tk.END, values=tuple(values))
         else:
             tree.insert("", tk.END, values=("No tournament results found", "", "", ""))
 

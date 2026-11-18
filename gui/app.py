@@ -15,7 +15,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.figure import Figure
 
 from aggregation import aggregate_season, filter_leaderboard_by_region, invalidate_season_caches
-from gui.constants import CHART_COLORS, DEFAULT_SEASON
+from gui.constants import CHART_COLORS, DEFAULT_SEASON, SEASONS
 from gui.dialogs import (
     LoadTotalCPFileDialog,
     PlayerManager,
@@ -24,6 +24,12 @@ from gui.dialogs import (
     TournamentEditor,
 )
 from logger import logger
+from moneyball import (
+    DEFAULT_MIN_COUNTING_FINISHES,
+    DEFAULT_TOP_X,
+    REGION_OPTIONS,
+    moneyball_leaderboard,
+)
 from more_charts import (
     box_plot_rank_buckets,
     estimated_remaining_events_heuristic,
@@ -94,13 +100,23 @@ class App(tk.Tk):
         self._build_worlds_race_tab(self.worlds_race_frame)
         self._build_more_charts_tab(self.more_charts_frame)
 
+    def _season_combobox(self, parent: ttk.Frame) -> ttk.Combobox:
+        """Create a season picker bound to the one shared season selection."""
+        return ttk.Combobox(
+            parent,
+            textvariable=self.season_var,
+            values=SEASONS,
+            width=12,
+            state="readonly",
+        )
+
     # --- Add Tournament Tab ---
     def _build_add_tab(self, parent: ttk.Frame) -> None:
         top = ttk.Frame(parent)
         top.pack(fill=tk.X, padx=10, pady=5)
 
         ttk.Label(top, text="Season:").grid(row=0, column=0, sticky="w")
-        ttk.Entry(top, textvariable=self.season_var, width=12).grid(row=0, column=1, sticky="w")
+        self._season_combobox(top).grid(row=0, column=1, sticky="w")
 
         # Paste controls
         paste_frame = ttk.LabelFrame(parent, text="Paste Results")
@@ -324,9 +340,7 @@ class App(tk.Tk):
         controls = ttk.Frame(parent)
         controls.pack(fill=tk.X, padx=10, pady=5)
         ttk.Label(controls, text="Season:").pack(side=tk.LEFT)
-        ttk.Entry(controls, textvariable=self.season_var, width=12).pack(
-            side=tk.LEFT, padx=5
-        )
+        self._season_combobox(controls).pack(side=tk.LEFT, padx=5)
         ttk.Button(controls, text="Refresh", command=self._refresh_leaderboard).pack(
             side=tk.LEFT, padx=5
         )
@@ -525,10 +539,7 @@ class App(tk.Tk):
         controls = ttk.Frame(parent)
         controls.pack(fill=tk.X, padx=10, pady=5)
         ttk.Label(controls, text="Season:").pack(side=tk.LEFT)
-        self.tournaments_season_var = tk.StringVar(value=DEFAULT_SEASON)
-        ttk.Entry(controls, textvariable=self.tournaments_season_var, width=12).pack(
-            side=tk.LEFT, padx=5
-        )
+        self._season_combobox(controls).pack(side=tk.LEFT, padx=5)
         ttk.Button(controls, text="Refresh", command=self._refresh_tournaments_list).pack(
             side=tk.LEFT, padx=5
         )
@@ -572,11 +583,11 @@ class App(tk.Tk):
 
     def _open_player_manager(self) -> None:
         """Open the player merge/split management window."""
-        season = self.tournaments_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         PlayerManager(self, season)
 
     def _refresh_tournaments_list(self) -> None:
-        season = self.tournaments_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         self.tournaments_tree.delete(*self.tournaments_tree.get_children())
         self.tournament_paths.clear()
 
@@ -689,7 +700,7 @@ class App(tk.Tk):
 
         try:
             path.unlink()
-            season = self.tournaments_season_var.get().strip() or DEFAULT_SEASON
+            season = self.season_var.get().strip() or DEFAULT_SEASON
             invalidate_season_caches(season)
             messagebox.showinfo("Deleted", f"Tournament '{title}' has been deleted.")
             self._refresh_tournaments_list()
@@ -704,10 +715,7 @@ class App(tk.Tk):
         controls.pack(fill=tk.X, padx=10, pady=5)
 
         ttk.Label(controls, text="Season:").pack(side=tk.LEFT)
-        self.total_cp_season_var = tk.StringVar(value=DEFAULT_SEASON)
-        ttk.Entry(controls, textvariable=self.total_cp_season_var, width=12).pack(
-            side=tk.LEFT, padx=5
-        )
+        self._season_combobox(controls).pack(side=tk.LEFT, padx=5)
         ttk.Button(controls, text="Refresh", command=lambda: self._refresh_total_cp_analysis(force_regional_refresh=True)).pack(
             side=tk.LEFT, padx=5
         )
@@ -764,7 +772,7 @@ class App(tk.Tk):
 
     def _refresh_total_cp_analysis(self, *, force_regional_refresh: bool = False) -> None:
         """Refresh the Total CP Analysis table."""
-        season = self.total_cp_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
 
         # Load total CP data
         total_cp_entries = load_total_cp_data(season)
@@ -905,7 +913,7 @@ class App(tk.Tk):
 
     def _clear_total_cp_data(self) -> None:
         """Clear all total CP data for the current season."""
-        season = self.total_cp_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         if not messagebox.askyesno(
             "Confirm Clear",
             f"Are you sure you want to clear all total CP data for season {season}?\n\nThis action cannot be undone.",
@@ -931,7 +939,7 @@ class App(tk.Tk):
 
     def _match_pokedata_names(self) -> None:
         """Open dialog to match pokedata names with regional names."""
-        season = self.total_cp_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         PokedataNameMatcher(self, season)
 
     # --- Worlds Race Tab ---
@@ -941,10 +949,7 @@ class App(tk.Tk):
         controls.pack(fill=tk.X, padx=10, pady=5)
 
         ttk.Label(controls, text="Season:").pack(side=tk.LEFT)
-        self.worlds_race_season_var = tk.StringVar(value=DEFAULT_SEASON)
-        ttk.Entry(controls, textvariable=self.worlds_race_season_var, width=12).pack(
-            side=tk.LEFT, padx=5
-        )
+        self._season_combobox(controls).pack(side=tk.LEFT, padx=5)
         ttk.Button(controls, text="Load Players", command=self._worlds_race_load_players).pack(
             side=tk.LEFT, padx=5
         )
@@ -1011,7 +1016,7 @@ class App(tk.Tk):
 
     def _worlds_race_load_players(self) -> None:
         """Load player list for the season and populate the dropdown."""
-        season = self.worlds_race_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         try:
             self.worlds_race_all_cutoff_series.clear()
             self.worlds_race_player_series_by_name.clear()
@@ -1066,7 +1071,7 @@ class App(tk.Tk):
 
     def _worlds_race_refresh_charts(self, reset_players: bool = True) -> None:
         """Fetch series for selected player/region and redraw chart."""
-        season = self.worlds_race_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         display = self.worlds_race_player_var.get().strip()
         name = self.worlds_race_selected_name
         region_key = self.worlds_race_selected_region_key
@@ -1328,8 +1333,7 @@ class App(tk.Tk):
         top = ttk.Frame(parent)
         top.pack(fill=tk.X, padx=10, pady=5)
         ttk.Label(top, text="Season:").pack(side=tk.LEFT)
-        self.more_charts_season_var = tk.StringVar(value=DEFAULT_SEASON)
-        ttk.Entry(top, textvariable=self.more_charts_season_var, width=12).pack(side=tk.LEFT, padx=5)
+        self._season_combobox(top).pack(side=tk.LEFT, padx=5)
         ttk.Label(top, text="Region:").pack(side=tk.LEFT, padx=(15, 0))
         self.more_charts_region_var = tk.StringVar(value="NA")
         region_codes = ["NA", "EU", "LA", "OC", "MEA"]
@@ -1367,9 +1371,14 @@ class App(tk.Tk):
         inner.add(est_frame, text="Estimated remaining")
         self._build_more_charts_estimated_tab(est_frame)
 
+        # Sub-tab: Moneyball efficiency (smallest fields, best CP haul)
+        money_frame = ttk.Frame(inner)
+        inner.add(money_frame, text="Moneyball")
+        self._build_more_charts_moneyball_tab(money_frame)
+
     def _more_charts_refresh_all(self) -> None:
         """Load region leaderboard and refresh all More Charts figures."""
-        season = self.more_charts_season_var.get().strip() or DEFAULT_SEASON
+        season = self.season_var.get().strip() or DEFAULT_SEASON
         region = self.more_charts_region_var.get().strip().upper() or "NA"
         try:
             df, cutoff_rank, cutoff_cp = get_region_leaderboard(
@@ -1388,6 +1397,7 @@ class App(tk.Tk):
         self._more_charts_draw_potential()
         self._more_charts_draw_events()
         self._more_charts_draw_estimated()
+        self._more_charts_draw_moneyball()
 
     def _build_more_charts_race_tab(self, parent: ttk.Frame) -> None:
         """Histogram and box plot for Top 135 race."""
@@ -1649,6 +1659,302 @@ class App(tk.Tk):
         self.mc_est_ax.legend()
         self.mc_est_ax.grid(True, alpha=0.3, axis="y")
         self.mc_est_canvas.draw_idle()
+
+    # --- Moneyball Tab ---
+    def _build_more_charts_moneyball_tab(self, parent: ttk.Frame) -> None:
+        """Efficiency of top-5 CP finishes at the smallest fields."""
+        opts = ttk.Frame(parent)
+        opts.pack(fill=tk.X, padx=5, pady=5)
+
+        ttk.Label(opts, text="Region:").pack(side=tk.LEFT, padx=(0, 4))
+        self.mc_money_region_var = tk.StringVar(value="ALL")
+        ttk.Combobox(
+            opts,
+            textvariable=self.mc_money_region_var,
+            values=list(REGION_OPTIONS),
+            width=7,
+            state="readonly",
+        ).pack(side=tk.LEFT, padx=2)
+
+        ttk.Label(opts, text="Min finishes:").pack(side=tk.LEFT, padx=(14, 4))
+        self.mc_money_min_var = tk.StringVar(value=str(DEFAULT_MIN_COUNTING_FINISHES))
+        ttk.Entry(opts, textvariable=self.mc_money_min_var, width=5).pack(side=tk.LEFT, padx=2)
+
+        ttk.Label(opts, text="Top X:").pack(side=tk.LEFT, padx=(14, 4))
+        self.mc_money_top_var = tk.StringVar(value=str(DEFAULT_TOP_X))
+        ttk.Entry(opts, textvariable=self.mc_money_top_var, width=6).pack(side=tk.LEFT, padx=2)
+
+        self.mc_money_autobid_var = tk.BooleanVar(value=True)
+        ttk.Checkbutton(
+            opts,
+            text="Include autobid winners",
+            variable=self.mc_money_autobid_var,
+            command=self._more_charts_draw_moneyball,
+        ).pack(side=tk.LEFT, padx=(14, 4))
+
+        ttk.Button(
+            opts, text="Refresh", command=self._more_charts_draw_moneyball
+        ).pack(side=tk.LEFT, padx=(14, 2))
+
+        search_frame = ttk.Frame(parent)
+        search_frame.pack(fill=tk.X, padx=5, pady=(0, 4))
+        ttk.Label(search_frame, text="Find player:").pack(side=tk.LEFT, padx=(2, 4))
+        self.mc_money_search_var = tk.StringVar()
+        search_entry = ttk.Entry(search_frame, textvariable=self.mc_money_search_var, width=24)
+        search_entry.pack(side=tk.LEFT, padx=2)
+        search_entry.bind("<Return>", lambda *_: self._more_charts_draw_moneyball())
+        ttk.Button(
+            search_frame, text="Find", command=self._more_charts_draw_moneyball
+        ).pack(side=tk.LEFT, padx=2)
+        ttk.Label(
+            search_frame,
+            text="(highlights matches in the chart and table)",
+            foreground="#6b7280",
+        ).pack(side=tk.LEFT, padx=(8, 2))
+
+        ttk.Label(
+            parent,
+            text=(
+                "Efficiency = CP / (event kicker tier + 1), averaged over the top 5 CP-scoring finishes. "
+                "Higher means more CP extracted from smaller fields. Autobid winners are included by "
+                "default because winning a small regional earns an autobid. Double-click a row to see "
+                "that player's events."
+            ),
+            wraplength=900,
+            foreground="#4b5563",
+        ).pack(fill=tk.X, padx=8, pady=(0, 4))
+
+        self.mc_money_summary_var = tk.StringVar(value="")
+        ttk.Label(
+            parent, textvariable=self.mc_money_summary_var, foreground="#1e40af"
+        ).pack(fill=tk.X, padx=8, pady=(0, 4))
+
+        self.mc_money_fig = Figure(figsize=(10, 4), dpi=100)
+        self.mc_money_ax = self.mc_money_fig.add_subplot(111)
+        self.mc_money_canvas = FigureCanvasTkAgg(self.mc_money_fig, master=parent)
+        self.mc_money_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+        table_frame = ttk.Frame(parent)
+        table_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        cols = ("Rank", "Name", "Region", "TotalCP", "Score", "AvgTier", "SmallestField", "Finishes")
+        self.mc_money_tree = ttk.Treeview(table_frame, columns=cols, show="headings", height=10)
+        widths = {
+            "Rank": 55, "Name": 190, "Region": 70, "TotalCP": 85,
+            "Score": 75, "AvgTier": 80, "SmallestField": 110, "Finishes": 85,
+        }
+        for c in cols:
+            self.mc_money_tree.heading(
+                c, text=c, command=lambda col=c: self._sort_moneyball_tree(col)
+            )
+            self.mc_money_tree.column(c, width=widths[c])
+        money_scroll = ttk.Scrollbar(
+            table_frame, orient=tk.VERTICAL, command=self.mc_money_tree.yview
+        )
+        self.mc_money_tree.configure(yscrollcommand=money_scroll.set)
+        self.mc_money_tree.bind("<Double-1>", self._on_moneyball_double_click)
+        self.mc_money_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        money_scroll.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.mc_money_sort_key = "Rank"
+        self.mc_money_sort_col = "Rank"
+        self.mc_money_sort_reverse = False
+
+    def _more_charts_draw_moneyball(self) -> None:
+        """Recompute and redraw the Moneyball chart and table."""
+        self.mc_money_ax.clear()
+        for item in self.mc_money_tree.get_children():
+            self.mc_money_tree.delete(item)
+        self.mc_money_summary_var.set("")
+        self.more_charts_data["moneyball_df"] = pd.DataFrame()
+
+        season = self.season_var.get().strip() or DEFAULT_SEASON
+        region = self.mc_money_region_var.get().strip().upper() or "ALL"
+        try:
+            min_finishes = max(
+                1, int(self.mc_money_min_var.get().strip() or DEFAULT_MIN_COUNTING_FINISHES)
+            )
+        except ValueError:
+            min_finishes = DEFAULT_MIN_COUNTING_FINISHES
+        try:
+            top_x = max(1, int(self.mc_money_top_var.get().strip() or DEFAULT_TOP_X))
+        except ValueError:
+            top_x = DEFAULT_TOP_X
+
+        try:
+            mb = moneyball_leaderboard(
+                season,
+                region_group=region,
+                min_counting_finishes=min_finishes,
+                top_x=top_x,
+                include_autobid=self.mc_money_autobid_var.get(),
+            )
+        except Exception as exc:
+            logger.error("Moneyball load: %s", exc)
+            self.mc_money_ax.set_title("Moneyball — error loading data")
+            self.mc_money_canvas.draw_idle()
+            return
+
+        self.more_charts_data["moneyball_df"] = mb
+        if mb.empty:
+            self.mc_money_ax.set_title(f"Moneyball ({region}) — no qualifying players")
+            self.mc_money_canvas.draw_idle()
+            return
+
+        top = mb.iloc[0]
+        self.mc_money_summary_var.set(
+            f"Top moneyball player: {top['Name']} — {int(top['TotalCP']):,} CP from "
+            f"{int(top['CountingFinishes'])} counting finishes, avg kicker tier "
+            f"{top['AvgEventTier']:g}, smallest field {int(top['SmallestField']):,}."
+        )
+
+        matches = self._moneyball_match_names()
+        groups = sorted(mb["RegionGroup"].unique())
+        color_for = {g: CHART_COLORS[i % len(CHART_COLORS)] for i, g in enumerate(groups)}
+        for group in groups:
+            sub = mb[mb["RegionGroup"] == group]
+            self.mc_money_ax.scatter(
+                sub["TotalCP"],
+                sub["MoneyballScore"],
+                c=color_for[group],
+                alpha=0.7,
+                s=45,
+                label=str(group),
+            )
+        for _, row in mb.head(10).iterrows():
+            self.mc_money_ax.annotate(
+                str(row["Name"])[:16],
+                (row["TotalCP"], row["MoneyballScore"]),
+                fontsize=7,
+                xytext=(4, 4),
+                textcoords="offset points",
+            )
+        if matches:
+            found = mb[mb["Name"].isin(matches)]
+            self.mc_money_ax.scatter(
+                found["TotalCP"],
+                found["MoneyballScore"],
+                s=180,
+                facecolors="none",
+                edgecolors="#dc2626",
+                linewidths=2.5,
+                zorder=5,
+                label="Search match",
+            )
+            for _, row in found.iterrows():
+                self.mc_money_ax.annotate(
+                    str(row["Name"])[:22],
+                    (row["TotalCP"], row["MoneyballScore"]),
+                    fontsize=9,
+                    color="#dc2626",
+                    fontweight="bold",
+                    xytext=(6, 8),
+                    textcoords="offset points",
+                    zorder=6,
+                )
+        self.mc_money_ax.set_xlabel("Total CP (top 5 finishes)")
+        self.mc_money_ax.set_ylabel("Moneyball efficiency score")
+        self.mc_money_ax.set_title(f"Moneyball — CP per field-size tier ({region}, top {top_x})")
+        self.mc_money_ax.grid(True, alpha=0.3)
+        self.mc_money_ax.legend(fontsize=8)
+        self.mc_money_canvas.draw_idle()
+
+        self.mc_money_sort_key = "Rank"
+        self.mc_money_sort_col = "Rank"
+        self.mc_money_sort_reverse = False
+        self._populate_moneyball_tree(mb)
+        self._select_moneyball_matches()
+
+    def _select_moneyball_matches(self) -> None:
+        """Keep search matches selected after a redraw or column re-sort."""
+        matches = self._moneyball_match_names()
+        if not matches:
+            return
+        lowered = {name.lower() for name in matches}
+        for item in self.mc_money_tree.get_children():
+            if str(self.mc_money_tree.item(item, "values")[1]).lower() in lowered:
+                self.mc_money_tree.selection_add(item)
+                self.mc_money_tree.see(item)
+
+    def _moneyball_match_names(self) -> list[str]:
+        """Player names in the current view matching the search box (substring, case-insensitive)."""
+        query = self.mc_money_search_var.get().strip().lower()
+        if not query:
+            return []
+        mb = self.more_charts_data.get("moneyball_df")
+        if mb is None or mb.empty:
+            return []
+        hit = mb[mb["Name"].str.lower().str.contains(query, regex=False, na=False)]
+        return [str(name) for name in hit["Name"].tolist()]
+
+    def _on_moneyball_double_click(self, event) -> None:
+        """Show the player's full season event list, like the Leaderboard tab."""
+        item_id = self.mc_money_tree.identify_row(event.y)
+        if not item_id:
+            return
+        values = self.mc_money_tree.item(item_id, "values")
+        name = str(values[1]) if len(values) > 1 else ""
+        region = str(values[2]) if len(values) > 2 else ""
+        mb = self.more_charts_data.get("moneyball_df")
+        if mb is None or mb.empty:
+            return
+        row = mb[
+            (mb["Name"] == name)
+            & ((mb["RegionCode"] == region) | (mb["RegionGroup"] == region))
+        ]
+        if row.empty:
+            row = mb[mb["Name"] == name]
+        if row.empty:
+            return
+        PlayerResultsViewer(self, name, row.iloc[0].get("AllResults") or [])
+
+    @staticmethod
+    def _moneyball_tree_values(row) -> tuple:
+        return (
+            int(row["Rank"]),
+            str(row["Name"]),
+            str(row["RegionCode"] or row["RegionGroup"]),
+            int(row["TotalCP"]),
+            float(row["MoneyballScore"]),
+            float(row["AvgEventTier"]),
+            int(row["SmallestField"]),
+            int(row["CountingFinishes"]),
+        )
+
+    def _populate_moneyball_tree(self, df: pd.DataFrame) -> None:
+        for item in self.mc_money_tree.get_children():
+            self.mc_money_tree.delete(item)
+        ordered = df
+        if self.mc_money_sort_key in df.columns:
+            ordered = df.sort_values(
+                by=self.mc_money_sort_key, ascending=not self.mc_money_sort_reverse
+            )
+        for _, row in ordered.iterrows():
+            self.mc_money_tree.insert("", tk.END, values=self._moneyball_tree_values(row))
+
+    def _sort_moneyball_tree(self, col: str) -> None:
+        df = self.more_charts_data.get("moneyball_df")
+        if df is None or df.empty:
+            return
+        key_map = {
+            "Region": "RegionGroup",
+            "Score": "MoneyballScore",
+            "AvgTier": "AvgEventTier",
+            "SmallestField": "SmallestField",
+            "Finishes": "CountingFinishes",
+        }
+        key = key_map.get(col, col)
+        for c in self.mc_money_tree["columns"]:
+            self.mc_money_tree.heading(c, text=c)
+        if self.mc_money_sort_col == col:
+            self.mc_money_sort_reverse = not self.mc_money_sort_reverse
+        else:
+            self.mc_money_sort_col = col
+            self.mc_money_sort_reverse = True
+        self.mc_money_sort_key = key
+        arrow = " ▾" if self.mc_money_sort_reverse else " ▴"
+        self.mc_money_tree.heading(col, text=col + arrow)
+        self._populate_moneyball_tree(df)
+        self._select_moneyball_matches()
 
 
 

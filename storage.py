@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import tempfile
 from datetime import datetime
 from pathlib import Path
@@ -11,6 +12,11 @@ from utils import TournamentKey, ensure_dir, slugify, timestamp_str
 DATA_DIR = Path("data")
 _MAX_JSON_SIZE_MB = 100
 _VALID_TOURNAMENT_TYPES = {"REGIONAL", "IC"}
+
+# Seasons offered by the picker even before any data has been saved for them.
+# Keep this sorted; list_seasons() returns everything newest first.
+KNOWN_SEASONS: tuple[str, ...] = ("2026-2027",)
+_SEASON_DIR_PATTERN = re.compile(r"\d{4}-\d{4}")
 
 
 def validate_tournament_data(
@@ -58,6 +64,22 @@ def season_dir(season: str) -> Path:
 def list_tournament_files(season: str) -> list[Path]:
     tdir = tournament_dir(season)
     return sorted(tdir.glob("*.json"))
+
+
+def list_seasons() -> list[str]:
+    """Return all selectable seasons, newest first.
+
+    Combines seasons with an existing ``data/<season>/`` directory with
+    ``KNOWN_SEASONS`` so a new season can be chosen before it has any data.
+    """
+    seasons = set(KNOWN_SEASONS)
+    if DATA_DIR.is_dir():
+        seasons.update(
+            path.name
+            for path in DATA_DIR.iterdir()
+            if path.is_dir() and _SEASON_DIR_PATTERN.fullmatch(path.name)
+        )
+    return sorted(seasons, reverse=True)
 
 
 def load_json(path: Path) -> dict[str, Any]:

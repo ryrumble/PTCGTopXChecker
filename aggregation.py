@@ -28,7 +28,15 @@ class PlayerStats:
     placements: list[int] = field(default_factory=list)
     tournament_results: list[dict] = field(default_factory=list)
 
-    def add_result(self, cp: int, placement: int, tournament_title: str, tournament_type: str) -> None:
+    def add_result(
+        self,
+        cp: int,
+        placement: int,
+        tournament_title: str,
+        tournament_type: str,
+        num_competitors: int = 0,
+        tournament_id: str = "",
+    ) -> None:
         self.cp_finishes.append(cp)
         self.placements.append(placement)
         self.tournament_results.append({
@@ -36,6 +44,8 @@ class PlayerStats:
             "placement": placement,
             "type": tournament_type,
             "cp": cp,
+            "num_competitors": num_competitors,
+            "tournament_id": tournament_id,
         })
 
 
@@ -77,7 +87,14 @@ def aggregate_season(season: str, *, force: bool = False) -> pd.DataFrame:
             cp = calculate_cp(t_type, placement, num_comp)
             if key not in players:
                 players[key] = PlayerStats(name=canonical_name, region_code=region_code)
-            players[key].add_result(cp, placement, meta.get("title", "Unknown"), t_type)
+            players[key].add_result(
+                cp,
+                placement,
+                meta.get("title", "Unknown"),
+                t_type,
+                num_comp,
+                meta.get("id", ""),
+            )
 
     rows: list[dict] = []
     for p in players.values():

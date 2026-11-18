@@ -8,6 +8,20 @@ class TestDialogImports:
     def test_player_results_viewer_imports(self):
         from gui.dialogs.player_results import PlayerResultsViewer  # noqa: F401
 
+    def test_result_columns_basic_and_moneyball(self):
+        from gui.dialogs.player_results import result_columns
+
+        basic = [{"tournament": "A", "placement": 1, "type": "REGIONAL", "cp": 350}]
+        assert [col for col, _ in result_columns(basic)] == [
+            "tournament", "placement", "type", "cp"
+        ]
+
+        detailed = [dict(basic[0], num_competitors=80, tier=65, efficiency=5.303, counts=True)]
+        assert [col for col, _ in result_columns(detailed)] == [
+            "tournament", "placement", "type", "cp",
+            "num_competitors", "tier", "efficiency", "counts",
+        ]
+
     def test_player_manager_imports(self):
         from gui.dialogs.player_manager import PlayerManager  # noqa: F401
 
@@ -35,6 +49,7 @@ class TestDialogImports:
         assert hasattr(App, "_build_ui")
 
     def test_gui_package_imports(self):
-        from gui.constants import CHART_COLORS, DEFAULT_SEASON
-        assert DEFAULT_SEASON == "2025-2026"
+        from gui.constants import CHART_COLORS, DEFAULT_SEASON, SEASONS
+        assert DEFAULT_SEASON == "2026-2027"
+        assert SEASONS[0] == DEFAULT_SEASON
         assert len(CHART_COLORS) == 10

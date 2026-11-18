@@ -88,7 +88,7 @@ class LoadTotalCPFileDialog(tk.Toplevel):
             if self.merge_mappings:
                 self.parsed_entries = merge_duplicate_entries(self.parsed_entries, self.merge_mappings)
 
-            season = self.parent.total_cp_season_var.get().strip() or DEFAULT_SEASON
+            season = self.parent.season_var.get().strip() or DEFAULT_SEASON
             existing_data = load_total_cp_data(season)
 
             existing_entries: list[TotalCPEntry] = []

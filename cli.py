@@ -4,10 +4,10 @@ from aggregation import aggregate_season, filter_leaderboard_by_region
 from logger import logger
 from parsers import ParsedEntry, detect_format, parse_format_a, parse_format_b
 from scraper import fetch_with_retries, parse_first_table
-from storage import existing_tournament_key_ids, save_tournament
+from storage import existing_tournament_key_ids, list_seasons, save_tournament
 from utils import TournamentKey, normalize_player_name
 
-DEFAULT_SEASON = "2025-2026"
+DEFAULT_SEASON = list_seasons()[0]
 
 
 def _prompt(text: str, default: str = "") -> str:
