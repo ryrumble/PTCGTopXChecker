@@ -375,5 +375,68 @@ df = moneyball_leaderboard(
 print(df.head(10))
 ```
 
+### Invite Flow Sankey (More Charts → Invite flow)
+
+The **Invite flow** sub-tab shows how the Worlds invite race changes after each Regional/IC date, using the season and region selected at the top of the More Charts tab. All events on the same date are combined into one x-axis stage. Dates that included an IC are shaded, marked `(IC)` in purple on the x axis, and tagged in the footer text. Hovering a stage (or checking the text below the chart) reports the date, the Regional/IC names held that day, and the invite movement counts.
+
+Invite eligibility matches Worlds Race: a date only appears once the region has enough positive-CP players to fill its invite slots. This avoids showing September MEA invites before the MEA cutoff actually exists.
+
+Each Sankey column contains only players who currently hold a status:
+
+- **Kept invite** — players invited at the previous date who are still invited.
+- **Entered invite list** — players newly invited at this date. Together with kept players, this is the region's full invite list, so entering players are not also counted in the earlier column.
+- **Autobid** — players in the region holding an autobid after this date; they are excluded from the invite-race ranking.
+
+Dropped players are not drawn as their own node or ribbon — if someone is no longer in the next column, that absence is the drop. Entering players are labelled directly on the target date's **Entered invite list** segment, so there is no separate "in" column either. The only transition node is **Auto+** in the gap between columns: players who gain an autobid from outside the invite list.
+
+Ribbons show the pivots between states: kept/entered players can stay invited or take an autobid, and autobid holders persist. New autobids arrive from the gap. The footer reports kept, entered, autobids gained, and autobids total. Ribbon width is a player count, and the Y axis is labelled **# of Players**. Node counts are bold and outlined; very small counts use a callout label with a light background so the numbers stay readable.
+
+Programmatic use:
+
+```python
+from gui.invite_flow_chart import describe_column
+from worlds_race import get_invite_flows
+
+flow = get_invite_flows("2025-2026", "NA")
+for index in range(len(flow.stages)):
+    print(describe_column(flow, index))
+```
+
+### Invite Forecast (GUI tab)
+
+The **Invite Forecast** tab answers a forward-looking question: *if the season ended today-plus-the-remaining-schedule, who keeps a Worlds invite?* It combines the current invite race with behaviour learned from the completed 2025–2026 season and a Monte Carlo projection of both player CP and the invite cutoff.
+
+Three linked views share one result:
+
+- **Safety Map** — current invite CP vs. probability of keeping the invite on a 0–100% Y axis. Bubble size reflects projected events remaining; dashed and shaded lines show the current and projected cutoff. Dot colors mark the safety zones. For the selected/searched players, a purple triangle and dashed connector show the **ceiling case**: what could happen if placements peak. It is upside only and is not included in P(keep).
+- **Bubble Band** — ranked players around the cutoff on evenly spaced rows, capped so names stay readable. The dot is current CP, the horizontal bar is the simulated p10–p90 final CP, the vertical tick is the median, and the label is P(keep). A purple triangle marks the ceiling CP for selected/searched players. Searched players outside the bubble are added at the bottom of the list.
+- **Player Detail** — histogram of the selected player's simulated final CP overlaid with the projected cutoff distribution. An on-chart key explains that blue bars are simulation counts, the black line is the player's median final CP, orange marks the projected cutoff, green/red shading marks the keep/miss sides, and the purple dotted line is the ceiling case. The **Attendance Projection** table shows current/prior and expected/remaining Regional and IC counts.
+
+Controls include season, region, as-of date, cutoff scenario (Low/Baseline/High), ceiling tiers gained per event, simulation count, and a **Show ceiling upside (not expected)** toggle. The ceiling improves one tier per remaining event by default, capped at T1, and uses each player's best placement across every available season. The **Find players** box accepts comma-separated names or name fragments; matching dots get a bold label and a leader line in both chart views. Press **Search** or Enter to apply immediately, or stop typing for one second to refresh automatically. The **Include Cup/Challenge +260** toggle is off by default: the Total CP feed is deprecated and updates slowly, so the default basis is regional/IC CP only.
+
+Attendance is projected by event type:
+
+- **Regionals** use a 50/50 blend of current-season pace and prior-season count, capped by the remaining regional dates implied by the prior season's schedule.
+- **ICs** assume at most **3 per season**. If a player attended ICs last season, the projection targets at least that many ICs this season, but only the unplayed IC slots can be added. For example, with 2 IC dates already held, a player who attended 2 ICs last season and 0 so far has only 1 IC remaining.
+- Players absent from the prior season use their region's median regional count and an IC-pace fallback.
+
+Outputs are **calibrated directional estimates**, not exact odds. Expected placements stay anchored at the player's demonstrated PB, so ceiling improvement is shown as upside rather than assumed in P(keep). The model learns attendance from the prior season, keeps the best five CP finishes, and bootstraps cutoff growth from the prior season's analogous remaining dates.
+
+Programmatic use:
+
+```python
+from invite_forecast import ForecastConfig, build_forecast
+
+result = build_forecast("2026-2027", "NA", ForecastConfig(simulations=500))
+for player in result.players:
+    print(
+        player.name,
+        player.current_cp,
+        player.p_keep,
+        player.p_lose,
+        player.ceiling_tier,
+        player.ceiling_final_cp,
+    )
+```
 
 

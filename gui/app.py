@@ -1,6 +1,8 @@
 import tkinter as tk
 import webbrowser
 from pathlib import Path
+from queue import Empty, Queue
+from threading import Thread
 from tkinter import messagebox, ttk
 
 import matplotlib
@@ -23,6 +25,15 @@ from gui.dialogs import (
     PokedataNameMatcher,
     TournamentEditor,
 )
+from gui.invite_flow_chart import describe_column, draw_invite_flow_sankey
+from gui.invite_forecast_chart import (
+    describe_player,
+    draw_bubble_band,
+    draw_player_detail,
+    draw_safety_map,
+    nearest_player,
+)
+from invite_forecast import ForecastConfig, ForecastResult, build_forecast, reset_forecast_cache
 from logger import logger
 from moneyball import (
     DEFAULT_MIN_COUNTING_FINISHES,
@@ -32,11 +43,9 @@ from moneyball import (
 )
 from more_charts import (
     box_plot_rank_buckets,
-    estimated_remaining_events_heuristic,
     events_attended_histogram,
     get_region_leaderboard,
     histogram_cp_data,
-    potential_ceiling_data,
 )
 from parsers import ParsedEntry, detect_format, parse_format_a, parse_format_b
 from storage import (
@@ -57,6 +66,7 @@ from worlds_race import (
     WorldsRacePoint,
     get_all_players_for_season,
     get_cutoff_rank_for_region,
+    get_invite_flows,
     get_player_worlds_series,
     get_region_cutoff_series,
 )
@@ -85,12 +95,14 @@ class App(tk.Tk):
         self.tournaments_frame = ttk.Frame(notebook)
         self.total_cp_frame = ttk.Frame(notebook)
         self.worlds_race_frame = ttk.Frame(notebook)
+        self.invite_forecast_frame = ttk.Frame(notebook)
         self.more_charts_frame = ttk.Frame(notebook)
         notebook.add(self.add_frame, text="Add Tournament")
         notebook.add(self.leaderboard_frame, text="Leaderboard")
         notebook.add(self.tournaments_frame, text="Tournaments")
         notebook.add(self.total_cp_frame, text="Total CP Analysis")
         notebook.add(self.worlds_race_frame, text="Worlds Race")
+        notebook.add(self.invite_forecast_frame, text="Invite Forecast")
         notebook.add(self.more_charts_frame, text="More Charts")
 
         self._build_add_tab(self.add_frame)
@@ -98,6 +110,7 @@ class App(tk.Tk):
         self._build_tournaments_tab(self.tournaments_frame)
         self._build_total_cp_tab(self.total_cp_frame)
         self._build_worlds_race_tab(self.worlds_race_frame)
+        self._build_invite_forecast_tab(self.invite_forecast_frame)
         self._build_more_charts_tab(self.more_charts_frame)
 
     def _season_combobox(self, parent: ttk.Frame) -> ttk.Combobox:
@@ -333,6 +346,7 @@ class App(tk.Tk):
             tournament_date=tournament_date,
         )
         invalidate_season_caches(season)
+        reset_forecast_cache(season)
         messagebox.showinfo("Saved", "Tournament saved successfully.")
 
     # --- Leaderboard Tab ---
@@ -702,6 +716,7 @@ class App(tk.Tk):
             path.unlink()
             season = self.season_var.get().strip() or DEFAULT_SEASON
             invalidate_season_caches(season)
+            reset_forecast_cache(season)
             messagebox.showinfo("Deleted", f"Tournament '{title}' has been deleted.")
             self._refresh_tournaments_list()
         except Exception as exc:
@@ -1327,9 +1342,412 @@ class App(tk.Tk):
                 pass
         self.worlds_race_canvas1.mpl_connect("motion_notify_event", on_motion)
 
+    # --- Invite Forecast Tab ---
+    def _build_invite_forecast_tab(self, parent: ttk.Frame) -> None:
+        """Build the forward-looking invite forecast tab with three linked views."""
+        top = ttk.Frame(parent)
+        top.pack(fill=tk.X, padx=10, pady=5)
+        ttk.Label(top, text="Season:").pack(side=tk.LEFT)
+        self._season_combobox(top).pack(side=tk.LEFT, padx=5)
+        ttk.Label(top, text="Region:").pack(side=tk.LEFT, padx=(15, 0))
+        self.forecast_region_var = tk.StringVar(value="NA")
+        ttk.Combobox(
+            top,
+            textvariable=self.forecast_region_var,
+            values=["NA", "EU", "LA", "OC", "MEA"],
+            width=8,
+            state="readonly",
+        ).pack(side=tk.LEFT, padx=5)
+        self.forecast_run_button = ttk.Button(top, text="Run forecast", command=self._forecast_run)
+        self.forecast_run_button.pack(side=tk.LEFT, padx=5)
+
+        options = ttk.Frame(parent)
+        options.pack(fill=tk.X, padx=10, pady=2)
+        ttk.Label(options, text="As of (blank = latest):").pack(side=tk.LEFT)
+        self.forecast_as_of_var = tk.StringVar(value="")
+        ttk.Entry(options, textvariable=self.forecast_as_of_var, width=14).pack(side=tk.LEFT, padx=(2, 12))
+        ttk.Label(options, text="Cutoff scenario:").pack(side=tk.LEFT)
+        self.forecast_scenario_var = tk.StringVar(value="Baseline")
+        ttk.Combobox(
+            options,
+            textvariable=self.forecast_scenario_var,
+            values=["Low", "Baseline", "High"],
+            width=10,
+            state="readonly",
+        ).pack(side=tk.LEFT, padx=(2, 12))
+        ttk.Label(options, text="Ceiling tiers/event:").pack(side=tk.LEFT)
+        self.forecast_ceiling_gain_var = tk.StringVar(value="1.0")
+        ttk.Entry(options, textvariable=self.forecast_ceiling_gain_var, width=5).pack(side=tk.LEFT, padx=2)
+        ttk.Label(options, text="Sims:").pack(side=tk.LEFT, padx=(12, 0))
+        self.forecast_sims_var = tk.StringVar(value="500")
+        ttk.Entry(options, textvariable=self.forecast_sims_var, width=7).pack(side=tk.LEFT, padx=2)
+        self.forecast_show_ceiling_var = tk.BooleanVar(value=True)
+        ttk.Checkbutton(
+            options,
+            text="Show ceiling upside (not expected)",
+            variable=self.forecast_show_ceiling_var,
+        ).pack(side=tk.LEFT, padx=(12, 0))
+        self.forecast_include_cup_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            options,
+            text="Include Cup/Challenge +260 (deprecated, stale data)",
+            variable=self.forecast_include_cup_var,
+        ).pack(side=tk.LEFT, padx=(12, 0))
+
+        selection = ttk.Frame(parent)
+        selection.pack(fill=tk.X, padx=10, pady=2)
+        self.forecast_selected_var = tk.StringVar(value="No player selected — click a dot or name")
+        ttk.Label(selection, textvariable=self.forecast_selected_var, width=44, anchor="w").pack(
+            side=tk.LEFT
+        )
+        ttk.Label(selection, text="Find players:").pack(side=tk.LEFT, padx=(10, 0))
+        self.forecast_search_var = tk.StringVar(value="")
+        search_entry = ttk.Entry(selection, textvariable=self.forecast_search_var, width=36)
+        search_entry.pack(side=tk.LEFT, padx=2)
+        search_entry.bind("<KeyRelease>", self._forecast_on_search_changed)
+        search_entry.bind("<Return>", self._forecast_apply_search)
+        ttk.Button(selection, text="Search", command=self._forecast_apply_search).pack(
+            side=tk.LEFT, padx=2
+        )
+        ttk.Button(selection, text="Clear", command=self._forecast_clear_search).pack(
+            side=tk.LEFT, padx=2
+        )
+        ttk.Label(selection, text="(comma-separated; Search/Enter applies now, auto after 1s)").pack(
+            side=tk.LEFT, padx=(6, 0)
+        )
+
+        self.forecast_status_var = tk.StringVar(
+            value="Click 'Run forecast'. Estimates are calibrated from last season — directional, not exact."
+        )
+        ttk.Label(parent, textvariable=self.forecast_status_var, wraplength=950).pack(
+            fill=tk.X, padx=10, pady=4
+        )
+
+        self.forecast_result: ForecastResult | None = None
+        self.forecast_selected_key: tuple[str, str] | None = None
+        self.forecast_projection_ids: dict[str, tuple[str, str]] = {}
+        self.forecast_table_result: ForecastResult | None = None
+        self.forecast_table_updating = False
+        self.forecast_running = False
+        self.forecast_search_after_id: str | None = None
+        self.forecast_queue: Queue[tuple[ForecastResult | None, Exception | None]] = Queue()
+
+        inner = ttk.Notebook(parent)
+        inner.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
+
+        map_frame = ttk.Frame(inner)
+        inner.add(map_frame, text="Safety Map")
+        self.forecast_map_fig = Figure(figsize=(10, 5), dpi=100)
+        self.forecast_map_ax = self.forecast_map_fig.add_subplot(111)
+        self.forecast_map_canvas = FigureCanvasTkAgg(self.forecast_map_fig, master=map_frame)
+        NavigationToolbar2Tk(self.forecast_map_canvas, map_frame).pack()
+        self.forecast_map_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        self.forecast_map_canvas.mpl_connect(
+            "motion_notify_event", lambda event: self._forecast_on_pick(event, "map")
+        )
+        self.forecast_map_canvas.mpl_connect(
+            "button_press_event", lambda event: self._forecast_on_pick(event, "map", select=True)
+        )
+
+        band_frame = ttk.Frame(inner)
+        inner.add(band_frame, text="Bubble Band")
+        self.forecast_band_fig = Figure(figsize=(10, 10), dpi=100)
+        self.forecast_band_ax = self.forecast_band_fig.add_subplot(111)
+        self.forecast_band_canvas = FigureCanvasTkAgg(self.forecast_band_fig, master=band_frame)
+        NavigationToolbar2Tk(self.forecast_band_canvas, band_frame).pack()
+        self.forecast_band_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        self.forecast_band_canvas.mpl_connect(
+            "motion_notify_event", lambda event: self._forecast_on_pick(event, "band")
+        )
+        self.forecast_band_canvas.mpl_connect(
+            "button_press_event", lambda event: self._forecast_on_pick(event, "band", select=True)
+        )
+
+        detail_frame = ttk.Frame(inner)
+        inner.add(detail_frame, text="Player Detail")
+        self.forecast_detail_fig = Figure(figsize=(9, 5), dpi=100)
+        self.forecast_detail_ax = self.forecast_detail_fig.add_subplot(111)
+        self.forecast_detail_canvas = FigureCanvasTkAgg(self.forecast_detail_fig, master=detail_frame)
+        NavigationToolbar2Tk(self.forecast_detail_canvas, detail_frame).pack()
+
+        projection_frame = ttk.Frame(detail_frame)
+        projection_frame.pack(fill=tk.X, side=tk.BOTTOM, padx=5, pady=5)
+        columns = (
+            "Rank",
+            "Player",
+            "Reg now/prior",
+            "Reg exp (rem)",
+            "IC now/prior",
+            "IC exp (rem)",
+            "Total rem",
+            "Basis",
+        )
+        self.forecast_projection_tree = ttk.Treeview(
+            projection_frame, columns=columns, show="headings", height=8
+        )
+        widths = (45, 180, 95, 95, 85, 85, 75, 250)
+        for col, width in zip(columns, widths, strict=True):
+            self.forecast_projection_tree.heading(col, text=col)
+            self.forecast_projection_tree.column(col, width=width, anchor=tk.W)
+        self.forecast_projection_tree.tag_configure("search", background="#FFF2CC")
+        projection_scroll = ttk.Scrollbar(
+            projection_frame, orient=tk.VERTICAL, command=self.forecast_projection_tree.yview
+        )
+        self.forecast_projection_tree.configure(yscrollcommand=projection_scroll.set)
+        self.forecast_projection_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        projection_scroll.pack(side=tk.RIGHT, fill=tk.Y)
+        self.forecast_projection_tree.bind("<<TreeviewSelect>>", self._forecast_on_projection_select)
+
+        self.forecast_detail_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+    def _forecast_build_config(self) -> ForecastConfig:
+        """Parse the forecast controls into a ForecastConfig."""
+        as_of_text = self.forecast_as_of_var.get().strip()
+        as_of = None
+        if as_of_text:
+            as_of = datetime.strptime(as_of_text, "%Y-%m-%d").date()
+        try:
+            ceiling_gain = float(self.forecast_ceiling_gain_var.get().strip() or "1.0")
+            simulations = int(self.forecast_sims_var.get().strip() or "500")
+        except ValueError as exc:
+            raise ValueError("Ceiling tiers/event and Sims must be numbers.") from exc
+        if ceiling_gain < 0 or simulations < 50:
+            raise ValueError("Ceiling tiers/event must be >= 0 and Sims must be >= 50.")
+        return ForecastConfig(
+            as_of=as_of,
+            include_cup_challenge=self.forecast_include_cup_var.get(),
+            scenario=self.forecast_scenario_var.get().strip() or "Baseline",
+            ceiling_tiers_per_event=ceiling_gain,
+            show_ceiling=self.forecast_show_ceiling_var.get(),
+            simulations=simulations,
+        )
+
+    def _forecast_run(self) -> None:
+        """Start the forecast in a worker so the Tk window stays responsive."""
+        if self.forecast_running:
+            return
+        try:
+            config = self._forecast_build_config()
+        except ValueError as exc:
+            messagebox.showerror("Invalid forecast settings", str(exc))
+            return
+        season = self.season_var.get().strip() or DEFAULT_SEASON
+        region = self.forecast_region_var.get().strip().upper() or "NA"
+
+        while not self.forecast_queue.empty():
+            self.forecast_queue.get_nowait()
+        self.forecast_running = True
+        self.forecast_run_button.configure(text="Running...", state=tk.DISABLED)
+        self.forecast_status_var.set(
+            f"Computing forecast for {region} ({season}) — the window stays usable..."
+        )
+        self.update_idletasks()
+
+        def worker() -> None:
+            try:
+                reset_forecast_cache(season)
+                forecast = build_forecast(season, region, config)
+                self.forecast_queue.put((forecast, None))
+            except Exception as exc:  # noqa: BLE001 - surfaced in the GUI below
+                logger.error("Forecast failed: %s", exc)
+                self.forecast_queue.put((None, exc))
+
+        Thread(target=worker, name="invite-forecast", daemon=True).start()
+        self.after(50, self._forecast_poll_queue)
+
+    def _forecast_poll_queue(self) -> None:
+        """Move worker results back onto Tk's main thread."""
+        try:
+            result, error = self.forecast_queue.get_nowait()
+        except Empty:
+            if self.forecast_running:
+                self.after(50, self._forecast_poll_queue)
+            return
+        self._forecast_finish(result, error)
+
+    def _forecast_finish(
+        self, result: ForecastResult | None, error: Exception | None
+    ) -> None:
+        """Apply a completed forecast from the main thread only."""
+        self.forecast_running = False
+        self.forecast_run_button.configure(text="Run forecast", state=tk.NORMAL)
+        if error is not None:
+            self.forecast_status_var.set(f"Forecast failed: {error}")
+            return
+        if result is None:
+            self.forecast_status_var.set("Forecast returned no result.")
+            return
+
+        self.forecast_result = result
+        self.forecast_selected_key = result.players[0].key if result.players else None
+        try:
+            self._forecast_redraw()
+        except Exception as exc:  # noqa: BLE001 - never kill the app on a draw error
+            logger.error("Forecast redraw failed: %s", exc)
+            self.forecast_status_var.set(f"Forecast computed, but display failed: {exc}")
+            return
+
+        projected_median = (
+            result.players[0].projected_cutoff_p50 if result.players else result.cutoff_cp
+        )
+        summary = (
+            f"{len(result.players)} players | as of {result.as_of:%Y-%m-%d} | "
+            f"cutoff now {result.cutoff_cp} -> projected median {projected_median} | "
+            "calibrated directional estimates, not exact odds"
+        )
+        if result.warnings:
+            summary += " | " + " ".join(result.warnings)
+        self.forecast_status_var.set(summary)
+
+    def _forecast_search_players(self) -> set[tuple[str, str]]:
+        """Return keys of players matching the comma-separated search box."""
+        result = self.forecast_result
+        if result is None:
+            return set()
+        terms = [
+            term.strip().casefold()
+            for term in self.forecast_search_var.get().replace(";", ",").split(",")
+            if term.strip()
+        ]
+        if not terms:
+            return set()
+        return {
+            player.key
+            for player in result.players
+            if any(term in player.name.casefold() for term in terms)
+        }
+
+    def _forecast_on_search_changed(self, _event=None) -> None:
+        """Debounce search redraws so typing several names stays responsive."""
+        if self.forecast_search_after_id is not None:
+            self.after_cancel(self.forecast_search_after_id)
+        self.forecast_search_after_id = self.after(1000, self._forecast_apply_search)
+
+    def _forecast_apply_search(self, _event=None) -> None:
+        """Redraw highlights for the current search text."""
+        if self.forecast_search_after_id is not None:
+            self.after_cancel(self.forecast_search_after_id)
+            self.forecast_search_after_id = None
+        self._forecast_redraw()
+        result = self.forecast_result
+        matches = self._forecast_search_players()
+        if result is not None and matches:
+            names = [player.name for player in result.players if player.key in matches]
+            self.forecast_status_var.set(f"{len(matches)} search matches: " + ", ".join(names))
+        elif result is not None and self.forecast_search_var.get().strip():
+            self.forecast_status_var.set("No players match the search.")
+
+    def _forecast_clear_search(self) -> None:
+        if self.forecast_search_after_id is not None:
+            self.after_cancel(self.forecast_search_after_id)
+            self.forecast_search_after_id = None
+        self.forecast_search_var.set("")
+        self._forecast_apply_search()
+
+    def _forecast_redraw(self) -> None:
+        result = self.forecast_result
+        if result is None:
+            return
+        search_keys = self._forecast_search_players()
+        draw_safety_map(self.forecast_map_ax, result, self.forecast_selected_key, search_keys)
+        self.forecast_map_canvas.draw_idle()
+        draw_bubble_band(self.forecast_band_ax, result, self.forecast_selected_key, search_keys)
+        self.forecast_band_canvas.draw_idle()
+        self._forecast_populate_projection_table(result, search_keys)
+        selected = result.player_by_key(self.forecast_selected_key) if self.forecast_selected_key else None
+        if selected is not None:
+            draw_player_detail(self.forecast_detail_ax, result, selected)
+            self.forecast_selected_var.set(describe_player(selected))
+        else:
+            self.forecast_detail_ax.clear()
+            self.forecast_detail_ax.set_axis_off()
+            self.forecast_selected_var.set("No player selected — click a dot or name")
+        self.forecast_detail_canvas.draw_idle()
+
+    def _forecast_populate_projection_table(
+        self, result: ForecastResult, search_keys: set[tuple[str, str]]
+    ) -> None:
+        tree = self.forecast_projection_tree
+        if self.forecast_table_result is result and len(tree.get_children()) == len(result.players):
+            self.forecast_table_updating = True
+            try:
+                for player in result.players:
+                    item_id = f"{player.key[0]}|{player.key[1]}"
+                    tree.item(item_id, tags=("search",) if player.key in search_keys else ())
+                # Do not call selection_set here: Tk queues <<TreeviewSelect>>
+                # and that would trigger another redraw in an endless loop.
+            finally:
+                self.forecast_table_updating = False
+            return
+
+        self.forecast_table_updating = True
+        try:
+            for item in tree.get_children():
+                tree.delete(item)
+            self.forecast_projection_ids.clear()
+            for player in result.players:
+                item_id = f"{player.key[0]}|{player.key[1]}"
+                self.forecast_projection_ids[item_id] = player.key
+                tags = ("search",) if player.key in search_keys else ()
+                tree.insert(
+                    "",
+                    tk.END,
+                    iid=item_id,
+                    tags=tags,
+                    values=(
+                        player.rank,
+                        player.name,
+                        f"{player.current_regionals} / {player.prior_regionals}",
+                        f"{player.expected_regionals} ({player.remaining_regionals})",
+                        f"{player.current_ics} / {player.prior_ics}",
+                        f"{player.expected_ics} ({player.remaining_ics})",
+                        player.events_remaining,
+                        player.attendance_basis,
+                    ),
+                )
+            self.forecast_table_result = result
+        finally:
+            self.forecast_table_updating = False
+
+    def _forecast_on_projection_select(self, _event=None) -> None:
+        """Selecting a projection row updates the player detail across views."""
+        if self.forecast_table_updating:
+            return
+        selected = self.forecast_projection_tree.selection()
+        if not selected:
+            return
+        key = self.forecast_projection_ids.get(selected[0])
+        if key is None:
+            return
+        self.forecast_selected_key = key
+        self._forecast_redraw()
+
+    def _forecast_on_pick(self, event, view: str, *, select: bool = False) -> None:
+        """Hover updates the status line; click selects a player across all views."""
+        result = self.forecast_result
+        if result is None or not event.inaxes or event.xdata is None or event.ydata is None:
+            return
+        ax = self.forecast_map_ax if view == "map" else self.forecast_band_ax
+        player = nearest_player(
+            ax,
+            result,
+            event.xdata,
+            event.ydata,
+            view=view,
+            selected_key=self.forecast_selected_key,
+            search_keys=self._forecast_search_players(),
+        )
+        if player is None:
+            return
+        if select:
+            self.forecast_selected_key = player.key
+            self._forecast_redraw()
+        else:
+            self.forecast_status_var.set(describe_player(player))
+
     # --- More Charts Tab ---
     def _build_more_charts_tab(self, parent: ttk.Frame) -> None:
-        """Tab-of-tabs with histogram, box plot, potential, events attended, estimated remaining."""
+        """Tab-of-tabs with the CP race, events attended, Moneyball and invite flow."""
         top = ttk.Frame(parent)
         top.pack(fill=tk.X, padx=10, pady=5)
         ttk.Label(top, text="Season:").pack(side=tk.LEFT)
@@ -1356,28 +1774,26 @@ class App(tk.Tk):
         inner.add(race_frame, text="Top 135 race")
         self._build_more_charts_race_tab(race_frame)
 
-        # Sub-tab: Potential & ceiling
-        pot_frame = ttk.Frame(inner)
-        inner.add(pot_frame, text="Potential & ceiling")
-        self._build_more_charts_potential_tab(pot_frame)
-
         # Sub-tab: Events attended
         ev_frame = ttk.Frame(inner)
         inner.add(ev_frame, text="Events attended")
         self._build_more_charts_events_tab(ev_frame)
-
-        # Sub-tab: Estimated remaining
-        est_frame = ttk.Frame(inner)
-        inner.add(est_frame, text="Estimated remaining")
-        self._build_more_charts_estimated_tab(est_frame)
 
         # Sub-tab: Moneyball efficiency (smallest fields, best CP haul)
         money_frame = ttk.Frame(inner)
         inner.add(money_frame, text="Moneyball")
         self._build_more_charts_moneyball_tab(money_frame)
 
+        # Sub-tab: Worlds invite-flow Sankey (kept / entered / autobids per date)
+        invite_frame = ttk.Frame(inner)
+        inner.add(invite_frame, text="Invite flow")
+        self._build_more_charts_invite_flow_tab(invite_frame)
+
     def _more_charts_refresh_all(self) -> None:
         """Load region leaderboard and refresh all More Charts figures."""
+        # Invite flows use the tournament snapshots directly, so they render
+        # even when the aggregate-based charts have nothing to show.
+        self._more_charts_draw_invite_flow()
         season = self.season_var.get().strip() or DEFAULT_SEASON
         region = self.more_charts_region_var.get().strip().upper() or "NA"
         try:
@@ -1394,9 +1810,7 @@ class App(tk.Tk):
             messagebox.showerror("Error", str(exc))
             return
         self._more_charts_draw_race()
-        self._more_charts_draw_potential()
         self._more_charts_draw_events()
-        self._more_charts_draw_estimated()
         self._more_charts_draw_moneyball()
 
     def _build_more_charts_race_tab(self, parent: ttk.Frame) -> None:
@@ -1524,74 +1938,6 @@ class App(tk.Tk):
         self._more_charts_draw_hist_only()
         self._more_charts_draw_box_only()
 
-    def _build_more_charts_potential_tab(self, parent: ttk.Frame) -> None:
-        """Table/chart for potential gain and 5th-best CP."""
-        self.mc_pot_fig = Figure(figsize=(10, 5), dpi=100)
-        self.mc_pot_ax = self.mc_pot_fig.add_subplot(111)
-        self.mc_pot_canvas = FigureCanvasTkAgg(self.mc_pot_fig, master=parent)
-        self.mc_pot_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
-        # Table of players around cutoff
-        table_frame = ttk.Frame(parent)
-        table_frame.pack(fill=tk.X, padx=5, pady=5)
-        cols = ("Rank", "Name", "TotalCP", "FifthBest", "PotentialGain", "ZeroCP")
-        self.mc_pot_tree = ttk.Treeview(table_frame, columns=cols, show="headings", height=8)
-        for c in cols:
-            self.mc_pot_tree.heading(c, text=c)
-            self.mc_pot_tree.column(c, width=90)
-        mc_pot_v = ttk.Scrollbar(table_frame, orient=tk.VERTICAL, command=self.mc_pot_tree.yview)
-        self.mc_pot_tree.configure(yscrollcommand=mc_pot_v.set)
-        self.mc_pot_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        mc_pot_v.pack(side=tk.RIGHT, fill=tk.Y)
-
-    def _more_charts_draw_potential(self) -> None:
-        df = self.more_charts_data.get("df")
-        cutoff_rank = self.more_charts_data.get("cutoff_rank")
-        region = self.more_charts_data.get("region", "NA")
-        self.mc_pot_ax.clear()
-        for item in self.mc_pot_tree.get_children():
-            self.mc_pot_tree.delete(item)
-        if df is None or df.empty:
-            self.mc_pot_ax.set_title("No data")
-            self.mc_pot_canvas.draw_idle()
-            return
-        pot_df = potential_ceiling_data(df, cutoff_rank)
-        if pot_df.empty:
-            self.mc_pot_canvas.draw_idle()
-            return
-        # Scatter: X = TotalCP, Y = PotentialGainOneSlot (highlight around rank 135)
-        self.mc_pot_ax.scatter(
-            pot_df["TotalCP"],
-            pot_df["PotentialGainOneSlot"],
-            c=CHART_COLORS[1],
-            alpha=0.6,
-            label="All",
-        )
-        near = pot_df[(pot_df["Rank"] >= cutoff_rank - 20) & (pot_df["Rank"] <= cutoff_rank + 20)]
-        if not near.empty:
-            self.mc_pot_ax.scatter(
-                near["TotalCP"],
-                near["PotentialGainOneSlot"],
-                c=CHART_COLORS[5],
-                s=80,
-                alpha=0.9,
-                label=f"Near rank {cutoff_rank}",
-            )
-        self.mc_pot_ax.set_xlabel("Total CP")
-        self.mc_pot_ax.set_ylabel("Potential gain (one slot, max 500 - 5th best)")
-        self.mc_pot_ax.set_title(f"Potential ceiling ({region}) — high gain = room to improve 5th finish")
-        self.mc_pot_ax.legend()
-        self.mc_pot_ax.grid(True, alpha=0.3)
-        self.mc_pot_canvas.draw_idle()
-        for _, row in pot_df.head(200).iterrows():
-            self.mc_pot_tree.insert("", tk.END, values=(
-                int(row["Rank"]),
-                row["Name"][:20],
-                int(row["TotalCP"]),
-                int(row["FifthBestCP"]),
-                int(row["PotentialGainOneSlot"]),
-                int(row["ZeroCPFinishes"]),
-            ))
-
     def _build_more_charts_events_tab(self, parent: ttk.Frame) -> None:
         """Histogram of events attended (1, 2, ..., 10+)."""
         opts = ttk.Frame(parent)
@@ -1627,38 +1973,6 @@ class App(tk.Tk):
         self.mc_events_ax.set_title(f"Events attended ({region})" if (df is not None and not df.empty) else f"Events attended ({region}) — click Refresh All")
         self.mc_events_ax.grid(True, alpha=0.3, axis="y")
         self.mc_events_canvas.draw_idle()
-
-    def _build_more_charts_estimated_tab(self, parent: ttk.Frame) -> None:
-        """Heuristic: 1 event + 0 CP -> 0 remaining; else N/A."""
-        self.mc_est_fig = Figure(figsize=(8, 3), dpi=100)
-        self.mc_est_ax = self.mc_est_fig.add_subplot(111)
-        self.mc_est_canvas = FigureCanvasTkAgg(self.mc_est_fig, master=parent)
-        self.mc_est_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
-        ttk.Label(parent, text="Assumption: players with exactly 1 event and 0 CP are assumed to attend 0 more events.", wraplength=600).pack(padx=5, pady=5)
-
-    def _more_charts_draw_estimated(self) -> None:
-        df = self.more_charts_data.get("df")
-        region = self.more_charts_data.get("region", "NA")
-        self.mc_est_ax.clear()
-        if df is None or df.empty:
-            self.mc_est_canvas.draw_idle()
-            return
-        est_df = estimated_remaining_events_heuristic(df)
-        if est_df.empty:
-            self.mc_est_canvas.draw_idle()
-            return
-        zero_rem = est_df["EstRemaining"] == 0
-        n_zero = zero_rem.sum()
-        n_other = len(est_df) - n_zero
-        self.mc_est_ax.bar([0], [n_zero], width=0.5, label="Est. 0 remaining (1 event, 0 CP)", color=CHART_COLORS[0])
-        self.mc_est_ax.bar([1], [n_other], width=0.5, label="Other (no estimate)", color=CHART_COLORS[1])
-        self.mc_est_ax.set_xticks([0, 1])
-        self.mc_est_ax.set_xticklabels(["Est. 0 remaining", "Other"])
-        self.mc_est_ax.set_ylabel("Number of players")
-        self.mc_est_ax.set_title(f"Estimated remaining events ({region}) — heuristic")
-        self.mc_est_ax.legend()
-        self.mc_est_ax.grid(True, alpha=0.3, axis="y")
-        self.mc_est_canvas.draw_idle()
 
     # --- Moneyball Tab ---
     def _build_more_charts_moneyball_tab(self, parent: ttk.Frame) -> None:
@@ -1956,8 +2270,54 @@ class App(tk.Tk):
         self._populate_moneyball_tree(df)
         self._select_moneyball_matches()
 
+    # --- Invite flow (Sankey) ---
+    def _build_more_charts_invite_flow_tab(self, parent: ttk.Frame) -> None:
+        """Build the invite-flow Sankey sub-tab (uses the shared season/region)."""
+        self.mc_invite_flow_fig = Figure(figsize=(10, 4), dpi=100)
+        self.mc_invite_flow_ax = self.mc_invite_flow_fig.add_subplot(111)
+        self.mc_invite_flow_canvas = FigureCanvasTkAgg(self.mc_invite_flow_fig, master=parent)
+        self.mc_invite_flow_canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        self.mc_invite_flow_status_var = tk.StringVar(
+            value="Click 'Refresh All' to load invite flows, then hover a date for details."
+        )
+        ttk.Label(parent, textvariable=self.mc_invite_flow_status_var, wraplength=900).pack(
+            fill=tk.X, padx=5, pady=4
+        )
+        self.mc_invite_flow_canvas.mpl_connect(
+            "motion_notify_event", self._more_charts_invite_flow_hover
+        )
 
+    def _more_charts_draw_invite_flow(self) -> None:
+        """Load and draw invite flows for the selected season and region."""
+        season = self.season_var.get().strip() or DEFAULT_SEASON
+        region = self.more_charts_region_var.get().strip().upper() or "NA"
+        try:
+            flow = get_invite_flows(season, region)
+        except Exception as exc:
+            logger.error("Invite flow load: %s", exc)
+            self.mc_invite_flow_status_var.set(f"Error loading invite flows: {exc}")
+            self.mc_invite_flow_ax.clear()
+            self.mc_invite_flow_ax.set_axis_off()
+            self.mc_invite_flow_canvas.draw_idle()
+            return
+        self.more_charts_data["invite_flow"] = flow
+        draw_invite_flow_sankey(self.mc_invite_flow_ax, flow)
+        self.mc_invite_flow_canvas.draw_idle()
+        if flow.stages:
+            self.mc_invite_flow_status_var.set(
+                f"Hover a column for details. Latest: {describe_column(flow, len(flow.stages) - 1)}"
+            )
+        else:
+            self.mc_invite_flow_status_var.set("No Regional/IC data for this season and region.")
 
-
+    def _more_charts_invite_flow_hover(self, event) -> None:
+        """Show kept/entered/autobid counts for the date under the cursor."""
+        flow = self.more_charts_data.get("invite_flow")
+        if flow is None or not event.inaxes or event.xdata is None:
+            return
+        index = int(round(event.xdata))
+        if not 0 <= index < len(flow.stages):
+            return
+        self.mc_invite_flow_status_var.set(describe_column(flow, index))
 
 

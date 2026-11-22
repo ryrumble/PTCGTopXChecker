@@ -101,33 +101,6 @@ def box_plot_rank_buckets(
     return labels, data
 
 
-def potential_ceiling_data(
-    df: pd.DataFrame,
-    cutoff_rank: int,
-) -> pd.DataFrame:
-    """
-    For each player: 5th best CP (or 0 if <5 events), potential gain from one big finish
-    (e.g. 500 - 5th_best as max single gain), and count of 0-CP finishes.
-    """
-    if df is None or df.empty:
-        return pd.DataFrame()
-
-    def fifth_best(row):
-        cps = row.get("CPFinishes") or []
-        return cps[4] if len(cps) >= 5 else (cps[-1] if cps else 0)
-
-    def zero_cp_count(row):
-        cps = row.get("CPFinishes") or []
-        return sum(1 for x in cps if x == 0)
-
-    out = df[["Rank", "Name", "TotalCP", "NumTournaments"]].copy()
-    out["FifthBestCP"] = df.apply(fifth_best, axis=1)
-    out["PotentialGainOneSlot"] = out["FifthBestCP"].apply(lambda x: max(0, 500 - x))
-    out["ZeroCPFinishes"] = df.apply(zero_cp_count, axis=1)
-    out["CPFinishes"] = df["CPFinishes"]
-    return out
-
-
 def events_attended_histogram(
     df: pd.DataFrame,
     cap_at: int = 10,
@@ -144,17 +117,3 @@ def events_attended_histogram(
     return counts, labels
 
 
-def estimated_remaining_events_heuristic(
-    df: pd.DataFrame,
-) -> pd.DataFrame:
-    """
-    Heuristic: if exactly 1 event and 0 TotalCP, assume 0 remaining; else no estimate.
-    Could extend later with average events per player in region.
-    """
-    if df is None or df.empty:
-        return pd.DataFrame()
-    out = df[["Rank", "Name", "NumTournaments", "TotalCP"]].copy()
-    out["EstRemaining"] = None
-    one_zero = (out["NumTournaments"] == 1) & (out["TotalCP"] == 0)
-    out.loc[one_zero, "EstRemaining"] = 0
-    return out
