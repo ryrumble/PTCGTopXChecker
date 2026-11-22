@@ -56,11 +56,11 @@ python main.py
 python main.py --mode gui
 ```
 
-### Championship Points Tables (2025–2026)
+### Championship Points Tables
 
-The CP logic lives in `cp_calculator.py`. It encodes **placement bands** and a **kicker threshold** (minimum number of competitors) per band.
+The CP logic lives in `cp_calculator.py`. It encodes **placement bands** and a **kicker threshold** (minimum number of competitors) per band. Brackets are season-aware: pass `season="2026-2027"` (or the relevant season) to `calculate_cp(...)` / `kicker_ladder(...)` / `max_kicker_for_field(...)`.
 
-For this season, the app uses **one kicker threshold per band**, matching the specification:
+**2025–2026 (default) brackets:**
 
 - **International Championships (IC)**:
   - 1st: Kicker 0 → 500 CP
@@ -88,16 +88,20 @@ For this season, the app uses **one kicker threshold per band**, matching the sp
   - 257–512th: Kicker 1,025 → 40 CP
   - 513–1,024th: Kicker 2,049 → 20 CP
 
+**2026–2027 differences** (all other brackets unchanged):
+- **IC**: 257–512th (T512) → 85 CP; 513–1,024th (T1024) → 42 CP
+- **Regional/SPE**: 257–512th (T512) → 45 CP; 513–1,024th (T1024) → 22 CP
+
 **Algorithm summary** (`calculate_cp`):
 
-- Inputs: `tournament_type` (`"IC"` or `"REGIONAL"`), `placement` (1-based), `num_competitors`.
-- Find all brackets for that type where:
+- Inputs: `tournament_type` (`"IC"` or `"REGIONAL"`), `placement` (1-based), `num_competitors`, optional `season`.
+- Find all brackets for that type/season where:
   - `min_place <= placement <= max_place`
   - `kicker <= num_competitors`
 - Pick the bracket with the **largest kicker ≤ num_competitors** and return its `cp`.
 - If no bracket matches (e.g. placement outside supported range), CP=0.
 
-To update for a new season, adjust the lists in `_make_brackets_ic()` and `_make_brackets_regional()` in `cp_calculator.py`.
+To update for a new season, add season-specific bracket builders in `cp_calculator.py` and route them through `_brackets_for(...)`.
 
 ### Parsing Rules
 

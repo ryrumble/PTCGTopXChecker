@@ -22,10 +22,10 @@ DEFAULT_TOP_X = 200
 REGION_OPTIONS = ("ALL", "NA", "EU", "LA", "OC", "MEA", "BA", "OTHER")
 
 
-def max_kicker_for_result(result: dict) -> int:
+def max_kicker_for_result(result: dict, season: str | None = None) -> int:
     """Size tier for a single tournament result, tolerating missing metadata."""
     competitors = int(result.get("num_competitors") or 0)
-    return max_kicker_for_field(competitors, result.get("type", "REGIONAL"))
+    return max_kicker_for_field(competitors, result.get("type", "REGIONAL"), season=season)
 
 
 def finish_efficiency(cp: int, size_tier: int) -> float:
@@ -78,7 +78,7 @@ def moneyball_leaderboard(
         scoring = []
         for index, result in enumerate(results):
             cp = int(result.get("cp") or 0)
-            tier = max_kicker_for_result(result)
+            tier = max_kicker_for_result(result, season=season)
             item = dict(result)
             item["tier"] = tier
             item["efficiency"] = round(finish_efficiency(cp, tier), 3) if cp > 0 else 0.0

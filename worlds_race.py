@@ -117,7 +117,7 @@ def _build_per_player_events(
             if key not in player_region_code:
                 player_region_code[key] = region_code or ""
 
-            cp = calculate_cp(t_type, placement, num_comp)
+            cp = calculate_cp(t_type, placement, num_comp, season=season)
             player_events[key].append(
                 EventRecord(
                     tournament_date=t_date,
@@ -167,7 +167,7 @@ def _append_tournament_to_player_events(
         if key not in player_region_code:
             player_region_code[key] = region_code or ""
 
-        cp = calculate_cp(t_type, placement, num_comp)
+        cp = calculate_cp(t_type, placement, num_comp, season=season)
         player_events[key].append(
             EventRecord(
                 tournament_date=t_date,

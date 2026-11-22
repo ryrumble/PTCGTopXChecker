@@ -84,7 +84,7 @@ def aggregate_season(season: str, *, force: bool = False) -> pd.DataFrame:
             # Key by (name, region) so same name in different regions = different players
             region_key = (region_code or "").strip().upper() if region_code else ""
             key: PlayerKey = (canonical_name, region_key)
-            cp = calculate_cp(t_type, placement, num_comp)
+            cp = calculate_cp(t_type, placement, num_comp, season=season)
             if key not in players:
                 players[key] = PlayerStats(name=canonical_name, region_code=region_code)
             players[key].add_result(

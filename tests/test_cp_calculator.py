@@ -148,3 +148,31 @@ class TestCalculateCP:
     def test_stripped_type(self):
         result = calculate_cp("  IC  ", 1, 500)
         assert result == 500
+
+
+class TestSeasonSpecificCP:
+    def test_2026_2027_regional_t512_t1024(self):
+        assert calculate_cp("REGIONAL", 257, 1_200, season="2026-2027") == 45
+        assert calculate_cp("REGIONAL", 512, 1_200, season="2026-2027") == 45
+        assert calculate_cp("REGIONAL", 513, 2_500, season="2026-2027") == 22
+        assert calculate_cp("REGIONAL", 1_024, 2_500, season="2026-2027") == 22
+
+    def test_2026_2027_ic_t512_t1024(self):
+        assert calculate_cp("IC", 257, 1_200, season="2026-2027") == 85
+        assert calculate_cp("IC", 512, 1_200, season="2026-2027") == 85
+        assert calculate_cp("IC", 513, 2_500, season="2026-2027") == 42
+        assert calculate_cp("IC", 1_024, 2_500, season="2026-2027") == 42
+
+    def test_2026_2027_other_brackets_unchanged(self):
+        assert calculate_cp("REGIONAL", 1, 100, season="2026-2027") == 350
+        assert calculate_cp("REGIONAL", 129, 600, season="2026-2027") == 60
+        assert calculate_cp("IC", 1, 500, season="2026-2027") == 500
+        assert calculate_cp("IC", 129, 600, season="2026-2027") == 100
+
+    def test_default_season_uses_original_values(self):
+        assert calculate_cp("REGIONAL", 257, 1_200) == 40
+        assert calculate_cp("REGIONAL", 513, 2_500) == 20
+        assert calculate_cp("IC", 257, 1_200) == 80
+        assert calculate_cp("IC", 513, 2_500) == 40
+        assert calculate_cp("REGIONAL", 257, 1_200, season="2025-2026") == 40
+        assert calculate_cp("IC", 513, 2_500, season="2025-2026") == 40
